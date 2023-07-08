@@ -1,0 +1,201 @@
+.copyright {
+    margin-bottom: 24px;
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.profile {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin: 64px 0;
+    justify-content: center;
+
+    @media (max-width: 1080px) {
+        flex-direction: column;
+    }
+
+    > img {
+        width: 400px;
+        border-radius: 28%;
+        aspect-ratio: 1;
+
+        @media (max-width: 432px) {
+            width: 100%;
+        }
+    }
+}
+
+.profile-description {
+    margin-bottom: 64px;
+    background-color: var(--color-primary-container);
+    padding: 56px;
+    border-radius: 64px;
+
+    @media (max-width: 500px) {
+        padding: 40px;
+        border-radius: 48px;
+    }
+
+    > h2 {
+        margin-bottom: 24px;
+        font-size: 48px;
+        letter-spacing: 2px;
+        color: var(--color-on-primary-container);
+
+        @media (max-width: 500px) {
+            font-size: 40px;
+        }
+    }
+
+    > p {
+        margin-bottom: 64px;
+        color: var(--color-on-primary-container);
+        font-size: 20px;
+
+        @media (max-width: 500px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (max-width: 1080px) {
+        align-items: center;
+    }
+
+    > h1 {
+        font-size: 98px;
+        letter-spacing: 4px;
+
+        @media (max-width: 1080px) {
+            text-align: center;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 64px;
+        }
+
+        @media (max-width: 375px) {
+            font-size: 48px;
+        }
+    }
+
+    > p {
+        padding: 16px 32px;
+        border-radius: 99999999px;
+        width: fit-content;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: var(--color-primary);
+        color: var(--color-on-primary);
+
+        @media (max-width: 550px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 1080px) {
+            text-align: center;
+        }
+    }
+}
+
+.profile-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > a {
+        display: block;
+        padding: 8px 16px;
+        border-radius: 99999999px;
+        border: 1px solid var(--color-on-primary-container);
+        color: var(--color-on-primary-container);
+        transition: all .25s;
+
+        &:hover {
+            background-color: var(--color-on-primary-container);
+            color: var(--color-on-primary);
+        }
+    }
+}
+
+.works {
+    margin-bottom: 64px;
+
+    > h2 {
+        font-size: 48px;
+        letter-spacing: 2px;
+        margin-bottom: 24px;
+    }
+}
+
+.works-products {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(512px, 1fr) );
+
+    @media (max-width: 1090px) {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr) );
+    }
+
+    @media (max-width: 544px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr) );
+    }
+}
+
+.works-product {
+    display: block;
+    padding-bottom: 64px;
+
+    &:hover {
+        > img {
+            padding: 8px;
+        }
+        > h3 {
+            padding: 0 24px 0 32px;
+        }
+
+        > p {
+            padding: 0 32px 0 24px;
+        }
+    }
+
+    > img {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 32px;
+        margin-bottom: 8px;
+        object-fit: cover;
+        transition: all .25s;
+    }
+
+    > h3 {
+        font-size: 24px;
+        font-weight: normal;
+        color: var(--color-primary);
+        padding: 0 24px;
+        margin-bottom: 8px;
+        transition: all .25s;
+    }
+
+    > p {
+        color: var(--color-on-background);
+        font-size: 16px;
+        padding: 0 24px;
+        text-align: end;
+        transition: all .25s;
+    }
+}
