@@ -77,6 +77,9 @@ main {
     border-radius: 20px;
     min-height: 40px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .socials {
@@ -126,6 +129,8 @@ main {
                 border-radius: 24px;
                 align-items: flex-start;
                 z-index: 3;
+                border-width: 2px;
+                border-color: rgb(var(--color-primary));
 
                 @media (hover: hover) {
                     &:hover {
@@ -171,9 +176,7 @@ main {
     }
 
     & section {
-        --bg-color: var(--color-surface);
-        --bg-opacity: var(--opacity-inv-1);
-
+        background-color: rgb(var(--color-surface));
         border: var(--b);
         width: calc(100% - 96px);
         box-shadow: 0 4px 8px -2px #0000004d;
@@ -188,7 +191,6 @@ main {
         border-radius: 20px;
         padding: 8px 16px;
         z-index: 2;
-        backdrop-filter: blur(24px);
         transition: all .2s, border-width 0s;
 
         @media (hover: hover) {
@@ -215,11 +217,9 @@ main {
     }
 
     & .actions {
-        --bg-color: var(--color-surface);
-        --bg-opacity: var(--opacity-inv-2);
+        background-color: rgb(var(--color-surface));
         box-shadow: 0 4px 8px -2px #0000004d;
         border: var(--b);
-        backdrop-filter: blur(24px);
         border-radius: 20px;
         min-height: 40px;
         min-width: 40px;
@@ -230,7 +230,6 @@ main {
         right: 24px;
         z-index: 2;
         transition: all .2s;
-
     }
 
     & .btn {
