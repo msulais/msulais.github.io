@@ -1,97 +1,280 @@
+@font-face {
+    font-family: "FluentSystemIcons-Resizable";
+    src: url("/icons/FluentSystemIcons-Resizable.woff2") format("woff2"),
+         url("/icons/FluentSystemIcons-Resizable.woff") format("woff"),
+         url("/icons/FluentSystemIcons-Resizable.ttf") format("truetype")
+    ;
+}
+
 :root {
-    --color-primary: #94d785;
-    --color-on-primary: #003a02;
-    --color-primary-container: #135210;
-    --color-on-primary-container: #aff49f;
-    --color-secondary: #f7bd48;
-    --color-on-secondary: #412d00;
-    --color-secondary-container: #5e4200;
-    --color-on-secondary-container: #ffdea7;
-    --color-tertiary: #80d0ff;
-    --color-on-tertiary: #00344b;
-    --color-tertiary-container: #004c6a;
-    --color-on-tertiary-container: #c5e7ff;
-    --color-error: #ffb4ab;
-    --color-error-container: #93000a;
-    --color-on-error: #690005;
-    --color-on-error-container: #ffdad6;
-    --color-background: #1a1c18;
-    --color-on-background: #e2e3dd;
-    --color-surface: #1a1c18;
-    --color-on-surface: #e2e3dd;
-    --color-surface-variant: #42493f;
-    --color-on-surface-variant: #c2c8bc;
-    --color-outline: #8d9387;
-    --color-inverse-on-surface: #1a1c18;
-    --color-inverse-surface: #e2e3dd;
-    --color-inverse-primary: #2e6b27;
-    --color-shadow: #000000;
-    --color-surface-tint: #94d785;
-    --color-outline-variant: #42493f;
-    --color-scrim: #000000;
+    --color-app-background: 25, 25, 25; 
+    --color-surface: 33, 33, 33;
+    --color-on-surface: 250, 250, 250;
+    --color-primary: 0, 204, 78;
+    --color-on-primary: 0, 0, 0;
+
+    --opacity-0: .02;
+    --opacity-1: .04;
+    --opacity-2: .08;
+    --opacity-3: .12;
+    --opacity-4: .16;
+    --opacity-5: .20;
+    --opacity-inv-0: .92;
+    --opacity-inv-1: .84;
+    --opacity-inv-2: .76;
+    --opacity-inv-3: .68;
+    --opacity-inv-4: .60;
+    --opacity-inv-5: .52;
+    --opacity-border: .32;
+
+    background-color: rgb(var(--color-app-background));
+    font-family: system-ui,
+        -apple-system, BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        Arial, 
+        sans-serif
+    ;
+    color: rgb(var(--color-on-surface));
     color-scheme: dark;
+
     & * {
         color-scheme: dark;
     }
 }
 
-
 * {
+    --bg-color: 0, 0, 0;
+    --bg-opacity: 0;
+
     background-color: transparent;
+    background-color: rgba(var(--bg-color), var(--bg-opacity));
     box-sizing: border-box;
-    font-family: "DM Mono", monospace;
+    color: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-}
 
-a {
-    text-decoration: none;
-}
-
-html {
-    background-color: var(--color-background);
-}
-
-input, button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-:is(button, summary):hover {
-    cursor: pointer;
-}
-
-button, button *, summary, summary *, .icon, .icon * {
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-input, textarea, button, select, a, summary, .icon {
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
+a, button, icon, :is(a, button, icon) * {
+    user-select: none;
+    text-decoration: none;
+
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-main {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    max-width:calc(100% - 32px);
-    width: 1048px;
+:is(button, .btn) {
+    --border-color: 0, 0, 0;
+    --border-opacity: 0;
+    border: 1px solid;
+    border-color: transparent;
+    border-color: rgba(var(--border-color), var(--border-opacity));
+    display: block;
+    outline: none;
+
+    &:hover:not(:disabled) {
+        cursor: pointer;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
 }
 
-.icon {
+code {
+    font-family:
+        ui-monospace,
+        Menlo, Monaco,
+        "Cascadia Mono", 
+        "Segoe UI Mono",
+        "Roboto Mono",
+        "Oxygen Mono",
+        "Ubuntu Monospace",
+        "Source Code Pro",
+        "Fira Mono",
+        "Droid Sans Mono",
+        "Courier New", 
+        monospace
+    ;
+}
+
+icon {
+    display: block;
+    font-family: FluentSystemIcons-Resizable;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal !important;
+    line-height: 1;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &[data-inline] {
+        display: inline;
+        font-size: inherit;
+    }
+}
+
+img {
     display: block;
 }
 
-.center {
+.btn {
+    --padding: 4px 12px;
+
+    align-items: center;
+    border-radius: 4px;
     display: flex;
+    font-size: 14px;
     justify-content: center;
+    min-height: 40px;
+    scrollbar-width: none;
+    transition: all .2s;
+
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &[data-icon] {
+        --padding: 4px 10px;
+    }
+
+    &[data-compact] {
+        --padding: 0 8px;
+        min-height: 32px;
+
+        &[data-icon] {
+            --padding: 0 6px;
+        }
+    }
+
+    &:active > .btn-layer {
+        scale: .85;
+    }
+}
+
+.btn-filled-tonal {
+    --bg-color: var(--color-on-surface);
+    --bg-opacity: var(--opacity-2);
+    --border-color: var(--color-on-surface);
+    --border-opacity: var(--opacity-1);
+
+    &:disabled {
+        --bg-opacity: var(--opacity-0);
+        color: rgba(var(--color-on-surface), var(--opacity-5));
+    }
+
+    &:not(:disabled){
+        @media (hover:hover) {
+            &:hover {
+                --bg-opacity: var(--opacity-3);
+            }
+        }
+
+        &:active {
+            --bg-opacity: var(--opacity-1);
+
+            > .btn-layer {
+                scale: .85;
+            }
+        }
+    }
+}
+
+.btn-layer {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+    font-size: inherit;
+    font-weight: inherit;
+    gap: 8px;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--padding);
+    transition: all .2s;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    > .icon {
+        position: relative
+    }
+}
+
+.btn-outlined {
+    --bg-color: var(--color-on-surface);
+    --border-color: var(--color-on-surface);
+    --border-opacity: var(--opacity-border);
+
+    &:disabled {
+        color: rgba(var(--color-on-surface), var(--opacity-5));
+        --border-color: var(--color-on-surface);
+        --border-opacity: var(--opacity-5);
+    }
+
+    &:not(:disabled){
+        @media (hover:hover) {
+            &:hover {
+                --bg-opacity: var(--opacity-1);
+            }
+        }
+
+        &:active {
+            --bg-opacity: var(--opacity-0);
+        }
+    }
+}
+
+.btn-transparent {
+    --bg-color: var(--color-on-surface);
+
+    &:disabled {
+        color: rgba(var(--color-on-surface), var(--opacity-5));
+    }
+
+    &:not(:disabled){
+        @media (hover:hover) {
+            &:hover {
+                --bg-opacity: var(--opacity-1);
+                --border-color: var(--color-on-surface);
+                --border-opacity: var(--opacity-1);
+            }
+        }
+
+        &:active {
+            --bg-opacity: var(--opacity-0);
+            --border-color: var(--color-on-surface);
+            --border-opacity: var(--opacity-1);
+        }
+    }
+}
+
+.scrollbar\:none {
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
