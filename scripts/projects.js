@@ -4,16 +4,10 @@ import h from 'https://esm.sh/solid-js@1.8.16/h'
 
 const my_projects = [
     {
-        img: '/images/redmerah-android.png',
+        img: '/images/redmerah-android-cover.png',
         title: 'Android Apps',
         description: 'Several Android apps built using Flutter. Why did I choose Flutter over Kotlin/Java? Because Flutter offers simplicity and ease of use, allowing developers to communicate even in their native language.',
         url: 'https://play.google.com/store/apps/dev?id=8392660381147653639'
-    },
-    {
-        img: '/images/redmerah-com.png',
-        title: 'redmerah.com',
-        description: 'My web domain connected to a blogger platform. I took the initiative to design a custom theme from scratch for my website, giving it a unique and personal touch. I have published various articles on topics I have extensively studied, particularly focusing on programming.',
-        url: 'https://redmerah.com/'
     },
     {
         img: '/images/artic-template.png',
@@ -22,19 +16,19 @@ const my_projects = [
         url: 'https://artic-delta.vercel.app/'
     },
     {
-        img: '/images/shutterstock-msulais.png',
+        img: '/images/vector-images-cover.png',
         title: 'Vector Images',
         description: 'Some of my vector works that I sell on  Shutterstock. Even though the vectors are just simple, I think they\'re pretty good.',
         url: 'https://www.shutterstock.com/g/muh_sulais'
     },
     {
-        img: '/images/markdown-to-html.png',
+        img: '/images/markdown-converter-cover.png',
         title: 'Markdown Converter',
-        description: 'Markdown converter built using React.js and Redux. This converter combines the flexibility of React.js with the powerful state management capabilities of Redux, providing users with a seamless and intuitive experience.',
-        url: '/markdown-to-html'
+        description: 'Markdown converter built using SolidJS. Convert your markdown to HTML. This converter is not just regular converter, I add some features that (maybe) you won\'t see it in other converter. For example, you can print the result!',
+        url: '/markdown-converter'
     },
     {
-        img: '/images/markdown-to-html.png',
+        img: '/images/markdown-converter-cover.png',
         title: 'Color Generator',
         description: 'Generator color for dark & light mode',
         url: '/color-generator'
