@@ -4,22 +4,10 @@ import h from 'https://esm.sh/solid-js@1.8.16/h'
 
 const my_projects = [
     {
-        img: '/images/redmerah-android-cover.png',
-        title: 'Android Apps',
-        description: 'Several Android apps built using Flutter. Why did I choose Flutter over Kotlin/Java? Because Flutter offers simplicity and ease of use, allowing developers to communicate even in their native language.',
-        url: 'https://play.google.com/store/apps/dev?id=8392660381147653639'
-    },
-    {
-        img: '/images/artic-template.png',
-        title: 'Artic - Web Template',
-        description: 'Web template for article/news/blog. This is actually a template I\'d like to sell somewhere. But because it was always rejected,it wasn\'t used until now. It is built using Next.js',
-        url: 'https://artic-delta.vercel.app/'
-    },
-    {
-        img: '/images/vector-images-cover.png',
-        title: 'Vector Images',
-        description: 'Some of my vector works that I sell on  Shutterstock. Even though the vectors are just simple, I think they\'re pretty good.',
-        url: 'https://www.shutterstock.com/g/muh_sulais'
+        img: '/images/color-generator-cover.png',
+        title: 'Color Generator',
+        description: 'A color generator specifically designed for app development. It\'s been instrumental in crafting the visual theme for my own app. Feel free to utilize this tool for your app\'s color scheme as well.',
+        url: '/color-generator'
     },
     {
         img: '/images/markdown-converter-cover.png',
@@ -28,10 +16,22 @@ const my_projects = [
         url: '/markdown-converter'
     },
     {
-        img: '/images/markdown-converter-cover.png',
-        title: 'Color Generator',
-        description: 'Generator color for dark & light mode',
-        url: '/color-generator'
+        img: '/images/redmerah-android-cover.png',
+        title: 'Android Apps',
+        description: 'Several Android apps built using Flutter. Why did I choose Flutter over Kotlin/Java? Because Flutter offers simplicity and ease of use, allowing developers to communicate even in their native language.',
+        url: 'https://play.google.com/store/apps/dev?id=8392660381147653639'
+    },
+    {
+        img: '/images/vector-images-cover.png',
+        title: 'Vector Images',
+        description: 'Some of my vector works that I sell on  Shutterstock. Even though the vectors are just simple, I think they\'re pretty good.',
+        url: 'https://www.shutterstock.com/g/muh_sulais'
+    },
+    {
+        img: '/images/artic-template.png',
+        title: 'Artic - Web Template',
+        description: 'Web template for article/news/blog. This is actually a template I\'d like to sell somewhere. But because it was always rejected,it wasn\'t used until now. It is built using Next.js',
+        url: 'https://artic-delta.vercel.app/'
     },
 ]
 
