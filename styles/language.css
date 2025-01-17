@@ -1,0 +1,7 @@
+:root[lang=en] [lang]:not([lang=en]) {
+	display: none;
+}
+
+:root[lang=id] [lang]:not([lang=id]) {
+	display: none;
+}

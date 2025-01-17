@@ -1,0 +1,11 @@
+.c-icon {
+	display: contents;
+}
+
+:root[data-icon-theme=monochrome] [data-c-icon-theme=colorful] {
+	display: none;
+}
+
+:root[data-icon-theme=colorful] [data-c-icon-theme=monochrome] {
+	display: none;
+}

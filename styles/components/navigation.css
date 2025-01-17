@@ -1,0 +1,123 @@
+nav {
+	background-color: rgba(var(--g-color-on-surface), var(--g-opacity1));
+	padding: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+	max-height: 100dvh;
+	overflow: auto;
+
+	@media (max-width: 600px) {
+		flex-direction: row;
+	}
+
+	> div {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		@media (max-width: 600px) {
+			flex-direction: row;
+			justify-content: space-around !important;
+			flex: 1;
+
+			&:not([data-content]) {
+				display: none;
+			}
+		}
+
+		&[data-top] {
+			padding: 16px 0;
+		}
+
+		&[data-content] {
+			flex: 1;
+			justify-content: center;
+		}
+	}
+}
+
+.c-navigation-btn {
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+	min-width: 64px;
+	max-width: 64px;
+	min-height: 64px;
+	font-size: 12px;
+	padding-bottom: 4px;
+	font-weight: 500;
+
+	&:focus-visible {
+		outline: none;
+
+		> div {
+			outline: auto;
+			min-width: 64px;
+			max-width: 64px;
+			border-color: rgba(var(--g-color-on-surface), var(--g-opacity2));
+			--g-background-color: var(--g-color-on-surface);
+			--g-background-color-opacity: var(--g-opacity2);
+		}
+	}
+
+	&[data-selected] {
+		color: rgb(var(--g-color-accent));
+
+		> div {
+			min-width: 64px;
+			max-width: 64px;
+			--g-background-color: var(--g-color-on-surface);
+			--g-background-color-opacity: var(--g-opacity2);
+		}
+	}
+
+	> div {
+		border: 1px solid transparent;
+		min-width: 36px;
+		max-width: 36px;
+		min-height: 36px;
+		max-height: 36px;
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		:root[data-corner=sharp] & { border-radius: 0px }
+		:root[data-corner=semi-round] & { border-radius: 4px }
+		:root[data-corner=full-round] & { border-radius: 18px }
+
+		:root[data-animation=on] & {
+			transition-property: all, border-color;
+			transition-duration: .2s, 0s;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
+
+			> div {
+				min-width: 64px;
+				max-width: 64px;
+				border-color: rgba(var(--g-color-on-surface), var(--g-opacity2));
+				--g-background-color: var(--g-color-on-surface);
+				--g-background-color-opacity: var(--g-opacity2);
+			}
+		}
+	}
+
+	&:active {
+		> div {
+			min-width: 64px;
+			max-width: 64px;
+			--g-background-color: var(--g-color-on-surface);
+			--g-background-color-opacity: var(--g-opacity0);
+			border-color: rgba(var(--g-color-on-surface), var(--g-opacity3));
+		}
+	}
+}
