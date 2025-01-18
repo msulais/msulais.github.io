@@ -3,6 +3,11 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 16px;
+	position: sticky;
+	top: 0px;
+	background-color: rgba(var(--g-color-background), var(--g-opacity3));
+	backdrop-filter: blur(32px);
+	z-index: 9;
 
 	@media (max-width: 600px) {
 		display: flex;

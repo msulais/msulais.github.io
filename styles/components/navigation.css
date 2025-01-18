@@ -7,9 +7,15 @@ nav {
 	gap: 4px;
 	max-height: 100dvh;
 	overflow: auto;
+	position: sticky;
+	top: 0px;
+	left: 0px;
 
 	@media (max-width: 600px) {
 		flex-direction: row;
+		top: auto;
+		bottom: 0px;
+		backdrop-filter: blur(32px);
 	}
 
 	> div {
