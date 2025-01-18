@@ -23,7 +23,9 @@ a, button, .c-icon, :is(a, button, .c-icon) * {
 }
 
 body {
-    min-height: 100dvh;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow: auto;
     display: flex;
     max-width: 100%;
     flex-direction: row-reverse;

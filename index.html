@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="/styles/components/modal.css">
     <link rel="stylesheet" href="/styles/components/menu.css">
     <link rel="stylesheet" href="/styles/components/divider.css">
+
+    <!-- page styles -->
+    <link rel="stylesheet" href="/styles/pages/home.css">
 </head>
 
 <body>
@@ -51,10 +54,51 @@
         </button>
     </header>
     <main>
-        <section id="home"></section>
-        <section id="about"></section>
-        <section id="portfolio"></section>
-        <section id="contact"></section>
+        <section id="home">
+            <svg data-c-icon-theme="colorful" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 33.2179C12 30.1705 12 28.6468 12.6727 27.3486C13.3454 26.0503 14.5902 25.1716 17.0798 23.4143L30.1289 14.2031C33.6774 11.6983 35.4516 10.4459 37.4547 10.5061C39.4578 10.5663 41.1537 11.923 44.5454 14.6363L55.4963 23.3971C57.7092 25.1674 58.8156 26.0525 59.4078 27.2846C60 28.5167 60 29.9336 60 32.7675V54C60 59.6569 60 62.4853 58.2426 64.2426C56.4853 66 53.6569 66 48 66H24C18.3431 66 15.5147 66 13.7574 64.2426C12 62.4853 12 59.6569 12 54V33.2179Z" fill="#DADADA"/> <path d="M6 30L37.5 9L66 30" stroke="#FF7903" stroke-width="6.66667" stroke-linecap="round"/> <path d="M6 30L37.5 9L66 30" stroke="#FF7904" stroke-width="6.66667" stroke-linecap="round"/> <path d="M24 45C24 39.3431 24 36.5147 25.7574 34.7574C27.5147 33 30.3431 33 36 33C41.6569 33 44.4853 33 46.2426 34.7574C48 36.5147 48 39.3431 48 45V66H24V45Z" fill="#FF7904"/> <rect x="42" y="48" width="3" height="3" rx="1.5" fill="white"/> </svg>
+            <svg data-c-icon-theme="monochrome" width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M12 33.2179C12 30.1705 12 28.6468 12.6727 27.3486C13.3454 26.0503 14.5902 25.1716 17.0798 23.4143L30.1289 14.2031C33.6774 11.6983 35.4516 10.4459 37.4547 10.5061C39.4578 10.5663 41.1537 11.923 44.5454 14.6363L55.4963 23.3971C57.7092 25.1674 58.8156 26.0525 59.4078 27.2846C60 28.5167 60 29.9336 60 32.7675V54C60 59.6569 60 62.4853 58.2426 64.2426C56.4853 66 53.6569 66 48 66H24C18.3431 66 15.5147 66 13.7574 64.2426C12 62.4853 12 59.6569 12 54V33.2179Z" fill="#DBDBDB"/> <path d="M6 30L37.5 9L66 30" stroke="#848484" stroke-width="6.66667" stroke-linecap="round"/> <path d="M24 45C24 39.3431 24 36.5147 25.7574 34.7574C27.5147 33 30.3431 33 36 33V33C41.6569 33 44.4853 33 46.2426 34.7574C48 36.5147 48 39.3431 48 45V66H24V45Z" fill="#9E9E9E"/> <rect x="42" y="48" width="3" height="3" rx="1.5" fill="white"/> </svg>
+            <small>
+                <span lang="id">Hai, saya adalah</span>
+                <span lang="en">Hello, I am a</span>
+            </small>
+            <h1>Front-End<br>Web Developer</h1>
+            <p>
+                <span lang="en">Crafting user-friendly and visually appealing web experiences</span>
+                <span lang="id">Menciptakan pengalaman web yang ramah pengguna dan menarik secara visual.</span>
+            </p>
+            <div class="home-skills">
+                <img src="/logos/html.svg" alt="HTML logo">
+                <img src="/logos/css.svg" alt="CSS logo">
+                <img src="/logos/javascript.svg" alt="Javascript logo">
+                <img src="/logos/react.svg" alt="React logo">
+                <img src="/logos/svelte.svg" alt="Svelte logo">
+                <img src="/logos/solid.svg" alt="Solid logo">
+                <img src="/logos/astro.svg" alt="Astro logo">
+                <img src="/logos/figma.svg" alt="Figma logo">
+            </div>
+            <div class="home-actions">
+                <button class="c-btn c-filled-btn">
+                    <span lang="en">Hire me</span>
+                    <span lang="id">Pekerjakan saya</span>
+                </button>
+                <button class="c-btn c-tonal-btn">
+                    <span lang="en">Portfolio summary</span>
+                    <span lang="id">Ringkasan portofolio</span>
+                </button>
+            </div>
+        </section>
+        <div class="c-divider"></div>
+        <section id="about">
+            <h2>About</h2>
+        </section>
+        <div class="c-divider"></div>
+        <section id="work">
+            <h2>Work</h2>
+        </section>
+        <div class="c-divider"></div>
+        <section id="contact">
+            <h2>Contact</h2>
+        </section>
     </main>
     <nav id="g-navigation-id">
         <div data-top>
@@ -81,13 +125,13 @@
                 <span lang="en">About</span>
                 <span lang="id">Tentang</span>
             </a>
-            <a class="c-navigation-btn" href="#portfolio">
+            <a class="c-navigation-btn" href="#work">
                 <div>
                     <svg data-c-icon-theme="colorful" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="2" y="2" width="9" height="9" rx="2" fill="#8201F5"/> <rect x="2" y="13" width="9" height="9" rx="2" fill="#00F0F6"/> <rect x="14" y="3" width="7" height="7" rx="3.5" stroke="#FF0901" stroke-width="2"/> <rect x="13" y="13" width="9" height="9" rx="2" fill="#74F500"/> </svg>
                     <svg data-c-icon-theme="monochrome" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="2" y="2" width="9" height="9" rx="2" fill="#828282"/> <rect x="2" y="13" width="9" height="9" rx="2" fill="#828282"/> <rect x="14" y="3" width="7" height="7" rx="3.5" stroke="#B8B8B8" stroke-width="2"/> <rect x="13" y="13" width="9" height="9" rx="2" fill="#828282"/> </svg>
                 </div>
-                <span lang="en">Portfolio</span>
-                <span lang="id">Portofolio</span>
+                <span lang="en">Work</span>
+                <span lang="id">Karya</span>
             </a>
             <a class="c-navigation-btn" href="#contact">
                 <div>
