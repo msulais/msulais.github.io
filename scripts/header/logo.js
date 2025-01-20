@@ -101,11 +101,8 @@ function animate_logo(logo) {
 }
 
 function init_logos() {
-	const logo1 = document.getElementById('logo-1')
-	logo1.onclick = () => animate_logo(logo1)
-
-	const logo2 = document.getElementById('logo-2')
-	logo2.onclick = () => animate_logo(logo2)
+	const logo = document.getElementById('logo')
+	logo.onclick = () => animate_logo(logo)
 }
 
 init_logos()

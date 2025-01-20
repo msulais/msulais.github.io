@@ -1,9 +1,5 @@
 * {
-    --g-background-color: transparent;
-    --g-background-color-opacity: 0;
-
     background-color: transparent;
-    background-color: rgba(var(--g-background-color), var(--g-background-color-opacity));
     box-sizing: border-box;
     color: inherit;
     font-family: inherit;
@@ -15,77 +11,14 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-a, button, .c-icon, :is(a, button, .c-icon) * {
+a,
+button,
+:is(a, button) * {
     user-select: none;
     text-decoration: none;
     -webkit-user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-body {
-    display: flex;
-    max-width: 100%;
-    flex-direction: row-reverse;
-
-    @media (max-width: 600px) {
-        flex-direction: column;
-    }
-}
-
-code {
-    font-family: var(--g-font-family-monospace);
 }
 
 img {
     display: block;
-}
-
-kbd {
-    border-radius: .3em;
-    background-color: rgb(var(--g-color-on-surface));
-    font-size: .85em;
-    color: rgb(var(--g-color-surface));
-    padding: .2em .4em;
-    box-shadow: 0 .1em .3em -.15em rgba(var(--g-color-on-surface), 1);
-}
-
-pre > code {
-    font-family: var(--g-font-family-monospace);
-    white-space: pre;
-
-    & * {
-        font-family: inherit;
-    }
-}
-
-[data-g-no-pointer-event] {
-    pointer-events: none;
-    user-select: none;
-    touch-action: none;
-
-    & :not([data-g-keep-pointer-event], [data-g-keep-pointer-event] *) {
-        pointer-events: none;
-        user-select: none;
-        touch-action: none;
-    }
-
-    & :is([data-g-keep-pointer-event], [data-g-keep-pointer-event] *) {
-        pointer-events: auto;
-        user-select: auto;
-        touch-action: auto;
-    }
-}
-
-[data-g-no-outline] {
-    outline: none !important;
-
-    & * {
-        outline: none !important;
-    }
-}
-
-[data-g-no-appearance] {
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
 }

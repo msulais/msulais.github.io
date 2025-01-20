@@ -1,30 +1,3 @@
 main {
-	flex: 1;
-	display: grid;
-    max-width: 100%;
-	justify-items: center;
-
-	> section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		width: min(1440px, 100%);
-		padding: 32px;
-		min-height: 100dvh;
-
-		@media (max-width: 600px) {
-			min-height: calc(100dvh - 148px);
-		}
-
-		/* icons */
-		> svg {
-			min-height: 72px;
-		}
-
-		> h2 {
-			font-size: 64px;
-			font-weight: 100;
-			margin-top: 8px;
-		}
-	}
+	min-height: calc(100dvh - 123px);
 }
