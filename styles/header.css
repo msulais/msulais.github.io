@@ -3,12 +3,16 @@ header {
 	justify-content: space-between;
 	padding: 16px 20px 16px 16px;
 
-	> div {
+	> button {
 		display: flex;
 		align-items: center;
 		gap: 16px;
-
 		font-size: 24px;
+		border: none;
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	> nav {

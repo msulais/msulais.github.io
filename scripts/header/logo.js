@@ -102,7 +102,8 @@ function animate_logo(logo) {
 
 function init_logos() {
 	const logo = document.getElementById('logo')
-	logo.onclick = () => animate_logo(logo)
+	const button = logo.parentElement
+	button.onclick = () => animate_logo(logo)
 }
 
 init_logos()
