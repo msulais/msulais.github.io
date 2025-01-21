@@ -6,12 +6,21 @@ header {
 	> button:first-child {
 		display: flex;
 		align-items: center;
-		gap: 16px;
 		font-size: 24px;
 		border: none;
 
+		> div {
+			margin-right: 16px;
+		}
+
 		&:hover {
 			cursor: pointer;
+		}
+
+		> span {
+			@media (max-width: 350px) {
+				display: none;
+			}
 		}
 	}
 
