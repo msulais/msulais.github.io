@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 
-    <!-- global styles -->
+    <!-- styles -->
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/language.css">
@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="styles/main/page.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
             </div>
             Muhammad Sulais
         </button>
-        <nav>
+        <nav id="h-navigation">
             <a href="/" data-selected>
                 <span lang="en">Home</span>
                 <span lang="id">Beranda</span>
@@ -55,7 +56,17 @@
             </a>
         </nav>
     </header>
-    <main></main>
+    <main class="no-view">
+        <div data-page-target="/" data-selected>
+            <h1>
+                <span lang="en">Crafting user-friendly and visually appealing web experiences.</span>
+                <span lang="id">Menciptakan pengalaman web yang ramah pengguna dan menarik secara visual.</span>
+            </h1>
+        </div>
+        <div data-page-target="/about"></div>
+        <div data-page-target="/works"></div>
+        <div data-page-target="/contact"></div>
+    </main>
     <footer>
         <div>&copy; <span id="f-year">0000</span> Muhammad Sulais</div>
         <p>
@@ -66,8 +77,8 @@
             <time id="f-time" datetime="08:30:00">08:30:00 AM (WIB)</time>
         </p>
     </footer>
-    <!-- scripts -->
     <script src="/scripts/header/logo.js"></script>
+    <script src="/scripts/header/navigation.js"></script>
     <script src="/scripts/footer/time.js"></script>
     <script src="/scripts/footer/year.js"></script>
     <script src="/scripts/footer/language.js"></script>
