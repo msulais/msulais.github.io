@@ -3,7 +3,7 @@ header {
 	justify-content: space-between;
 	padding: 16px 20px 16px 16px;
 
-	> button {
+	> button:first-child {
 		display: flex;
 		align-items: center;
 		gap: 16px;
@@ -20,6 +20,10 @@ header {
 		align-items: center;
 		gap: 16px;
 		font-size: 14px;
+
+		@media (max-width: 600px) {
+			display: none
+		}
 
 		> a {
 			display: block;
@@ -55,6 +59,89 @@ header {
 				height: 2px;
 				transition-duration: .2s;
 			}
+		}
+	}
+}
+
+:is(#h-menu, #h-dialog-close) {
+	display: none;
+	min-height: 36px;
+	max-height: 36px;
+	min-width: 36px;
+	max-width: 36px;
+	justify-content: center;
+	align-items: center;
+	border: none;
+
+	&:is(#h-dialog-close) {
+		display: flex;
+		position: absolute;
+		right: 32px;
+		top: 32px;
+	}
+
+	@media (max-width: 600px) {
+		display: flex;
+	}
+
+	&:is(:hover,:focus-visible) {
+		cursor: pointer;
+
+		> svg {
+			fill: rgb(var(--g-color-accent));
+			scale: 130%;
+		}
+	}
+
+	&:active > svg {
+		fill: rgb(var(--g-color-accent));
+		scale: 85%;
+	}
+
+	> svg {
+		transition-duration: .2s;
+	}
+}
+
+#h-dialog {
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	max-width: 100%;
+	height: 100dvh;
+	max-height: 100dvh;
+	background-color: rgba(21, 21, 21, 0.92);
+	border: none;
+	padding: 32px;
+	flex-direction: column;
+	gap: 16px;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	display: flex;
+	transition-duration: .3s;
+
+	&:not([open]) {
+		top: -100%;
+	}
+
+	> a {
+		display: block;
+		font-size: min(10dvw, 32px);
+		transition-duration: .2s;
+
+		&[data-selected] {
+			text-shadow: 0 0 1em rgb(var(--g-color-accent));
+			color: rgb(var(--g-color-accent));
+		}
+
+		&:hover {
+			color: rgb(var(--g-color-accent));
+			letter-spacing: .05em;
+		}
+
+		&:active {
+			scale: 85%;
 		}
 	}
 }
