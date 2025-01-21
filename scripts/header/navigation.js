@@ -10,6 +10,9 @@ let selected_page = document.querySelector('main>[data-selected]')
 function update_page(pathname, animation=true){
 	if (pathname == selected_route) return
 
+	document.querySelector('nav>[data-selected]').removeAttribute('data-selected')
+	document.querySelector(`nav>[href="${CSS.escape(pathname)}"]`).setAttribute('data-selected', '')
+
 	selected_route = pathname
 	selected_page.removeAttribute('data-selected')
 	selected_page = document.querySelector(`main>div[data-page-target="${CSS.escape(pathname)}"]`)
