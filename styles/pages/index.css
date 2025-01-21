@@ -1,5 +1,4 @@
 [data-page-target="/"] {
-	min-height: calc(100dvh - 123px);
 	padding: 32px;
 	display: flex;
 	flex-direction: column;

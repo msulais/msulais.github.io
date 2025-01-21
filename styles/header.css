@@ -30,7 +30,7 @@ header {
 		gap: 16px;
 		font-size: 14px;
 
-		@media (max-width: 600px) {
+		@media (max-width: 620px) {
 			display: none
 		}
 
@@ -89,7 +89,7 @@ header {
 		top: 32px;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 620px) {
 		display: flex;
 	}
 
