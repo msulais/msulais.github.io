@@ -11,6 +11,8 @@ function update_language(lang) {
 		duration: 200,
 		easing: 'cubic-bezier(.15,0,0,1)'
 	}
+	if (language == lang) return
+
 	language = lang
 	root.lang = lang
 	localStorage.setItem('language', lang)
