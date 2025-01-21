@@ -51,8 +51,13 @@ function init_navigation(){
 }
 
 function init_custom_btn() {
-	const btn = document.getElementById('mp-home-btn')
-	btn.onclick = () => update_page('/contact')
+	const mp_home_btn = document.getElementById('mp-home-btn')
+	mp_home_btn.onclick = () => update_page('/contact')
+
+	const h_logo_btn = document.getElementById('h-logo-btn')
+
+	// el.onclick already in used in logo.js
+	h_logo_btn.addEventListener('click', () => update_page('/'))
 }
 
 function init_dialog_navigation() {

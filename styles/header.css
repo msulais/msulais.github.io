@@ -3,27 +3,6 @@ header {
 	justify-content: space-between;
 	padding: 16px 20px 16px 16px;
 
-	> button:first-child {
-		display: flex;
-		align-items: center;
-		font-size: 24px;
-		border: none;
-
-		> div {
-			margin-right: 16px;
-		}
-
-		&:hover {
-			cursor: pointer;
-		}
-
-		> span {
-			@media (max-width: 350px) {
-				display: none;
-			}
-		}
-	}
-
 	> nav {
 		display: flex;
 		align-items: center;
@@ -68,6 +47,27 @@ header {
 				height: 2px;
 				transition-duration: .2s;
 			}
+		}
+	}
+}
+
+#h-logo-btn {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	border: none;
+
+	> div {
+		margin-right: 16px;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	> span {
+		@media (max-width: 350px) {
+			display: none;
 		}
 	}
 }
