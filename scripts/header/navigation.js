@@ -46,6 +46,12 @@ function init_navigation(){
 	document.querySelector('main').classList.remove('no-view')
 }
 
+function init_custom_btn() {
+	const btn = document.getElementById('mp-home-btn')
+	btn.onclick = () => update_page('/contact')
+}
+
 init_navigation()
 init_navigation_btn()
+init_custom_btn()
 })()
