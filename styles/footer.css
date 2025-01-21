@@ -4,6 +4,11 @@ footer {
 	justify-content: space-between;
 	padding: 16px 20px;
 
+	@media (max-width: 550px) {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
 	> div {
 		font-size: 14px;
 	}
@@ -11,14 +16,16 @@ footer {
 	> p {
 		display: flex;
 		align-items: center;
-		gap: 16px;
+		gap: 0 16px;
 		font-size: 14px;
+		flex-wrap: wrap;
 
 		> :is(button, a) {
 			border: none;
 			border-bottom: 2px solid transparent;
 			transition-property: all, outline;
 			padding: 4px 0;
+			white-space: nowrap;
 			transition-duration: .3s, 0s;
 
 			&:hover {
