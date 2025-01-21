@@ -1,5 +1,0 @@
-main {
-	> div:not([data-selected]) {
-		display: none;
-	}
-}
