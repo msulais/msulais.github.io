@@ -75,17 +75,19 @@ function animate_logo(logo) {
 		break
 	}
 
-	if (width1 || left1 || right1 || opacity1) animation1 = block1.animate({
-		width: width1, left: left1, right: right1, opacity: opacity1
-	}, option1)
 
-	if (width2 || left2 || right2 || opacity2) animation2 = block2.animate({
-		width: width2, left: left2, right: right2, opacity: opacity2
-	}, option2)
+	const properties1 = { width: width1, left: left1, right: right1, opacity: opacity1 }
+	for (const key in properties1) if (!properties1[key]) delete properties1[key]
 
-	if (width3 || left3 || right3 || opacity3) animation3 = block3.animate({
-		width: width3, left: left3, right: right3, opacity: opacity3
-	}, option3)
+	const properties2 = { width: width2, left: left2, right: right2, opacity: opacity2 }
+	for (const key in properties2) if (!properties2[key]) delete properties2[key]
+
+	const properties3 = { width: width3, left: left3, right: right3, opacity: opacity3 }
+	for (const key in properties3) if (!properties3[key]) delete properties3[key]
+
+	if (width1 || left1 || right1 || opacity1) animation1 = block1.animate(properties1, option1)
+	if (width2 || left2 || right2 || opacity2) animation2 = block2.animate(properties2, option2)
+	if (width3 || left3 || right3 || opacity3) animation3 = block3.animate(properties3, option3)
 
 	const old_animation_type = animation_type
 	let i = 0
