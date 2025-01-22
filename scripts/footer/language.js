@@ -30,7 +30,7 @@ function update_language(lang) {
 	}
 	localStorage.setItem('language', lang)
 	btn_span.animate(
-		{opacity: [1, 0]},
+		{opacity: [1, 0], scale: [1, .85]},
 		animation_options
 	).finished.then(() => {
 		const rect_old = btn.getBoundingClientRect()
@@ -42,7 +42,7 @@ function update_language(lang) {
 			animation_options
 		)
 		btn_span.animate(
-			{opacity: [0, 1]},
+			{opacity: [0, 1], scale: [.85, 1]},
 			animation_options
 		)
 	})
