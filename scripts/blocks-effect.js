@@ -47,9 +47,11 @@ function reposition_blocks(){
 			++j
 		} while (is_prohibited && j < 100)
 
+		const opacity = Math.min(Math.max(Math.random(), .25), .85)
 		prohibited_area.push([left, left + rect.width, top, top + rect.height])
 		block.style.setProperty('top', top + 'px')
 		block.style.setProperty('left', left + 'px')
+		block.style.setProperty('opacity', opacity + '')
 	}
 }
 
@@ -99,7 +101,7 @@ function generate_blocks(){
 			blocks.push(div)
 			added_blocks.push(div)
 
-			const opacity = Math.min(Math.max(Math.random(), 0.3), 0.85)
+			const opacity = Math.min(Math.max(Math.random(), .25), .85)
 			div.animate({
 				opacity: [0, opacity],
 				transform: ['translateY(0px)', 'translateY(-16px)', 'translateY(0px)']
