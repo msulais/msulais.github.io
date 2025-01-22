@@ -1,7 +1,15 @@
-:root[lang=en] [lang]:not([lang=en]) {
-	display: none;
+:root[lang=en] [lang]{
+	display: inline-block;
+
+	&:not([lang=en]) {
+		display: none;
+	}
 }
 
-:root[lang=id] [lang]:not([lang=id]) {
-	display: none;
+:root[lang=id] [lang]{
+	display: inline-block;
+
+	&:not([lang=id]) {
+		display: none;
+	}
 }

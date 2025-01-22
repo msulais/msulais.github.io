@@ -13,8 +13,21 @@ function update_language(lang) {
 	}
 	if (language == lang) return
 
-	language = lang
-	root.lang = lang
+	/** @type HTMLSpanElement[] */
+	const spans = document.querySelectorAll('span[lang]')
+	let finished_span = 0
+	for (const span of spans) {
+		span.animate({opacity: [1, 0], scale: [1, .85]}, animation_options).onfinish = () => {
+			++finished_span
+			if (finished_span < spans.length) return
+
+			root.lang = lang
+			language = lang
+			for (const s of spans) {
+				s.animate({opacity: [0, 1], scale: [.85, 1]}, animation_options)
+			}
+		}
+	}
 	localStorage.setItem('language', lang)
 	btn_span.animate(
 		{opacity: [1, 0]},
