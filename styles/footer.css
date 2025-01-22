@@ -11,6 +11,10 @@ footer {
 
 	> div {
 		font-size: 14px;
+
+		@media (max-width: 650px) {
+			margin-bottom: 4px;
+		}
 	}
 
 	> p {
@@ -22,13 +26,15 @@ footer {
 
 		> :is(button, a) {
 			border: none;
-			border-bottom: 2px solid transparent;
+			border-bottom: 2px solid rgb(var(--g-color-accent));
 			transition-property: all, outline;
 			padding: 4px 0;
 			white-space: nowrap;
 			transition-duration: .3s, 0s;
 
 			@media (hover: hover) {
+				border-bottom-color: transparent;
+
 				&:hover {
 					border-bottom-color: rgb(var(--g-color-accent));
 					cursor: pointer;
