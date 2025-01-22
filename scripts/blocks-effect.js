@@ -16,7 +16,6 @@ function reposition_blocks(){
 	 * @type [X1: number, X2: number, Y1: number, Y2: number][]
 	 */
 	const prohibited_area = []
-	let i = 0
 	for (const block of blocks) {
 		const rect = block.getBoundingClientRect()
 		let [top, left] = [0, 0]
@@ -51,7 +50,6 @@ function reposition_blocks(){
 		prohibited_area.push([left, left + rect.width, top, top + rect.height])
 		block.style.setProperty('top', top + 'px')
 		block.style.setProperty('left', left + 'px')
-		++i
 	}
 }
 
