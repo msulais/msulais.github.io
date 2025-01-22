@@ -38,9 +38,22 @@
 		position: relative;
 		overflow: hidden;
 
-		&:is(:hover,:focus-visible,:active) {
-			cursor: pointer;
+		@media (hover: hover) {
+			&:hover {
+				cursor: pointer;
 
+				> [data-state='1'] {
+					top: calc(1em + 8px);
+				}
+
+				> [data-state='2'] {
+					top: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		&:focus-visible {
 			> [data-state='1'] {
 				top: calc(1em + 8px);
 			}
@@ -55,6 +68,15 @@
 			color: rgb(var(--g-color-on-surface));
 			background-color: rgba(var(--g-color-accent), 0.32);
 			border-color: rgb(var(--g-color-accent));
+
+			> [data-state='1'] {
+				top: calc(1em + 8px);
+			}
+
+			> [data-state='2'] {
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
 		}
 
 		> [data-state='1'] {

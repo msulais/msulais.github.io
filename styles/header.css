@@ -22,15 +22,15 @@ header {
 				width: 100%;
 			}
 
-			&:hover::after {
-				width: 100%;
-			}
-
-			&:active{
-				&::after {
-					top: calc(100% + 12px);
+			@media (hover: hover) {
+				&:hover::after {
 					width: 100%;
 				}
+			}
+
+			&:active::after {
+				top: calc(100% + 12px);
+				width: 100%;
 			}
 
 			&::after {
@@ -93,12 +93,14 @@ header {
 		display: flex;
 	}
 
-	&:is(:hover,:focus-visible) {
-		cursor: pointer;
+	@media (hover: hover) {
+		&:hover {
+			cursor: pointer;
 
-		> svg {
-			fill: rgb(var(--g-color-accent));
-			scale: 130%;
+			> svg {
+				fill: rgb(var(--g-color-accent));
+				scale: 130%;
+			}
 		}
 	}
 
@@ -144,12 +146,15 @@ header {
 			color: rgb(var(--g-color-accent));
 		}
 
-		&:hover {
-			color: rgb(var(--g-color-accent));
-			letter-spacing: .05em;
+		@media (hover: hover) {
+			&:hover {
+				color: rgb(var(--g-color-accent));
+				letter-spacing: .05em;
+			}
 		}
 
 		&:active {
+			color: rgb(var(--g-color-accent));
 			scale: 85%;
 		}
 	}

@@ -28,9 +28,11 @@ footer {
 			white-space: nowrap;
 			transition-duration: .3s, 0s;
 
-			&:hover {
-				border-bottom-color: rgb(var(--g-color-accent));
-				cursor: pointer;
+			@media (hover: hover) {
+				&:hover {
+					border-bottom-color: rgb(var(--g-color-accent));
+					cursor: pointer;
+				}
 			}
 
 			&:active {
