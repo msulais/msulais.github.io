@@ -121,7 +121,7 @@ header {
 	max-width: 100%;
 	height: 100dvh;
 	max-height: 100dvh;
-	background-color: rgba(21, 21, 21, 0.92);
+	background-color: rgba(var(--g-color-background), 0.92);
 	border: none;
 	padding: 32px;
 	flex-direction: column;
