@@ -7,7 +7,10 @@ const blocks = []
 /** @type number | null */
 let resize_timeout_id = null
 
-function reposition_blocks(){
+/**
+ * @param {boolean} opacity
+ */
+function reposition_blocks(p_opacity=true){
 	const screen_width = document.body.clientWidth
 	const screen_height = window.innerHeight
 
@@ -51,7 +54,7 @@ function reposition_blocks(){
 		prohibited_area.push([left, left + rect.width, top, top + rect.height])
 		block.style.setProperty('top', top + 'px')
 		block.style.setProperty('left', left + 'px')
-		block.style.setProperty('opacity', opacity + '')
+		if (p_opacity) block.style.setProperty('opacity', opacity + '')
 	}
 }
 
@@ -77,7 +80,6 @@ function generate_blocks(){
 				transform: ['translateY(0px)', 'translateY(-16px)', 'translateY(0px)']}, {
 				duration: 1000,
 				easing,
-				delay: i * 50,
 				delay: Math.min(Math.floor(Math.random() * deleted_blocks.length) * 50, 1000)
 			}).finished.then(() => block.remove())
 			++i
@@ -126,7 +128,7 @@ function init_window_resize_listener(){
 
 		resize_timeout_id = setTimeout(() => {
 			generate_blocks()
-			reposition_blocks()
+			reposition_blocks(false)
 			resize_timeout_id = null
 		}, 300)
 	})
@@ -141,7 +143,7 @@ function init_visibility_change() {
 }
 
 generate_blocks()
-reposition_blocks()
+reposition_blocks(false)
 init_window_resize_listener()
 init_document_click()
 init_visibility_change()
