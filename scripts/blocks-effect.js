@@ -1,6 +1,9 @@
 (() => {
 'use strict'
 
+const max_block_size = 108
+const min_block_size = 36
+
 /** @type HTMLDivElement[] */
 const blocks = []
 
@@ -20,6 +23,14 @@ function reposition_blocks(p_opacity=true){
 	 */
 	const prohibited_area = []
 	for (const block of blocks) {
+		const width = Math.floor(
+			min_block_size
+			+ Math.random()
+			* (max_block_size - min_block_size)
+		)
+		const height = width
+		block.style.setProperty('width', width + 'px')
+		block.style.setProperty('height', height + 'px')
 		const rect = block.getBoundingClientRect()
 		let [top, left] = [0, 0]
 		let is_prohibited = false
@@ -63,8 +74,6 @@ function generate_blocks(){
 	const screen_width = document.body.clientWidth
 	const screen_height = window.innerHeight
 	const size = screen_height * screen_width
-	const max_block_size = 108
-	const min_block_size = 36
 	const block_count = Math.floor(size / 40000)
 
 	if (blocks.length > block_count) {
