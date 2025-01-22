@@ -4,7 +4,7 @@ footer {
 	justify-content: space-between;
 	padding: 16px 20px;
 
-	@media (max-width: 550px) {
+	@media (max-width: 650px) {
 		flex-direction: column;
 		align-items: stretch;
 	}
@@ -39,5 +39,23 @@ footer {
 				border-bottom-color: rgb(var(--g-color-accent));
 			}
 		}
+	}
+}
+
+#f-theme > span {
+	> [data-theme] {
+		display: none;
+	}
+
+	:root[data-theme="system"] & > [data-theme="system"] {
+		display: inline-block;
+	}
+
+	:root[data-theme="light"] & > [data-theme="light"] {
+		display: inline-block;
+	}
+
+	:root[data-theme="dark"] & > [data-theme="dark"] {
+		display: inline-block;
 	}
 }

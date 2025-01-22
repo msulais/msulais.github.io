@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="system">
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,7 @@
 </head>
 
 <body>
+    <script src="/scripts/ahead/theme.js"></script>
     <header>
         <button id="h-logo-btn">
             <div id="logo">
@@ -124,6 +125,21 @@
     <footer>
         <div>&copy; <span id="f-year">0000</span> Muhammad Sulais</div>
         <p>
+            <button id="f-theme"><span style="display:inline-block;">
+                <span data-theme="system">
+                    <span lang="en">System theme</span>
+                    <span lang="id">Tema sistem</span>
+                </span>
+                <span data-theme="light">
+                    <span lang="en">Light</span>
+                    <span lang="id">Terang</span>
+                </span>
+                <span data-theme="dark">
+                    <span lang="en">Dark</span>
+                    <span lang="id">Gelap</span>
+                </span>
+            </span></button>
+            /
             <button id="f-language"><span style="display:inline-block;">English</span></button>
             /
             <a href="https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8">Yogyakarta</a>
@@ -138,6 +154,7 @@
     <script src="/scripts/footer/time.js"></script>
     <script src="/scripts/footer/year.js"></script>
     <script src="/scripts/footer/language.js"></script>
+    <script src="/scripts/footer/theme.js"></script>
     <script src="/scripts/blocks-effect.js"></script>
 </body>
 
