@@ -59,7 +59,7 @@ function reposition_blocks(p_opacity=true){
 				if (is_prohibited) break check
 			}
 			++j
-		} while (is_prohibited && j < 100)
+		} while (is_prohibited && j < 0xf)
 
 		const opacity = Math.min(Math.max(Math.random(), .25), .85)
 		prohibited_area.push([left, left + rect.width, top, top + rect.height])
