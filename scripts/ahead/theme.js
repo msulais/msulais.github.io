@@ -1,4 +1,6 @@
 (() => {
+'use strict'
+
 function init_theme(){
 	const theme = localStorage.getItem('theme')
 	if (!theme || !['system', 'light', 'dark'].includes(theme)) return
