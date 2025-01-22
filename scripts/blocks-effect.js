@@ -5,7 +5,7 @@ const max_block_size = 108
 const min_block_size = 36
 
 /** @type HTMLDivElement[] */
-const blocks = []
+let blocks = []
 
 /** @type number | null */
 let resize_timeout_id = null
@@ -77,11 +77,8 @@ function generate_blocks(){
 	const block_count = Math.floor(size / 40000)
 
 	if (blocks.length > block_count) {
-		const remove_count = blocks.length - block_count
-		const deleted_blocks = blocks.splice(
-			blocks.length - remove_count - 1,
-			blocks.length
-		)
+		const deleted_blocks = blocks.slice(block_count)
+		blocks = blocks.slice(0, block_count)
 
 		let i = 0
 		for (const block of deleted_blocks) {
@@ -100,17 +97,16 @@ function generate_blocks(){
 			+ Math.random()
 			* (max_block_size - min_block_size)
 		)
-		const added_blocks = []
 		for (let i = 0; i < block_count - blocks.length; i++) {
 			const div = document.createElement('div')
 			div.classList.add('block-effect')
+
 			const size = get_random_size()
 			div.style.setProperty('width', size + 'px')
 			div.style.setProperty('height', size + 'px')
 			div.style.setProperty('opacity', '0')
 			document.body.append(div)
 			blocks.push(div)
-			added_blocks.push(div)
 
 			const opacity = Math.min(Math.max(Math.random(), .25), .85)
 			div.animate({
