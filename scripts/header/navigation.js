@@ -1,10 +1,10 @@
 (() => {
 'use strict'
-let selected_route = '/'
+let selected_route = '#'
 let selected_page = document.querySelector('main>[data-selected]')
 
 /**
- * @param {`/${string}`} pathname
+ * @param {`#${string}`} pathname
  * @param {boolean} animation
  */
 function update_page(pathname, animation=true){
@@ -46,18 +46,18 @@ function init_navigation(){
 		return
 	}
 
-	update_page(hash.replace('#', '/'), false)
+	update_page(hash, false)
 	document.querySelector('main').classList.remove('no-view')
 }
 
 function init_custom_btn() {
 	const mp_home_btn = document.getElementById('mp-home-btn')
-	mp_home_btn.onclick = () => update_page('/contact')
+	mp_home_btn.onclick = () => update_page('#contact')
 
 	const h_logo_btn = document.getElementById('h-logo-btn')
 
 	// el.onclick already in used in logo.js
-	h_logo_btn.addEventListener('click', () => update_page('/'))
+	h_logo_btn.addEventListener('click', () => update_page('#'))
 }
 
 function init_dialog_navigation() {
