@@ -130,8 +130,17 @@ function init_window_resize_listener(){
 	})
 }
 
+function init_visibility_change() {
+	document.addEventListener('visibilitychange', () => {
+		if (document.hidden) return
+
+		reposition_blocks()
+	})
+}
+
 generate_blocks()
 reposition_blocks()
 init_window_resize_listener()
 init_document_click()
+init_visibility_change()
 })()
