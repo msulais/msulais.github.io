@@ -11,12 +11,14 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-a,
-button,
-:is(a, button) * {
+button, button * {
     user-select: none;
     text-decoration: none;
     -webkit-user-select: none;
+}
+
+a, a * {
+    text-decoration: none;
 }
 
 img {
