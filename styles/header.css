@@ -134,6 +134,7 @@ header {
 
 	&:not([open]) {
 		top: -100%;
+		visibility: hidden;
 	}
 
 	> a {
