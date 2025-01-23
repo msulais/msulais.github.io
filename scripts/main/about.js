@@ -33,7 +33,8 @@ function init_details(){
 			if (is_open) {
 				div.animate({
 					opacity: [1, 0],
-					height: [rect.height + 'px', '0px']
+					height: [rect.height + 'px', '0px'],
+					paddingTop: ['32px', '0px']
 				}, animation_options).finished.then(() => {
 					animation_done = true
 					detail.open = false
@@ -42,7 +43,8 @@ function init_details(){
 				detail.open = true
 				div.animate({
 					opacity: [0, 1],
-					height: ['0px', rect.height + 'px']
+					height: ['0px', rect.height + 'px'],
+					paddingTop: ['0px', '32px']
 				}, animation_options).finished.then(() => animation_done = true)
 			}
 		})
