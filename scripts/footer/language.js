@@ -18,7 +18,7 @@ function update_language(lang) {
 	const rect_old = btn.getBoundingClientRect()
 	let finished_span = 0
 	for (const span of spans) {
-		span.animate({opacity: [1, 0], scale: [1, .85]}, animation_options).onfinish = () => {
+		span.animate({opacity: [1, 0], translate: ['0 0', '0px -.5em']}, animation_options).onfinish = () => {
 			++finished_span
 			if (finished_span < spans.length) return
 
@@ -34,7 +34,7 @@ function update_language(lang) {
 				animation_options
 			)
 			for (const s of spans) {
-				s.animate({opacity: [0, 1], scale: [.85, 1]}, animation_options)
+				s.animate({opacity: [0, 1], translate: ['0px -.5em', '0 0']}, animation_options)
 			}
 		}
 	}
