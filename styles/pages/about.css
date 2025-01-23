@@ -1,0 +1,132 @@
+[data-page-target="#about"] {
+	padding: 32px;
+
+	> h2 {
+		font-size: 64px;
+		max-width: min(100%, 840px);
+		text-wrap: balance;
+	}
+
+	> details {
+		padding: 32px;
+		border-radius: 4px;
+		background-color: rgba(var(--g-color-surface), 0.85);
+		max-width: min(100%, 840px);
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+
+		&[open] {
+			> summary {
+				margin-bottom: 32px;
+				> svg {
+					rotate: 180deg;
+				}
+			}
+		}
+
+		> summary {
+			list-style: none;
+			font-size: 32px;
+			font-weight: bold;
+			display: flex;
+			gap: 16px;
+			align-items: center;
+			justify-content: space-between;
+			user-select: none;
+			transition-duration: .2s;
+
+			@media (hover: hover) {
+				&:hover {
+					cursor: pointer;
+					color: rgb(var(--g-color-accent));
+
+					> svg {
+						fill: rgb(var(--g-color-accent));
+					}
+				}
+			}
+
+			&:active {
+				border-bottom-color: rgb(var(--g-color-accent));
+				color: rgb(var(--g-color-accent));
+
+				> svg {
+					fill: rgb(var(--g-color-accent));
+				}
+			}
+
+			> svg {
+				transition-duration: .2s;
+				min-width: 36px;
+				min-height: 36px;
+			}
+		}
+
+		> div {
+			overflow: hidden;
+
+			> p {
+				margin: 0;
+				padding: 0px;
+				border-radius: 0px;
+				background-color: transparent;
+
+				&:not(:last-child) {
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+
+	& p {
+		font-size: 20px;
+		margin: 32px 0;
+		max-width: min(100%, 840px);
+		text-align: justify;
+		border-radius: 4px;
+		background-color: rgba(var(--g-color-background), 0.85);
+	}
+
+	& a {
+		display: inline-block;
+		position: relative;
+		top: 0px;
+		transition-duration: .2s;
+
+		@media (hover: hover) {
+			&:hover {
+				color: rgb(var(--g-color-accent));
+
+				&::after {
+					width: 50%;
+				}
+			}
+		}
+
+		&:active {
+			color: rgb(var(--g-color-accent));
+			top: -0.2em;
+
+			&::after {
+				width: 50%;
+				top: calc(100% + 0.2em);
+			}
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			border-radius: 1px;
+			background-color: rgb(var(--g-color-accent));
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			transition-duration: .2s;
+		}
+	}
+}

@@ -23,11 +23,13 @@
     <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="/styles/block-effect.css">
     <link rel="stylesheet" href="/styles/pages/index.css">
+    <link rel="stylesheet" href="/styles/pages/about.css">
 </head>
 
 <body>
     <script src="/scripts/ahead/theme.js"></script>
     <script src="/scripts/ahead/language.js"></script>
+    <div id="g-route-listener"></div>
     <header>
         <button id="h-logo-btn">
             <div id="logo">
@@ -109,16 +111,152 @@
         </div>
         <div data-page-target="#about">
             <h2>
-                <span lang="en">About me</span>
-                <span lang="id">Tentang saya</span>
+                <span lang="en">About Me</span>
+                <span lang="id">Tentang Saya</span>
             </h2>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. In omnis illo iste architecto illum! Qui error dignissimos dolor ut minima officia quis, facere corrupti culpa voluptatem vitae odio aliquam. Amet!
-                Tempore ad ex error quae, adipisci quisquam dolor velit, voluptate delectus asperiores alias ea illum cupiditate porro fugit, dolorum minus in dignissimos molestias consequuntur? Quod dolores repellendus deserunt nobis magni?
-                Velit aspernatur reprehenderit quod aperiam error molestias labore! Fugit, natus adipisci. Laborum fugit ea alias ad culpa nostrum commodi, eos repudiandae ipsum optio possimus rem omnis quisquam incidunt quis architecto.
-                Voluptatum, quam eaque doloribus corporis, provident iste ut deserunt, modi consectetur officiis rem esse nihil. Consequatur tempora saepe corrupti nostrum, adipisci labore hic, animi perspiciatis dolorum sapiente ipsam numquam ut.
-                Cumque esse quo illo adipisci. Quae voluptas deserunt ad, non excepturi exercitationem, corporis eveniet officia minima dignissimos fugiat odit. Alias, animi blanditiis? Harum optio distinctio voluptatem nulla at atque perspiciatis.
+                <span lang="en">
+                    Hi, I'm Muhammad Sulais, a Front-End Web Developer with a passion for UI/UX
+                    design. With <span class="mp-about-year">3</span> years of experience, I've honed my skills in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, and
+                    <a href="https://www.typescriptlang.org/">TypeScript</a>/<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>. I specialize in frameworks like <a href="https://react.dev/">React</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://www.solidjs.com/">SolidJS</a>,
+                    <a href="https://svelte.dev/">Svelte</a> + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, and <a href="https://astro.build/">Astro</a>, and I'm proficient in using <a href="https://figma.com/">Figma</a> for design.
+                </span>
+                <span lang="id">
+                    Hai, saya Muhammad Sulais, seorang Pengembang Web Front-End yang memiliki minat
+                    pada desain UI/UX. Dengan pengalaman <span class="mp-about-year">3</span> tahun, saya telah mengasah keterampilan
+                    saya dalam <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, dan <a href="https://www.typescriptlang.org/">TypeScript</a>/<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>. Saya ahli dalam framework/library
+                    seperti <a href="https://react.dev/">React</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://www.solidjs.com/">SolidJS</a>, <a href="https://svelte.dev/">Svelte</a> + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, dan <a href="https://astro.build/">Astro</a>, dan saya ahli dalam
+                    menggunakan <a href="https://figma.com/">Figma</a> untuk desain.
+                </span>
             </p>
+            <details>
+                <summary>
+                    <span lang="en">My journey in Front-End development</span>
+                    <span lang="id">Perjalanku kepada Front-End development</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M440-313v-447q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v447l196-196q12-12 28-11.5t28 12.5q11 12 11.5 28T772-452L508-188q-6 6-13 8.5t-15 2.5q-8 0-15-2.5t-13-8.5L188-452q-11-11-11-27.5t11-28.5q12-12 28.5-12t28.5 12l195 195Z"/></svg>
+                </summary>
+                <div>
+                    <p>
+                        <span lang="en">
+                            My journey in Front-End development started in high school. When COVID-19
+                            hit in 2020, I found myself with ample free time at home. Searching for
+                            something interesting to do, I stumbled upon <a href="https://www.python.org/">Python</a>. My initial thought was
+                            to build desktop applications, so I created a stopwatch timer app using
+                            <a href="https://docs.python.org/3/library/tkinter.html">TKinter</a>. However, I soon realized that <a href="https://www.python.org/">Python</a> was too slow for application
+                            development, so I switched to <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> for its speed.
+                        </span>
+                        <span lang="id">
+                            Perjalanan saya di dunia Front-End development dimulai saat masih di SMA.
+                            Ketika COVID-19 melanda di tahun 2020, saya punya banyak waktu luang di
+                            rumah. Untuk mencari kegiatan menarik, saya mulai mengenal <a href="https://www.python.org/">Python</a>. Awalnya,
+                            saya mencoba membuat aplikasi desktop dengan <a href="https://docs.python.org/3/library/tkinter.html">TKinter</a>, seperti stopwatch
+                            timer. Namun, saya cepat menyadari bahwa <a href="https://www.python.org/">Python</a> terlalu lambat untuk
+                            pengembangan aplikasi, sehingga saya beralih ke <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> karena kecepatannya.
+                        </span>
+                    </p>
+                    <p>
+                        <span lang="en">
+                            Unfortunately, my progress with <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> stalled as I couldn't find an ideal GUI
+                            for building desktop apps. Everything was challenging to set up, even the
+                            <a href="https://learn.microsoft.com/en-us/windows/win32/api/">Win32 API</a>. My laptop also wasn't powerful enough to run <a href="https://visualstudio.microsoft.com/">Visual Studio</a>
+                            smoothly, further complicating matters.
+                        </span>
+                        <span lang="id">
+                            Sayangnya, kemajuan saya dengan <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> terhambat karena sulit menemukan GUI
+                            yang ideal untuk membuat aplikasi desktop. Semua opsi yang ada, termasuk
+                            <a href="https://learn.microsoft.com/en-us/windows/win32/api/">Win32 API</a>, terlalu rumit untuk diatur. Selain itu, laptop saya tidak cukup
+                            kuat untuk menjalankan <a href="https://visualstudio.microsoft.com/">Visual Studio</a> dengan lancar, yang menambah tingkat
+                            kesulitan.
+                        </span>
+                    </p>
+                    <p>
+                        <span lang="en">
+                            In January 2021, I gave up on desktop app development due to the lack of a
+                            straightforward advertising platform. Instead, I turned to mobile app
+                            development and began learning <a href="https://flutter.dev/">Flutter</a> to build <a href="https://www.android.com/">Android</a> apps. I developed
+                            around 10 apps and uploaded them to the <a href="https://play.google.com/">Google Play Store</a>. However, in
+                            October 2024 I had to hide them all due to Google's new policy requiring my
+                            personal address to be displayed. If you're curious, you can still check out
+                            my developer account <a href="https://play.google.com/store/apps/dev?id=8392660381147653639">here</a>.
+                        </span>
+                        <span lang="id">
+                            Pada Januari 2021, saya berhenti mengembangkan aplikasi desktop karena tidak
+                            ada platform periklanan yang sederhana. Sebagai gantinya, saya beralih ke
+                            pengembangan aplikasi seluler dengan <a href="https://flutter.dev/">Flutter</a> untuk membuat aplikasi <a href="https://www.android.com/">Android</a>.
+                            Saya berhasil mengembangkan sekitar 10 aplikasi dan mengunggahnya ke <a href="https://play.google.com/">Google
+                            Play Store</a>. Namun, pada Oktober 2024, saya harus menyembunyikan semua
+                            aplikasi tersebut karena kebijakan baru Google yang mengharuskan alamat
+                            pribadi ditampilkan. Jika kamu penasaran, kamu masih bisa melihat akun
+                            pengembang saya di <a href="https://play.google.com/store/apps/dev?id=8392660381147653639">sini</a>.
+                        </span>
+                    </p>
+                    <p>
+                        <span lang="en">
+                            In August 2022, I purchased a domain called <a href="http://redmerah.com">redmerah.com</a> and hosting
+                            services. Initially unaware that web development could be learned without
+                            such investments, I decided to make the most of it. I learned <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>,
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>, and <a href="https://expressjs.com/">Express</a> for back-end development, and built an article web
+                            app. This marked my first foray into web app development. Since then, I've
+                            explored various web frameworks and libraries like <a href="https://react.dev/">React</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://nuxt.com/">Nuxt</a>,
+                            <a href="https://nextjs.org/">Next.js</a>, <a href="https://svelte.dev/">Svelte</a>, <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, <a href="https://www.solidjs.com/">SolidJS</a>, <a href="https://start.solidjs.com/">SolidStart</a>, and <a href="https://astro.build/">Astro</a>. Among these, I
+                            frequently use <a href="https://react.dev/">React</a> (industry standard), <a href="https://svelte.dev/">Svelte</a> + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> (great for
+                            multi-page apps), <a href="https://www.solidjs.com/">SolidJS</a> (incredibly fast), and <a href="https://astro.build/">Astro</a> (for static site
+                            generation).
+                        </span>
+                        <span lang="id">
+                            Pada Agustus 2022, saya membeli domain bernama <a href="http://redmerah.com">redmerah.com</a> dan layanan
+                            hosting. Awalnya, saya tidak tahu bahwa pengembangan web bisa dipelajari
+                            tanpa investasi seperti itu, jadi saya memutuskan untuk memanfaatkannya
+                            sebaik mungkin. Saya mulai mempelajari <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>, dan <a href="https://expressjs.com/">Express</a>
+                            untuk pengembangan back-end, serta membangun aplikasi web artikel. Ini
+                            menandai langkah pertama saya dalam pengembangan aplikasi web. Sejak saat
+                            itu, saya telah menjelajahi berbagai framework dan library web seperti
+                            <a href="https://react.dev/">React</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://nuxt.com/">Nuxt</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://svelte.dev/">Svelte</a>, <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, <a href="https://www.solidjs.com/">SolidJS</a>, <a href="https://start.solidjs.com/">SolidStart</a>, dan <a href="https://astro.build/">Astro</a>.
+                            Di antara semuanya, saya sering menggunakan <a href="https://react.dev/">React</a> (standar industri), <a href="https://svelte.dev/">Svelte</a>
+                            + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> (hebat untuk aplikasi multi-halaman), <a href="https://www.solidjs.com/">SolidJS</a> (super kencang), dan
+                            <a href="https://astro.build/">Astro</a> (untuk generasi situs statis).
+                        </span>
+                    </p>
+                    <p>
+                        <span lang="en">
+                            One key tool I rely on is <a href="https://figma.com/">Figma</a> for prototyping any app I create, including
+                            layouts, icons, logos, and overall design.
+                        </span>
+                        <span lang="id">
+                            Salah satu alat utama yang saya andalkan adalah <a href="https://figma.com/">Figma</a> untuk membuat
+                            prototipe aplikasi apa pun yang saya buat, termasuk tata letak, ikon, logo,
+                            dan desain keseluruhan.
+                        </span>
+                    </p>
+                    <p>
+                        <span lang="en">
+                            While my primary focus is on web UI/UX, I'm eager to expand my skill set to
+                            include desktop and mobile app development, bringing cohesive and innovative
+                            designs across multiple platforms.
+                        </span>
+                        <span lang="id">
+                            Walaupun fokus utama saya adalah pada UI/UX web, saya sangat ingin
+                            memperluas keterampilan saya untuk mencakup pengembangan aplikasi desktop
+                            dan seluler, sehingga bisa menghadirkan desain yang kohesif dan inovatif di
+                            berbagai platform.
+                        </span>
+                    </p>
+                </div>
+            </details>
+            <details>
+                <summary>
+                    <span lang="en">What I can do</span>
+                    <span lang="id">Apa yang bisa saya lakukan</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M440-313v-447q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v447l196-196q12-12 28-11.5t28 12.5q11 12 11.5 28T772-452L508-188q-6 6-13 8.5t-15 2.5q-8 0-15-2.5t-13-8.5L188-452q-11-11-11-27.5t11-28.5q12-12 28.5-12t28.5 12l195 195Z"/></svg>
+                </summary>
+            </details>
+            <details open>
+                <summary>
+                    <span lang="en">Stay connected with me</span>
+                    <span lang="id">Tetap terhubung dengan saya</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M440-313v-447q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v447l196-196q12-12 28-11.5t28 12.5q11 12 11.5 28T772-452L508-188q-6 6-13 8.5t-15 2.5q-8 0-15-2.5t-13-8.5L188-452q-11-11-11-27.5t11-28.5q12-12 28.5-12t28.5 12l195 195Z"/></svg>
+                </summary>
+            </details>
         </div>
         <div data-page-target="#works"></div>
         <div data-page-target="#contact"></div>
@@ -159,6 +297,8 @@
     <script src="/scripts/footer/year.js"></script>
     <script src="/scripts/footer/language.js"></script>
     <script src="/scripts/footer/theme.js"></script>
+    <script src="/scripts/main/year.js"></script>
+    <script src="/scripts/main/about.js"></script>
     <script src="/scripts/blocks-effect.js"></script>
 </body>
 
