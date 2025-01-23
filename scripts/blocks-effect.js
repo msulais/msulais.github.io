@@ -121,8 +121,12 @@ function generate_blocks(){
 	}
 }
 
-function init_document_click(){
-	document.addEventListener('click', () => reposition_blocks())
+function init_route_change(){
+	const route = document.getElementById('g-route-listener')
+	route.addEventListener(
+		'custom:routechange',
+		() => reposition_blocks()
+	)
 }
 
 function init_window_resize_listener(){
@@ -150,6 +154,6 @@ function init_visibility_change() {
 generate_blocks()
 reposition_blocks(false)
 init_window_resize_listener()
-init_document_click()
+init_route_change()
 init_visibility_change()
 })()

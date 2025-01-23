@@ -1,5 +1,6 @@
 (() => {
 'use strict'
+const route_listener = document.getElementById('g-route-listener')
 let selected_route = '#'
 let selected_page = document.querySelector('main>[data-selected]')
 
@@ -22,6 +23,7 @@ function update_page(pathname, animation=true){
 	selected_page = document.querySelector(`main>div[data-page-target="${CSS.escape(pathname)}"]`)
 	selected_page.setAttribute('data-selected', '')
 	pathname = pathname.replace('/', '#').replace(/^#$/g, '')
+	route_listener.dispatchEvent(new CustomEvent('custom:routechange'))
 	if (pathname == '') pathname = '/'
 	window.history.pushState({}, "", pathname)
 }
