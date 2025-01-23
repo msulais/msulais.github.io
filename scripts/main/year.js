@@ -19,7 +19,11 @@ function init_experience_year(){
 	const diff_year = date_diff_in_days(start_date, current_date) / 365.25
 
 	for (const span of document.querySelectorAll('.mp-about-year')) {
-		span.textContent = Number.parseFloat(diff_year.toFixed(2)) + ''
+		const year = Number.parseFloat(diff_year.toFixed(2))
+		span.innerHTML = [
+			`<span lang="en">${year}</span>`,
+			`<span lang="id">${year}</span>`.replaceAll('.', ',')
+		].join('')
 	}
 }
 
