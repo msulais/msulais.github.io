@@ -29,12 +29,13 @@ function init_details(){
 
 			const is_open = detail.open
 			const rect = div.getBoundingClientRect()
+			const small_screen = window.matchMedia('(max-width: 600px)').matches
 			animation_done = false
 			if (is_open) {
 				div.animate({
 					opacity: [1, 0],
 					height: [rect.height + 'px', '0px'],
-					paddingTop: ['32px', '0px']
+					paddingTop: [small_screen? '16px' : '32px', '0px']
 				}, animation_options).finished.then(() => {
 					animation_done = true
 					detail.open = false
@@ -44,7 +45,7 @@ function init_details(){
 				div.animate({
 					opacity: [0, 1],
 					height: ['0px', rect.height + 'px'],
-					paddingTop: ['0px', '32px']
+					paddingTop: ['0px', small_screen? '16px' : '32px']
 				}, animation_options).finished.then(() => animation_done = true)
 			}
 		})
