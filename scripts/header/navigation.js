@@ -1,8 +1,10 @@
 (() => {
 'use strict'
 const route_listener = document.getElementById('g-route-listener')
+const route_order = ['#', '#about', '#works', '#contact']
 let selected_route = '#'
 let selected_page = document.querySelector('main>[data-selected]')
+let is_animate = false
 
 /**
  * @param {`#${string}`} pathname
@@ -18,14 +20,43 @@ function update_page(pathname, animation=true){
 		el.setAttribute('data-selected', '')
 	}
 
-	selected_route = pathname
-	selected_page.removeAttribute('data-selected')
-	selected_page = document.querySelector(`main>div[data-page-target="${CSS.escape(pathname)}"]`)
-	selected_page.setAttribute('data-selected', '')
-	pathname = pathname.replace('/', '#').replace(/^#$/g, '')
-	route_listener.dispatchEvent(new CustomEvent('custom:routechange'))
-	if (pathname == '') pathname = '/'
-	window.history.pushState({}, "", pathname)
+	const callback = () => {
+		selected_page.removeAttribute('data-selected')
+		selected_page = document.querySelector(`main>div[data-page-target="${CSS.escape(pathname)}"]`)
+		selected_page.setAttribute('data-selected', '')
+		route_listener.dispatchEvent(new CustomEvent('custom:routechange'))
+		if (pathname == '') pathname = '#'
+		window.history.pushState({}, "", pathname)
+		selected_route = pathname
+	}
+
+	if (!animation) return callback()
+	if (is_animate) return
+
+	const animation_options = {
+		duration: 200,
+		easing: 'cubic-bezier(.15, 0, 0, 1)',
+	}
+	const prev_index = route_order.findIndex(v => v === selected_route)
+	const next_index = route_order.findIndex(v => v === pathname)
+	if (prev_index < 0 || next_index < 0) return
+
+	const reverse = prev_index > next_index
+	is_animate = true
+	document.body.style.setProperty('overflow', 'hidden')
+	selected_page.animate({
+		translate: ['0 0', reverse? '32px 0' : '-32px 0'],
+		opacity: [1, 0]
+	}, animation_options).finished.then(() => {
+		callback()
+		selected_page.animate({
+			translate: [reverse? '-32px 0' : '32px 0', '0 0'],
+			opacity: [0, 1]
+		}, animation_options).finished.then(() => {
+			is_animate = false
+			document.body.style.removeProperty('overflow')
+		})
+	})
 }
 
 function init_navigation_btn() {
