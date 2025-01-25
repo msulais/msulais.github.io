@@ -144,10 +144,15 @@ function init_window_resize_listener(){
 }
 
 function init_visibility_change() {
+	let timeout_id = null
 	document.addEventListener('visibilitychange', () => {
 		if (document.hidden) return
+		if (typeof timeout_id === 'number') clearTimeout(timeout_id)
 
-		reposition_blocks()
+		timeout_id = setTimeout(() => {
+			reposition_blocks()
+			timeout_id = null
+		}, 200)
 	})
 }
 
