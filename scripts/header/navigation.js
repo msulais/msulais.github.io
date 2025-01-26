@@ -43,7 +43,7 @@ function update_page(pathname, animation=true){
 
 	const reverse = prev_index > next_index
 	is_animate = true
-	document.body.style.setProperty('overflow', 'hidden')
+	document.body.style.setProperty('overflow-x', 'hidden')
 	selected_page.animate({
 		translate: ['0 0', reverse? '32px 0' : '-32px 0'],
 		opacity: [1, 0]
@@ -54,7 +54,7 @@ function update_page(pathname, animation=true){
 			opacity: [0, 1]
 		}, animation_options).finished.then(() => {
 			is_animate = false
-			document.body.style.removeProperty('overflow')
+			document.body.style.removeProperty('overflow-x')
 		})
 	})
 }
