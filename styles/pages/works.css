@@ -64,6 +64,20 @@
 					outline-offset: 4px;
 					cursor: pointer;
 					outline-color: rgb(var(--g-color-accent));
+
+					&:first-child > p {
+						bottom: 8px;
+						opacity: 1;
+						scale: 1;
+					}
+
+					@media (max-width: 700px) {
+						> p {
+							bottom: 8px;
+							opacity: 1;
+							scale: 1;
+						}
+					}
 				}
 			}
 
@@ -71,6 +85,20 @@
 				outline-offset: 4px;
 				cursor: pointer;
 				outline-color: rgb(var(--g-color-accent));
+
+				&:first-child > p {
+					bottom: 8px;
+					opacity: 1;
+					scale: 1;
+				}
+
+				@media (max-width: 700px) {
+					> p {
+						bottom: 8px;
+						opacity: 1;
+						scale: 1;
+					}
+				}
 			}
 
 			&:active {
@@ -83,6 +111,20 @@
 
 				> h3 {
 					opacity: 0;
+				}
+
+				&:first-child > p {
+					bottom: 8px;
+					opacity: 1;
+					scale: 1;
+				}
+
+				@media (max-width: 700px) {
+					> p {
+						bottom: 8px;
+						opacity: 1;
+						scale: 1;
+					}
 				}
 			}
 		}
@@ -100,6 +142,26 @@
 			position: absolute;
 			top: 8px;
 			left: 8px;
+			max-width: calc(100% - 16px);
+			padding: .2em .4em;
+			border-radius: 4px;
+			color: rgb(var(--g-color-on-surface-dark));
+			border: 1px solid rgba(var(--g-color-on-surface-dark), .08);
+			background-color: rgba(var(--g-color-surface-dark), .32);
+			backdrop-filter: blur(32px);
+			font-weight: normal;
+			font-size: 16px;
+			overflow: hidden;
+			white-space: nowrap;
+			transition-duration: .2s;
+		}
+
+		> p {
+			position: absolute;
+			opacity: 0;
+			bottom: 0px;
+			left: 8px;
+			scale: .85;
 			max-width: calc(100% - 16px);
 			padding: .2em .4em;
 			border-radius: 4px;

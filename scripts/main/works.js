@@ -179,6 +179,7 @@ function init_works() {
 		const container = document.createElement('div')
 		const header = document.createElement('h3')
 		const image = document.createElement('img')
+		const paragraph = document.createElement('p')
 		image.src = work.images[0]
 		image.alt = work.name
 		image.onload = () => {
@@ -204,6 +205,10 @@ function init_works() {
 		}
 		image.onerror = () => image.src = IMAGE_SOURCE_FALLBACK
 		header.textContent = work.name
+		paragraph.innerHTML = [
+			'<span lang="en">Click to see more</span>',
+			'<span lang="id">Klik untuk lebih detail</span>',
+		].join('')
 		container.tabIndex = 0
 		container.setAttribute('data-work-id', work.id) // mark for parent click
 		container.append(image, header, paragraph)
