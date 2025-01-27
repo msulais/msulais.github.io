@@ -8,24 +8,95 @@ const animation_options = {
 	easing: 'cubic-bezier(.15, 0, 0, 1)',
 }
 
-/** @type {{id: string, name: string, images: string[]}[]} */
+/** @type {{id: string, name: string, images: string[], link: string, description: {en: string, id: string}[], tags: string[]}[]} */
 const works = [
-	{ id: generate_id(), name: 'Redmerah',
-	  images: [
-		'https://cdn.pixabay.com/photo/2020/04/28/13/18/tulips-5104497_640.jpg'
-	] },
-	{ id: generate_id(), name: 'Artic',
-	  images: [
-		'https://cdn.pixabay.com/photo/2024/07/01/10/50/flycatcher-8864922_640.jpg'
-	] },
-	{ id: generate_id(), name: 'Portfolio',
-	  images: [
-		'https://cdn.pixabay.com/photo/2024/12/13/14/45/real-estate-9265386_640.jpg'
-	] },
-	{ id: generate_id(), name: 'UI/UX Design',
-	  images: [
-		'https://cdn.pixabay.com/photo/2020/09/19/23/42/architecture-5585737_640.jpg'
-	] },
+	{
+		id: generate_id(),
+		name: 'Redmerah',
+		images: [
+			'https://cdn.pixabay.com/photo/2020/04/28/13/18/tulips-5104497_640.jpg',
+			'https://cdn.pixabay.com/photo/2024/07/01/10/50/flycatcher-8864922_640.jpg',
+			'https://cdn.pixabay.com/photo/2024/12/13/14/45/real-estate-9265386_640.jpg',
+		],
+		description: [
+{
+en: `Redmerah is a web app I created to bring together a suite of powerful tools in one efficient
+platform—advanced calculator, task manager, color maker/picker/gradient generator, QR code
+reader/scanner, randomizer, and so much more. Frustrated with apps that charge fees for basic
+features, bombard users with ads, and have clunky interfaces that waste time, I wanted to build
+something different: fast, user-friendly, and free of unnecessary distractions.`,
+
+id: `Redmerah adalah aplikasi web yang saya buat untuk menghimpun serangkaian alat yang kuat dalam
+satu platform yang efisien. Alat-alatnya meliputi kalkulator canggih, manajer tugas, pembuat/pemilih
+warna/gradasi, pembaca/pemindai kode QR, pengacak, dan masih banyak lagi. Frustrasi dengan aplikasi
+yang mengenakan biaya untuk fitur dasar, membombardir pengguna dengan iklan, dan memiliki antarmuka
+yang tidak efisien, saya ingin membangun sesuatu yang berbeda: cepat, ramah pengguna, dan bebas dari
+gangguan yang tidak perlu.`
+},
+
+{
+en: `What sets Redmerah apart is that everything runs and saving the data locally in your browser
+using IndexedDB API, eliminating the need for server-side operations. This means lightning-fast
+performance without constant page reloads or waiting for server responses. Your data stays with you,
+enhancing both speed and privacy. Developed with Astro and SolidJS, every UI component is
+handcrafted by me without relying on third-party libraries, allowing for a seamless and intuitive
+user experience.`,
+
+id: `Yang membedakan Redmerah adalah semuanya berjalan dan menyimpan data secara lokal di browser
+Anda menggunakan API IndexedDB, menghilangkan kebutuhan untuk operasi sisi server. Ini berarti
+kinerja yang sangat cepat tanpa sering memuat ulang halaman atau menunggu respons server. Data Anda
+tetap berada pada perangkat Anda, meningkatkan kecepatan dan privasi. Dikembangkan dengan Astro dan
+SolidJS, setiap komponen UI dibuat secara manual oleh saya tanpa bergantung pada pustaka pihak
+ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
+}
+],
+		link: 'https://redmerah.com',
+		tags: [
+			'Astro',
+			'SolidJS',
+			'SCSS'
+		]
+	},
+	{
+		id: generate_id(),
+		name: 'Artic',
+		images: [
+			'https://cdn.pixabay.com/photo/2024/07/01/10/50/flycatcher-8864922_640.jpg'
+		],
+		description: [],
+		link: 'https://artic-delta.vercel.app',
+		tags: [
+			'Next.js',
+			'React',
+			'SCSS'
+		]
+	},
+	{
+		id: generate_id(),
+		name: 'Portfolio',
+	  	images: [
+			'https://cdn.pixabay.com/photo/2024/12/13/14/45/real-estate-9265386_640.jpg'
+		],
+		description: [],
+		link: 'https://msulais.github.io',
+		tags: [
+			'HTML',
+			'CSS',
+			'JavaScript'
+		]
+	},
+	{
+		id: generate_id(),
+		name: 'UI/UX Design',
+		images: [
+			'https://cdn.pixabay.com/photo/2020/09/19/23/42/architecture-5585737_640.jpg'
+		],
+		description: [],
+		link: 'https://pin.it/Mjb3lapM2',
+		tags: [
+			'Figma'
+		]
+	},
 ]
 
 /**@type HTMLDivElement[] */
@@ -35,16 +106,115 @@ const containers = []
 const div = document.querySelector('.mp-works-portfolio')
 let is_animating = false
 
-function handle_click() {
+/**@type HTMLDialogElement */
+const dialog = document.getElementById('mp-works-dialog')
+
+/**
+ * @param {string} id
+ */
+function show_detail_work(id) {
+	const work = works.find(v => v.id === id)
+	const images = dialog.firstElementChild.firstElementChild
+	const images_indicator = images.nextElementSibling
+	const h2 = images_indicator.nextElementSibling
+	const ul = h2.nextElementSibling
+
+	/**@type HTMLAnchorElement */
+	const a = ul.nextElementSibling
+	const description = a.nextElementSibling
+
+	/**@type HTMLImageElement[] */
+	const images_elements = []
+
+	/**@type HTMLButtonElement */
+	let selected_image_indicator
+
+	/**@type HTMLImageElement */
+	let selected_image
+
+	images.replaceChildren(...work.images.map((v, i) => {
+		const img = document.createElement('img')
+		img.src = v
+		images_elements.push(img)
+		if (i == 0) {
+			img.setAttribute('data-selected', '')
+			selected_image = img
+		}
+
+		return img
+	}))
+	images_indicator.replaceChildren(...work.images.map((v, i) => {
+		const button = document.createElement('button')
+		const img = document.createElement('img')
+		img.src = v
+		button.onclick = () => {
+			if (selected_image_indicator === button) return
+
+			selected_image_indicator.removeAttribute('data-selected')
+			button.setAttribute('data-selected', '')
+			selected_image_indicator = button
+			selected_image.animate({
+				scale: [1, .9],
+				opacity: [1, 0]
+			}, {...animation_options, duration: 200}).finished.then(() => {
+				selected_image.removeAttribute('data-selected')
+				selected_image = images_elements[i]
+				selected_image.setAttribute('data-selected', '')
+				selected_image.animate({
+					scale: [.9, 1],
+					opacity: [0, 1]
+				}, {...animation_options, duration: 200})
+			})
+		}
+		if (i === 0) {
+			button.setAttribute('data-selected', '')
+			selected_image_indicator = button
+		}
+
+		button.appendChild(img)
+		return button
+	}))
+	h2.textContent = work.name
+	ul.replaceChildren(...work.tags.map(v => {
+		const li = document.createElement('li')
+		li.textContent = v
+		return li
+	}))
+	a.href = work.link
+	description.replaceChildren(...work.description.map(d => {
+		const p = document.createElement('p')
+		const span_en = document.createElement('span')
+		span_en.lang = 'en'
+		span_en.textContent = d.en.replaceAll('\n', ' ')
+
+		const span_id = document.createElement('span')
+		span_id.lang = 'id'
+		span_id.textContent = d.id.replaceAll('\n', ' ')
+		p.append(span_en, span_id)
+		return p
+	}))
+	dialog.showModal()
+	dialog.animate({
+		scale: [.85, 1],
+		opacity: [0, 1]
+	}, animation_options)
+}
+
+/**
+ * @param {MouseEvent} ev
+ */
+function handle_click(ev) {
 	/**@type HTMLDivElement */
 	const active = document.activeElement
 	if (!active || !div.contains(active)) return
 
 	const children = div.children
 	const child1 = children.item(0)
+	const work_id = active.dataset.workId
 	if (!child1) return
 	if (child1 === active) {
-		// TODO: show details
+		ev.stopImmediatePropagation()
+		show_detail_work(work_id)
 		return
 	}
 
@@ -52,7 +222,8 @@ function handle_click() {
 	if (index < 0 || is_animating) return
 
 	if (window.matchMedia("(max-width: 700px)").matches) {
-		// TODO: show details
+		ev.stopImmediatePropagation()
+		show_detail_work(work_id)
 		return
 	}
 
@@ -215,5 +386,18 @@ function init_works() {
 	}
 }
 
+function init_work_dialog() {
+	document.addEventListener('click', ev => {
+		const is_clicked_inside = dialog !== ev.target
+		if (is_clicked_inside) return;
+
+		dialog.animate({
+			scale: [1, .85],
+			opacity: [1, 0]
+		}, animation_options).finished.then(() => dialog.close())
+	})
+}
+
 init_works()
+init_work_dialog()
 })()
