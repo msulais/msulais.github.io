@@ -25,6 +25,12 @@
 	display: flex;
 	margin-top: 32px;
 
+	@media (max-width: 700px) {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
 	> div {
 		border: none;
 		outline: 2px solid transparent;
@@ -35,8 +41,16 @@
 		height: 360px;
 		transition-duration: .2s;
 
+		@media (max-width: 700px) {
+			width: 100%;
+		}
+
 		&:not(:nth-child(4),:last-child) {
 			margin-right: 16px;
+
+			@media (max-width: 700px) {
+				margin-right: 0px;
+			}
 		}
 
 		&[data-none] {
@@ -103,9 +117,17 @@
 
 	> :nth-child(-n + 4):not(:first-child) {
 		width: 192px;
+
+		@media (max-width: 700px) {
+			width: 100%;
+		}
 	}
 
 	> :nth-child(n + 5) {
 		display: none;
+
+		@media (max-width: 700px) {
+			display: block;
+		}
 	}
 }

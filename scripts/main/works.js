@@ -83,6 +83,11 @@ function init_works() {
 		const index = [...children].findIndex(el => el === active)
 		if (index < 0 || is_animating) return
 
+		if (window.matchMedia("(max-width: 700px)").matches) {
+			// TODO: show details
+			return
+		}
+
 		is_animating = true
 		const non_active_width = children.item(1)?.clientWidth ?? NON_ACTIVE_WORK_WIDTH
 		const width_child1 = child1.clientWidth
