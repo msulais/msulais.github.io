@@ -59,6 +59,15 @@
 		}
 
 		&:not([data-none]){
+
+			@media (hover: none) and (min-width: 701px) {
+				&:first-child > p {
+					bottom: 8px;
+					opacity: 1;
+					scale: 1;
+				}
+			}
+
 			@media (hover: hover) {
 				&:hover {
 					outline-offset: 4px;
