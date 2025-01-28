@@ -396,6 +396,14 @@ function init_work_dialog() {
 			opacity: [1, 0]
 		}, animation_options).finished.then(() => dialog.close())
 	})
+
+	const close_dialog_btn = document.getElementById('mp-works-dialog-close')
+	close_dialog_btn.onclick = () => {
+		dialog.animate({
+			scale: [1, .85],
+			opacity: [1, 0]
+		}, animation_options).finished.then(() => dialog.close())
+	}
 }
 
 init_works()
