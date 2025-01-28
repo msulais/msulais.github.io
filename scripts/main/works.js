@@ -373,7 +373,7 @@ function init_works() {
 					d.remove()
 					if (i < skeletons.length - 1) return
 
-					div.append(...containers)
+					div.append(...containers.sort((a, b) => a.dataset.workId.localeCompare(b.dataset.workId)))
 					for (const c of containers) c.animate({
 						scale: [.85, 1],
 						opacity: [0, 1]
