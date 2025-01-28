@@ -2,7 +2,7 @@
 'use strict'
 const NON_ACTIVE_WORK_WIDTH = 192
 const MAX_WORKS_SHOW = 4
-const IMAGE_SOURCE_FALLBACK = 'https://cdn.pixabay.com/photo/2020/04/28/13/18/tulips-5104497_640.jpg'
+const IMAGE_SOURCE_FALLBACK = '/images/no-image.png'
 const animation_options = {
 	duration: 300,
 	easing: 'cubic-bezier(.15, 0, 0, 1)',
@@ -14,9 +14,10 @@ const works = [
 		id: generate_id(),
 		name: 'Redmerah',
 		images: [
-			'https://cdn.pixabay.com/photo/2020/04/28/13/18/tulips-5104497_640.jpg',
-			'https://cdn.pixabay.com/photo/2024/07/01/10/50/flycatcher-8864922_640.jpg',
-			'https://cdn.pixabay.com/photo/2024/12/13/14/45/real-estate-9265386_640.jpg',
+			'/images/works/redmerah/redmerah-cover.png',
+			'/images/works/redmerah/redmerah-1.png',
+			'/images/works/redmerah/redmerah-2.png',
+			'/images/works/redmerah/redmerah-3.png',
 		],
 		description: [
 {
@@ -61,7 +62,10 @@ ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
 		id: generate_id(),
 		name: 'Artic',
 		images: [
-			'https://cdn.pixabay.com/photo/2024/07/01/10/50/flycatcher-8864922_640.jpg'
+			'/images/works/artic/artic-cover.png',
+			'/images/works/artic/artic-1.png',
+			'/images/works/artic/artic-2.png',
+			'/images/works/artic/artic-3.png',
 		],
 		description: [],
 		link: 'https://artic-delta.vercel.app',
@@ -75,7 +79,10 @@ ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
 		id: generate_id(),
 		name: 'Portfolio',
 	  	images: [
-			'https://cdn.pixabay.com/photo/2024/12/13/14/45/real-estate-9265386_640.jpg'
+			'/images/works/portfolio/portfolio-cover.png',
+			'/images/works/portfolio/portfolio-1.png',
+			'/images/works/portfolio/portfolio-2.png',
+			'/images/works/portfolio/portfolio-3.png',
 		],
 		description: [],
 		link: 'https://msulais.github.io',
@@ -89,7 +96,7 @@ ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
 		id: generate_id(),
 		name: 'UI/UX Design',
 		images: [
-			'https://cdn.pixabay.com/photo/2020/09/19/23/42/architecture-5585737_640.jpg'
+			'/images/works/ui-ux-design/ui-ux-design-cover.png',
 		],
 		description: [],
 		link: 'https://pin.it/Mjb3lapM2',
