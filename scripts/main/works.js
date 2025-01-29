@@ -48,7 +48,7 @@ const works = [
 </p>
 <p>
 	<span lang="en">Key features:</span>
-	<span lang="id">Fitur utama</span>
+	<span lang="id">Fitur utama:</span>
 </p>
 <ul>
 	<li>
