@@ -502,8 +502,10 @@ function show_detail_work(id) {
 	/**@type HTMLButtonElement */
 	let selected_image_indicator
 
-	/**@type HTMLImageElement */
-	let selected_image
+	/**@type number */
+	let selected_image_index = 0
+
+	let is_image_animating = false
 
 	images.replaceChildren(...work.images.map((v, i) => {
 		const img = document.createElement('img')
@@ -511,7 +513,6 @@ function show_detail_work(id) {
 		images_elements.push(img)
 		if (i == 0) {
 			img.setAttribute('data-selected', '')
-			selected_image = img
 		}
 
 		return img
@@ -521,22 +522,29 @@ function show_detail_work(id) {
 		const img = document.createElement('img')
 		img.src = v
 		button.onclick = () => {
-			if (selected_image_indicator === button) return
+			if (selected_image_indicator === button || is_image_animating) return
 
 			selected_image_indicator.removeAttribute('data-selected')
 			button.setAttribute('data-selected', '')
 			selected_image_indicator = button
-			selected_image.animate({
-				scale: [1, .9],
-				opacity: [1, 0]
-			}, {...animation_options, duration: 200}).finished.then(() => {
-				selected_image.removeAttribute('data-selected')
-				selected_image = images_elements[i]
-				selected_image.setAttribute('data-selected', '')
-				selected_image.animate({
-					scale: [.9, 1],
-					opacity: [0, 1]
-				}, {...animation_options, duration: 200})
+			is_image_animating = true
+
+			let image = images_elements[selected_image_index]
+			const reverse = i < selected_image_index
+			const width = image.clientWidth
+			image.animate({
+				left: ['0px', reverse? width + 'px' : '0x'],
+				width: [width + 'px', '0px']
+			}, animation_options).finished.then(() => {
+				image.removeAttribute('data-selected')
+				selected_image_index = i
+				image = images_elements[selected_image_index]
+				image.setAttribute('data-selected', '')
+				const width = image.clientWidth
+				image.animate({
+					left: [reverse? '0x' : width + 'px', '0px'],
+					width: ['0px', width + 'px']
+				}, animation_options).finished.then(() => is_image_animating = false)
 			})
 		}
 		if (i === 0) {
@@ -556,9 +564,10 @@ function show_detail_work(id) {
 	a.href = work.link
 	description.innerHTML = work.description
 	dialog.showModal()
+	const height = dialog.clientHeight
 	dialog.animate({
-		scale: [.85, 1],
-		opacity: [0, 1]
+		top: ['100%', '50%'],
+		translate: ['-50% 0', '-50% -50%'],
 	}, animation_options)
 }
 
@@ -754,16 +763,24 @@ function init_work_dialog() {
 		if (is_clicked_inside) return;
 
 		dialog.animate({
-			scale: [1, .85],
-			opacity: [1, 0]
+			top: ['50%', '100%'],
+			translate: ['-50% -50%', '-50% 0'],
 		}, animation_options).finished.then(() => dialog.close())
 	})
+
+	dialog.oncancel = (ev) => {
+		ev.preventDefault()
+		dialog.animate({
+			top: ['50%', '100%'],
+			translate: ['-50% -50%', '-50% 0'],
+		}, animation_options).finished.then(() => dialog.close())
+	}
 
 	const close_dialog_btn = document.getElementById('mp-works-dialog-close')
 	close_dialog_btn.onclick = () => {
 		dialog.animate({
-			scale: [1, .85],
-			opacity: [1, 0]
+			top: ['50%', '100%'],
+			translate: ['-50% -50%', '-50% 0'],
 		}, animation_options).finished.then(() => dialog.close())
 	}
 }
