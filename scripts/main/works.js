@@ -564,7 +564,6 @@ function show_detail_work(id) {
 	a.href = work.link
 	description.innerHTML = work.description
 	dialog.showModal()
-	const height = dialog.clientHeight
 	dialog.animate({
 		top: ['100%', '50%'],
 		translate: ['-50% 0', '-50% -50%'],
