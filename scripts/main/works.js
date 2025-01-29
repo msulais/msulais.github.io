@@ -8,7 +8,7 @@ const animation_options = {
 	easing: 'cubic-bezier(.15, 0, 0, 1)',
 }
 
-/** @type {{id: string, name: string, images: string[], link: string, description: {en: string, id: string}[], tags: string[]}[]} */
+/** @type {{id: string, name: string, images: string[], link: string, description: string, tags: string[]}[]} */
 const works = [
 	{
 		id: generate_id(),
@@ -19,38 +19,98 @@ const works = [
 			'/images/works/redmerah/redmerah-2.png',
 			'/images/works/redmerah/redmerah-3.png',
 		],
-		description: [
-{
-en: `Redmerah is a web app I created to bring together a suite of powerful tools in one efficient
-platform—advanced calculator, task manager, color maker/picker/gradient generator, QR code
-reader/scanner, randomizer, and so much more. Frustrated with apps that charge fees for basic
-features, bombard users with ads, and have clunky interfaces that waste time, I wanted to build
-something different: fast, user-friendly, and free of unnecessary distractions.`,
-
-id: `Redmerah adalah aplikasi web yang saya buat untuk menghimpun serangkaian alat yang kuat dalam
-satu platform yang efisien. Alat-alatnya meliputi kalkulator canggih, manajer tugas, pembuat/pemilih
-warna/gradasi, pembaca/pemindai kode QR, pengacak, dan masih banyak lagi. Frustrasi dengan aplikasi
-yang mengenakan biaya untuk fitur dasar, membombardir pengguna dengan iklan, dan memiliki antarmuka
-yang tidak efisien, saya ingin membangun sesuatu yang berbeda: cepat, ramah pengguna, dan bebas dari
-gangguan yang tidak perlu.`
-},
-
-{
-en: `What sets Redmerah apart is that everything runs and saving the data locally in your browser
-using IndexedDB API, eliminating the need for server-side operations. This means lightning-fast
-performance without constant page reloads or waiting for server responses. Your data stays with you,
-enhancing both speed and privacy. Developed with Astro and SolidJS, every UI component is
-handcrafted by me without relying on third-party libraries, allowing for a seamless and intuitive
-user experience.`,
-
-id: `Yang membedakan Redmerah adalah semuanya berjalan dan menyimpan data secara lokal di browser
-Anda menggunakan API IndexedDB, menghilangkan kebutuhan untuk operasi sisi server. Ini berarti
-kinerja yang sangat cepat tanpa sering memuat ulang halaman atau menunggu respons server. Data Anda
-tetap berada pada perangkat Anda, meningkatkan kecepatan dan privasi. Dikembangkan dengan Astro dan
-SolidJS, setiap komponen UI dibuat secara manual oleh saya tanpa bergantung pada pustaka pihak
-ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
-}
-],
+		description: `<p>
+	<span lang="en">
+		Redmerah is a comprehensive web application designed to bring together a suite of powerful
+		tools into one efficient and user-friendly platform. From an advanced calculator and todo
+		tasks to a color maker, gradient generator, QR code reader/scanner, randomizer, and more,
+		Redmerah simplifies everyday tasks without the clutter and frustrations of traditional apps.
+	</span>
+	<span lang="id">
+		Redmerah adalah aplikasi web komprehensif yang dirancang untuk menyatukan serangkaian alat
+		canggih ke dalam satu platform yang efisien dan ramah pengguna. Mulai dari kalkulator
+		canggih, tugas todo, pembuat warna, generator gradien, pembaca/pemindai QR code, pengacak,
+		dan banyak lagi, Redmerah menyederhanakan tugas sehari-hari tanpa kekacauan dan frustrasi
+		yang sering ditemui pada aplikasi tradisional.
+	</span>
+</p>
+<p>
+	<span lang="en">
+		Frustrated with apps that charge fees for basic features, overwhelm users with ads, or have
+		clunky interfaces, I built Redmerah to be different: <strong>fast, intuitive, and free of
+			unnecessary distractions.</strong>
+	</span>
+	<span lang="id">
+		Frustrasi dengan aplikasi yang mengenakan biaya untuk fitur dasar, membanjiri pengguna
+		dengan iklan, atau memiliki antarmuka yang kikuk, saya membangun Redmerah untuk menjadi
+		berbeda: <strong>cepat, intuitif, dan bebas dari gangguan yang tidak perlu.</strong>
+	</span>
+</p>
+<p>
+	<span lang="en">Key features:</span>
+	<span lang="id">Fitur utama</span>
+</p>
+<ul>
+	<li>
+		<span lang="en">
+			<strong>Local-First Approach:</strong> All data is stored and processed locally in your
+			browser using the <strong>IndexedDB API</strong>, ensuring lightning-fast performance
+			and enhanced privacy. No server-side operations mean no delays or constant page reloads.
+		</span>
+		<span lang="id">
+			<strong>Pendekatan Lokal:</strong> Semua data disimpan dan diproses secara lokal di
+			browser Anda menggunakan <strong>API IndexedDB</strong>, memastikan kinerja yang sangat
+			cepat dan privasi yang lebih baik. Tanpa operasi di sisi server berarti tidak ada
+			penundaan atau pemuatan halaman yang terus menerus.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Handcrafted UI:</strong> Every component is custom-built by me using
+			<strong>Astro</strong> and <strong>SolidJS</strong>, with no reliance on third-party
+			libraries. This results in a seamless, lightweight, and highly intuitive user
+			experience.
+		</span>
+		<span lang="id">
+			<strong>Antarmuka Buatan Tangan:</strong>
+			Setiap komponen dibuat secara khusus oleh saya menggunakan <strong>Astro</strong> dan
+			<strong>SolidJS</strong>, tanpa ketergantungan pada pustaka pihak ketiga. Hasilnya
+			adalah pengalaman pengguna yang mulus, ringan, dan sangat intuitif.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Versatile Tools:</strong> A growing collection of utilities, including:
+		</span>
+		<span lang="id">
+			<strong>Alat Serbaguna:</strong> Koleksi utilitas yang terus berkembang, termasuk:
+		</span>
+		<ul>
+			<li>Advanced calculator</li>
+			<li>TODO Tasks</li>
+			<li>Color maker, picker, and gradient generator</li>
+			<li>QR code reader/scanner</li>
+			<li>Randomizer</li>
+			<li>
+				<span lang="en">And much more!</span>
+				<span lang="id">Dan banyak lagi!</span>
+			</li>
+		</ul>
+	</li>
+</ul>
+<p>
+	<span lang="en">
+		Redmerah is a testament to my passion for creating efficient, user-centric applications that
+		prioritize performance, privacy, and simplicity. It’s a project born out of the desire to
+		solve real-world problems and provide a better alternative to bloated, ad-ridden tools.
+	</span>
+	<span lang="id">
+		Redmerah adalah bukti hasrat saya dalam menciptakan aplikasi efisien yang berfokus pada
+		pengguna dengan mengutamakan kinerja, privasi, dan kesederhanaan. Ini adalah proyek yang
+		lahir dari keinginan untuk memecahkan masalah dunia nyata dan memberikan alternatif yang
+		lebih baik dari alat yang penuh dengan iklan dan tidak efisien.
+	</span>
+</p>`,
 		link: 'https://redmerah.com',
 		tags: [
 			'Astro',
@@ -67,7 +127,93 @@ ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
 			'/images/works/artic/artic-2.png',
 			'/images/works/artic/artic-3.png',
 		],
-		description: [],
+		description: `<p>
+	<span lang="en">
+		Artic is a fully responsive and modern blog/magazine template built with
+		<strong>Next.js</strong>, designed to cater to content creators, news platforms, and online
+		publications. This template offers a sleek and user-friendly interface with a focus on
+		customization and functionality.
+	</span>
+	<span lang="id">
+		Artic adalah template blog/majalah yang sepenuhnya responsif dan modern, dibangun dengan
+		<strong>Next.js</strong>, dirancang untuk memenuhi kebutuhan pembuat konten, platform
+		berita, dan publikasi online. Template ini menawarkan antarmuka yang elegan dan ramah
+		pengguna dengan fokus pada kustomisasi dan fungsionalitas.
+	</span>
+</p>
+<p>
+	<span lang="en">Key features:</span>
+	<span lang="id">Fitur utama:</span>
+</p>
+<ul>
+	<li>
+		<span lang="en">
+			<strong>Dark/Light Theme:</strong> Seamless theme switching for enhanced user
+			experience.
+		</span>
+		<span lang="id">
+			<strong>Tema Gelap/Terang:</strong> Pergantian tema yang mulus untuk pengalaman pengguna
+			yang lebih baik.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Advanced Search & Filters:</strong> Robust search functionality with filtering
+			options for categories and tags.
+		</span>
+		<span lang="id">
+			<strong>Pencarian & Filter Lanjutan:</strong> Fungsi pencarian yang kuat dengan opsi
+			penyaringan berdasarkan kategori dan tag.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Dynamic Content Organization:</strong> Easily categorize and tag posts for
+			better content discoverability.
+		</span>
+		<span lang="id">
+			<strong>Pengaturan Konten Dinamis:</strong> Mudah mengategorikan dan menandai postingan
+			untuk meningkatkan penemuan konten.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Responsive Design:</strong> Optimized for all devices, ensuring a smooth
+			experience across desktops, tablets, and mobile devices.
+		</span>
+		<span lang="id">
+			<strong>Desain Responsif:</strong> Dioptimalkan untuk semua perangkat, memastikan
+			pengalaman yang lancar di desktop, tablet, dan perangkat seluler.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Modern UI/UX:</strong> Clean and intuitive design tailored for readability and
+			engagement.
+		</span>
+		<span lang="id">
+			<strong>UI/UX Modern:</strong> Desain bersih dan intuitif yang dirancang untuk
+			keterbacaan dan keterlibatan.
+		</span>
+	</li>
+</ul>
+<p>
+	<span lang="en">
+		This project was initially developed as a premium template for sale. However, it was not
+		accepted by certain template marketplaces due to their specific guidelines or requirements.
+		Despite this, Artic remains a showcase of my expertise in front-end development, Next.js,
+		and creating reusable, modular components. It’s a testament to my ability to build scalable,
+		feature-rich web applications with a focus on user experience.
+	</span>
+	<span lang="id">
+		Proyek ini awalnya dikembangkan sebagai template premium untuk dijual. Namun, template ini
+		tidak diterima oleh beberapa pasar template tertentu karena pedoman atau persyaratan khusus
+		mereka. Meskipun demikian, Artic tetap menjadi bukti keahlian saya dalam pengembangan
+		front-end, Next.js, dan pembuatan komponen yang dapat digunakan kembali serta modular.
+		Ini adalah bukti kemampuan saya dalam membangun aplikasi web yang kaya fitur dan dapat
+		diskalakan dengan fokus pada pengalaman pengguna.
+	</span>
+</p>`,
 		link: 'https://artic-delta.vercel.app',
 		tags: [
 			'Next.js',
@@ -84,7 +230,91 @@ ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
 			'/images/works/portfolio/portfolio-2.png',
 			'/images/works/portfolio/portfolio-3.png',
 		],
-		description: [],
+		description: `<p>
+	<span lang="en">
+		This portfolio website is a reflection of my skills and expertise as a front-end web
+		developer. Built entirely from scratch using vanilla <strong>HTML</strong>,
+		<strong>CSS</strong>, and <strong>JavaScript</strong>, it showcases my ability to create
+		clean, responsive, and interactive web experiences without relying on any third-party
+		libraries or frameworks.
+	</span>
+	<span lang="id">
+		Website portofolio ini merupakan cerminan dari keterampilan dan keahlian saya sebagai
+		seorang front-end web developer. Dibangun sepenuhnya dari awal menggunakan
+		<strong>HTML</strong>, <strong>CSS</strong>, dan <strong>JavaScript</strong> murni,
+		portofolio ini menunjukkan kemampuan saya dalam menciptakan pengalaman web yang bersih,
+		responsif, dan interaktif tanpa bergantung pada library atau framework pihak ketiga.
+	</span>
+</p>
+<p>
+	<span lang="en">Key features:</span>
+	<span lang="id">Fitur utama:</span>
+</p>
+<ul>
+	<li>
+		<span lang="en">
+			<strong>Custom Animations & Transitions:</strong> All animations and transitions are
+			handcrafted using <strong>JavaScript</strong> and <strong>CSS</strong>, demonstrating my
+			deep understanding of front-end development and creativity in enhancing user experience.
+		</span>
+		<span lang="id">
+			<strong>Animasi & Transisi Kustom:</strong> Semua animasi dan transisi dibuat secara
+			manual menggunakan <strong>JavaScript</strong> dan <strong>CSS</strong>, menunjukkan
+			pemahaman mendalam saya tentang pengembangan front-end dan kreativitas dalam
+			meningkatkan pengalaman pengguna.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Multi-Theme Support:</strong> Includes a dynamic theme switcher with options for
+			<strong>light, dark, and system theme</strong>, ensuring a personalized and visually
+			appealing experience for every user.
+		</span>
+		<span lang="id">
+			<strong>Dukungan Multi-Tema:</strong> Dilengkapi dengan fitur pengganti tema dinamis
+			yang mencakup opsi <strong>tema terang</strong>, <strong>gelap</strong>, dan
+			<strong>tema sistem</strong>, memastikan pengalaman yang personal dan menarik secara
+			visual untuk setiap pengguna.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Bilingual Support:</strong> supports <strong>English</strong> and
+			<strong>Indonesian</strong> languages, showcasing my ability to create multilingual and
+			accessible web applications.
+		</span>
+		<span lang="id">
+			<strong>Dukungan Bahasa Ganda:</strong> Mendukung penuh bahasa <strong>Inggris</strong>
+			dan <strong>Indonesia</strong>, menampilkan kemampuan saya dalam membuat aplikasi web
+			yang multilingual dan mudah diakses.
+		</span>
+	</li>
+	<li>
+		<span lang="en">
+			<strong>Responsive Design:</strong> Optimized for all devices, providing a seamless
+			experience across desktops, tablets, and mobile devices.
+		</span>
+		<span lang="id">
+			<strong>Desain Responsif:</strong> Dioptimalkan untuk semua perangkat, memberikan
+			pengalaman yang mulus di desktop, tablet, dan ponsel.
+		</span>
+	</li>
+</ul>
+<p>
+	<span lang="en">
+		This portfolio is more than just a showcase of my work—it’s a testament to my proficiency in
+		front-end development, attention to detail, and commitment to delivering high-quality,
+		user-centric web solutions. It’s designed to give visitors a clear understanding of my
+		skills, projects, and what I bring to the table as a developer.
+	</span>
+	<span lang="id">
+		Portofolio ini lebih dari sekadar pameran karya saya—ini adalah bukti kemahiran saya dalam
+		pengembangan front-end, perhatian terhadap detail, dan komitmen untuk memberikan solusi web
+		berkualitas tinggi yang berfokus pada pengguna. Portofolio ini dirancang untuk memberikan
+		pemahaman yang jelas tentang keterampilan, proyek, dan nilai yang saya tawarkan sebagai
+		seorang developer.
+	</span>
+</p>`,
 		link: 'https://msulais.github.io',
 		tags: [
 			'HTML',
@@ -98,7 +328,143 @@ ketiga, memungkinkan pengalaman pengguna yang mulus dan intuitif.`
 		images: [
 			'/images/works/ui-ux-design/ui-ux-design-cover.png',
 		],
-		description: [],
+		description: `<p>
+	<span lang="en">
+		As a front-end developer with a passion for design, I use <strong>Figma</strong> to create
+		UI/UX designs that range from fun, conceptual ideas to practical interfaces for apps I
+		develop. This section showcases my creativity and ability to think through user experiences,
+		whether I’m designing for a real-world project or simply exploring new ideas for fun.
+	</span>
+	<span lang="id">
+		Sebagai seorang front-end developer yang memiliki passion dalam desain, saya menggunakan
+		<strong>Figma</strong> untuk membuat desain UI/UX yang mencakup berbagai ide konsep yang
+		menyenangkan hingga antarmuka praktis untuk aplikasi yang saya kembangkan. Bagian ini
+		menampilkan kreativitas dan kemampuan saya dalam memikirkan pengalaman pengguna, baik saat
+		mendesain untuk proyek nyata maupun sekadar mengeksplorasi ide-ide baru untuk
+		bersenang-senang.
+	</span>
+</p>
+<p>
+	<span lang="en">Key highlights:</span>
+	<span lang="id">Highlight utama:</span>
+</p>
+<ul>
+	<li>
+		<span lang="en">
+			<strong>A Mix of Concepts & Real Projects:</strong> Some designs are playful
+			explorations of app ideas I may not develop due to complexity, while others are
+			practical blueprints for apps I’ve built or plan to build.
+		</span>
+		<span lang="id">
+			<strong>Kombinasi Konsep & Proyek Nyata:</strong> Beberapa desain adalah eksplorasi
+			kreatif dari ide aplikasi yang mungkin tidak saya kembangkan karena kompleksitasnya,
+			sementara yang lain adalah desain praktis untuk aplikasi yang sudah atau akan saya buat.
+		</span>
+	</li>
+	<li>
+		<span lang="en"><strong>Tools & Workflow:</strong></span>
+		<span lang="id"><strong>Alat & Workflow</strong></span>
+		<ul>
+			<li>
+				<span lang="en">
+					<strong>Figma:</strong> Used for creating wireframes, mockups, and interactive
+					prototypes.
+				</span>
+				<span lang="id">
+					<strong>Figma:</strong> Digunakan untuk membuat wireframe, mockup, dan prototipe
+					interaktif.
+				</span>
+			</li>
+			<li>
+				<span lang="en">
+					<strong>Design Systems:</strong> I establish consistent typography, color
+					palettes, and reusable components to maintain visual coherence.
+				</span>
+				<span lang="id">
+					<strong>Sistem Desain:</strong> Saya menetapkan tipografi, palet warna, dan
+					komponen yang dapat digunakan kembali untuk menjaga konsistensi visual.
+				</span>
+			</li>
+			<li>
+				<span lang="en">
+					<strong>Developer-Friendly Designs:</strong> When designing for real projects,
+					I ensure the designs are practical to implement and optimized for performance.
+				</span>
+				<span lang="id">
+					<strong>Desain yang Ramah Developer:</strong> Saat mendesain untuk proyek nyata,
+					saya memastikan desain tersebut praktis untuk diimplementasikan dan dioptimalkan
+					untuk performa.
+				</span>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<span lang="en"><strong>Focus Areas:</strong></span>
+		<span lang="id"><strong>Fokus Utama</strong></span>
+		<ul>
+			<li>
+				<span lang="en">
+					<strong>Responsive Design:</strong> Interfaces designed to work flawlessly
+					across devices, from mobile to desktop.
+				</span>
+				<span lang="id">
+					<strong>Desain Responsif:</strong> Antarmuka yang dirancang untuk bekerja dengan
+					mulus di berbagai perangkat, dari mobile hingga desktop.
+				</span>
+			</li>
+			<li>
+				<span lang="en">
+					<strong>User-Centered Approach:</strong> Designs that prioritize usability,
+					accessibility, and intuitive navigation.
+				</span>
+				<span lang="id">
+					<strong>Pendekatan Berpusat pada Pengguna:</strong> Desain yang mengutamakan
+					kegunaan, aksesibilitas, dan navigasi yang intuitif.
+				</span>
+			</li>
+			<li>
+				<span lang="en">
+					<strong>Microinteractions:</strong> Thoughtful animations and transitions that
+					enhance user engagement and bring interfaces to life.
+				</span>
+				<span lang="id">
+					<strong>Microinteractions:</strong> Animasi dan transisi yang dipikirkan dengan
+					matang untuk meningkatkan keterlibatan pengguna dan menghidupkan antarmuka.
+				</span>
+			</li>
+		</ul>
+	</li>
+</ul>
+<p>
+	<span lang="en">
+		Designing for fun allows me to experiment with new ideas, push creative boundaries, and stay
+		inspired. At the same time, designing for real projects ensures I can bridge the gap between
+		design and development, creating cohesive and polished digital experiences. This balance of
+		creativity and practicality is what makes my work unique.
+	</span>
+	<span lang="id">
+		Mendesain untuk kesenangan memungkinkan saya bereksperimen dengan ide-ide baru, mendorong
+		batas kreativitas, dan tetap terinspirasi. Sementara itu, mendesain untuk proyek nyata
+		memastikan saya dapat menjembatani kesenjangan antara desain dan pengembangan, menciptakan
+		pengalaman digital yang kohesif dan berkualitas. Keseimbangan antara kreativitas dan
+		kepraktisan inilah yang membuat karya saya unik.
+	</span>
+</p>
+<p>
+	<span lang="en">
+		This collection is a testament to my love for design and my ability to think through user
+		experiences, whether I’m building an app or just exploring a cool concept. Explore my
+		designs to see how I combine creativity, technical skills, and user empathy to bring ideas
+		to life—even if they’re just for fun!
+	</span>
+	<span lang="id">
+		Koleksi ini adalah bukti kecintaan saya pada desain dan kemampuan saya dalam memikirkan
+		pengalaman pengguna, baik saat membangun aplikasi maupun sekadar mengeksplorasi konsep yang
+		keren. Jelajahi desain saya untuk melihat bagaimana saya menggabungkan kreativitas,
+		keterampilan teknis, dan empati pengguna untuk menghidupkan ide—bahkan jika itu hanya untuk
+		bersenang-senang!
+	</span>
+</p>`,
 		link: 'https://pin.it/Mjb3lapM2',
 		tags: [
 			'Figma'
@@ -188,18 +554,7 @@ function show_detail_work(id) {
 		return li
 	}))
 	a.href = work.link
-	description.replaceChildren(...work.description.map(d => {
-		const p = document.createElement('p')
-		const span_en = document.createElement('span')
-		span_en.lang = 'en'
-		span_en.textContent = d.en.replaceAll('\n', ' ')
-
-		const span_id = document.createElement('span')
-		span_id.lang = 'id'
-		span_id.textContent = d.id.replaceAll('\n', ' ')
-		p.append(span_en, span_id)
-		return p
-	}))
+	description.innerHTML = work.description
 	dialog.showModal()
 	dialog.animate({
 		scale: [.85, 1],
