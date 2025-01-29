@@ -49,12 +49,6 @@ function init_details(){
 				}, animation_options).finished.then(() => animation_done = true)
 			}
 		})
-
-		detail.addEventListener('toggle', ev => {
-			if (detail.open) {
-				return
-			}
-		})
 	}
 }
 
