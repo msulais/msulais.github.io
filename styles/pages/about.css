@@ -1,6 +1,10 @@
 [data-page-target="#about"] {
 	padding: 32px;
 
+	@media (max-width: 600px) {
+		padding: 32px 16px;
+	}
+
 	> h2 {
 		font-size: 64px;
 		max-width: min(100%, 840px);
