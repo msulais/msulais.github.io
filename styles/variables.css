@@ -23,6 +23,26 @@
 	--g-transition-spring       : cubic-bezier(.15, 0, 0, 1);
 	--g-transition-spring-bounce: cubic-bezier(.15, 0, 0, 2);
 
+	--g-elevation1: 0px  2px  4px rgba(0, 0, 0, 0.04);
+	--g-elevation2: 0px  4px  8px rgba(0, 0, 0, 0.16);
+	--g-elevation3: 0px  8px 16px rgba(0, 0, 0, 0.16);
+	--g-elevation4: 0px 16px 32px rgba(0, 0, 0, 0.16);
+	--g-elevation5: 0px 32px 64px rgba(0, 0, 0, 0.16);
+
+	--g-opacity0: .02;
+	--g-opacity1: .04;
+	--g-opacity2: .08;
+	--g-opacity3: .12;
+	--g-opacity4: .16;
+	--g-opacity5: .20;
+	--g-opacity-inv0: .92;
+	--g-opacity-inv1: .84;
+	--g-opacity-inv2: .76;
+	--g-opacity-inv3: .68;
+	--g-opacity-inv4: .60;
+	--g-opacity-inv5: .52;
+	--g-opacity-border: .32;
+
 	background-color: rgb(var(--g-color-background));
 	color: rgb(var(--g-color-on-surface));
 	font-family: var(--g-font-family-sans-serif);
@@ -34,18 +54,30 @@
 		--g-color-surface: var(--g-color-surface-dark);
 		--g-color-on-surface: var(--g-color-on-surface-dark);
 
+		--g-elevation1: 0px  2px  4px rgba(0, 0, 0, .12);
+		--g-elevation2: 0px  4px  8px rgba(0, 0, 0, .28);
+		--g-elevation3: 0px  8px 16px rgba(0, 0, 0, .28);
+		--g-elevation4: 0px 16px 32px rgba(0, 0, 0, .28);
+		--g-elevation5: 0px 32px 64px rgba(0, 0, 0, .28);
+
 		color-scheme: dark;
 	}
 
 	&[data-theme="system"] {
 		@media (prefers-color-scheme: dark) {
-				--g-color-background: var(--g-color-background-dark);
-				--g-color-accent: var(--g-color-accent-dark);
-				--g-color-on-accent: var(--g-color-on-accent-dark);
-				--g-color-surface: var(--g-color-surface-dark);
-				--g-color-on-surface: var(--g-color-on-surface-dark);
+			--g-color-background: var(--g-color-background-dark);
+			--g-color-accent: var(--g-color-accent-dark);
+			--g-color-on-accent: var(--g-color-on-accent-dark);
+			--g-color-surface: var(--g-color-surface-dark);
+			--g-color-on-surface: var(--g-color-on-surface-dark);
 
-				color-scheme: dark;
+			--g-elevation1: 0px  2px  4px rgba(0, 0, 0, .12);
+			--g-elevation2: 0px  4px  8px rgba(0, 0, 0, .28);
+			--g-elevation3: 0px  8px 16px rgba(0, 0, 0, .28);
+			--g-elevation4: 0px 16px 32px rgba(0, 0, 0, .28);
+			--g-elevation5: 0px 32px 64px rgba(0, 0, 0, .28);
+
+			color-scheme: dark;
 		}
 	}
 }

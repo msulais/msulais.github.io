@@ -17,412 +17,152 @@
     <link rel="stylesheet" href="/styles/variables.css">
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/language.css">
-    <link rel="stylesheet" href="/styles/logo.css">
+    <link rel="stylesheet" href="/styles/theme.css">
     <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/theme.css">
-    <link rel="stylesheet" href="/styles/block-effect.css">
-    <link rel="stylesheet" href="/styles/pages/index.css">
-    <link rel="stylesheet" href="/styles/pages/about.css">
-    <link rel="stylesheet" href="/styles/pages/works.css">
-    <link rel="stylesheet" href="/styles/pages/contact.css">
 </head>
 
 <body>
-    <script src="/scripts/g-id.js"></script>
-    <script src="/scripts/ahead/theme.js"></script>
-    <script src="/scripts/ahead/language.js"></script>
-    <div id="g-route-listener"></div>
     <header>
-        <button id="h-logo-btn">
-            <div id="logo">
-                <div></div>
-                <div></div>
-                <div></div>
+        <img src="/images/muhammad_sulais.jpg" alt="Muhammad Sulais Photo Selfie">
+        <div class="h-header">
+            <h1>Front-End<br>Web Developer</h1>
+            <div class="h-skills">
+                <img src="/logos/html.svg" alt="HTML logo">
+                <img src="/logos/css.svg" alt="CSS logo">
+                <img src="/logos/javascript.svg" alt="JavaScript logo">
+                <img src="/logos/solid.svg" alt="SolidJS logo">
+                <img src="/logos/react.svg" alt="React lovo">
+                <img src="/logos/svelte.svg" alt="Svelte logo">
+                <img src="/logos/vue.svg" alt="Vue logo">
+                <img src="/logos/figma.svg" alt="Figma logo">
             </div>
-            <span>Muhammad&nbsp;</span>Sulais
-        </button>
-        <nav id="h-navigation">
-            <a href="#" data-selected>
-                <span lang="en">Home</span>
-                <span lang="id">Beranda</span>
-            </a>
-            /
-            <a href="#about">
-                <span lang="en">About</span>
-                <span lang="id">Tentang</span>
-            </a>
-            /
-            <a href="#works">
-                <span lang="en">Works</span>
-                <span lang="id">Karya</span>
-            </a>
-            /
-            <a href="#contact">
-                <span lang="en">Contact</span>
-                <span lang="id">Hubungi</span>
-            </a>
-        </nav>
-        <button id="h-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))">
-                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
-            </svg>
-        </button>
-        <dialog id="h-dialog">
-            <button id="h-dialog-close">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-            </button>
-            <a href="#" data-selected>
-                <span lang="en">Home</span>
-                <span lang="id">Beranda</span>
-            </a>
-            <a href="#about">
-                <span lang="en">About</span>
-                <span lang="id">Tentang</span>
-            </a>
-            <a href="#works">
-                <span lang="en">Works</span>
-                <span lang="id">Karya</span>
-            </a>
-            <a href="#contact">
-                <span lang="en">Contact</span>
-                <span lang="id">Hubungi</span>
-            </a>
-        </dialog>
+            <p><strong>Muhammad Sulais</strong> • <a href="https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8">Yogyakarta, Indonesia</a> <a href="https://time.is/GMT+7">(GMT+7)</a></p>
+            <div class="h-actions">
+                <a href="mailto:muh.sulais@gmail.com">
+                    <span data-state="false">Contact me</span>
+                    <span data-state="true">muh.sulais@gmail.com</span>
+                </a>
+                <a href="https://msulais.github.io/www.linkedin.com/in/muhammad-sulais-a39a36256">
+                    <img src="/logos/linkedin.svg" alt="LinkedIn logo">
+                </a>
+            </div>
+        </div>
     </header>
-    <main class="no-view">
-        <div data-page-target="#" data-selected>
-            <h1>
-                <span lang="en">Crafting user-friendly and visually appealing web experiences.</span>
-                <span lang="id">Menciptakan pengalaman web yang ramah pengguna dan menarik secara visual.</span>
-            </h1>
-            <p>
-                <span lang="en">
-                    Together with <strong style="color:#EF652A">HTML</strong>, <strong style="color:#1C88C7;">CSS</strong>, and our beloved <strong style="color:#F7DF1E;">JavaScript</strong>.
-                </span>
-                <span lang="id">
-                    Bersama dengan <strong style="color:#EF652A">HTML</strong>, <strong style="color:#1C88C7;">CSS</strong>, and tercinta kita <strong style="color:#F7DF1E;">JavaScript</strong>.
-                </span>
-            </p>
-            <button id="mp-home-btn">
-                <span data-state="1">Front-End Web Developer</span>
-                <span data-state="2">
-                    <span lang="en">Contact me</span>
-                    <span lang="id">Hubungi saya</span>
-                </span>
+    <main>
+        <div
+            role="tablist"
+            aria-label="Options"
+            id='m-tabs-id'>
+            <button
+                role="tab"
+                tabindex="0"
+                aria-selected="true"
+                aria-controls="about"
+                id="tab-about-id">
+                About
             </button>
+            <button
+                role="tab"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="works"
+                id="tab-works-id">
+                Works
+            </button>
+            <button
+                role="tab"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="contact"
+                id="tab-contact-id">
+                Contact
+            </button>
+            <div aria-hidden="true"></div>
         </div>
-        <div data-page-target="#about">
-            <h2>
-                <span lang="en">About Me</span>
-                <span lang="id">Tentang Saya</span>
-            </h2>
-            <p>
-                <span lang="en">
-                    Hi, I'm Muhammad Sulais, a Front-End Web Developer with a passion for UI/UX
-                    design. With <span class="mp-about-year">3</span> years of experience, I've honed my skills in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, and
-                    <a href="https://www.typescriptlang.org/">TypeScript</a>/<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>. I specialize in frameworks like <a href="https://react.dev/">React</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://www.solidjs.com/">SolidJS</a>,
-                    <a href="https://svelte.dev/">Svelte</a> + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, and <a href="https://astro.build/">Astro</a>, and I'm proficient in using <a href="https://figma.com/">Figma</a> for design.
-                </span>
-                <span lang="id">
-                    Hai, saya Muhammad Sulais, seorang Pengembang Web Front-End yang memiliki minat
-                    pada desain UI/UX. Dengan pengalaman <span class="mp-about-year">3</span> tahun, saya telah mengasah keterampilan
-                    saya dalam <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, dan <a href="https://www.typescriptlang.org/">TypeScript</a>/<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>. Saya ahli dalam framework/library
-                    seperti <a href="https://react.dev/">React</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://www.solidjs.com/">SolidJS</a>, <a href="https://svelte.dev/">Svelte</a> + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, dan <a href="https://astro.build/">Astro</a>, dan saya ahli dalam
-                    menggunakan <a href="https://figma.com/">Figma</a> untuk desain.
-                </span>
-            </p>
-            <details>
-                <summary>
-                    <span lang="en">My journey in Front-End development</span>
-                    <span lang="id">Perjalanku kepada Front-End development</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M440-313v-447q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v447l196-196q12-12 28-11.5t28 12.5q11 12 11.5 28T772-452L508-188q-6 6-13 8.5t-15 2.5q-8 0-15-2.5t-13-8.5L188-452q-11-11-11-27.5t11-28.5q12-12 28.5-12t28.5 12l195 195Z"/></svg>
-                </summary>
-                <div>
-                    <p>
-                        <span lang="en">
-                            My journey in Front-End development started in high school. When COVID-19
-                            hit in 2020, I found myself with ample free time at home. Searching for
-                            something interesting to do, I stumbled upon <a href="https://www.python.org/">Python</a>. My initial thought was
-                            to build desktop applications, so I created a stopwatch timer app using
-                            <a href="https://docs.python.org/3/library/tkinter.html">TKinter</a>. However, I soon realized that <a href="https://www.python.org/">Python</a> was too slow for application
-                            development, so I switched to <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> for its speed.
-                        </span>
-                        <span lang="id">
-                            Perjalanan saya di dunia Front-End development dimulai saat masih di SMA.
-                            Ketika COVID-19 melanda di tahun 2020, saya punya banyak waktu luang di
-                            rumah. Untuk mencari kegiatan menarik, saya mulai mengenal <a href="https://www.python.org/">Python</a>. Awalnya,
-                            saya mencoba membuat aplikasi desktop dengan <a href="https://docs.python.org/3/library/tkinter.html">TKinter</a>, seperti stopwatch
-                            timer. Namun, saya cepat menyadari bahwa <a href="https://www.python.org/">Python</a> terlalu lambat untuk
-                            pengembangan aplikasi, sehingga saya beralih ke <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> karena kecepatannya.
-                        </span>
-                    </p>
-                    <p>
-                        <span lang="en">
-                            Unfortunately, my progress with <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> stalled as I couldn't find an ideal GUI
-                            for building desktop apps. Everything was challenging to set up, even the
-                            <a href="https://learn.microsoft.com/en-us/windows/win32/api/">Win32 API</a>. My laptop also wasn't powerful enough to run <a href="https://visualstudio.microsoft.com/">Visual Studio</a>
-                            smoothly, further complicating matters.
-                        </span>
-                        <span lang="id">
-                            Sayangnya, kemajuan saya dengan <a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> terhambat karena sulit menemukan GUI
-                            yang ideal untuk membuat aplikasi desktop. Semua opsi yang ada, termasuk
-                            <a href="https://learn.microsoft.com/en-us/windows/win32/api/">Win32 API</a>, terlalu rumit untuk diatur. Selain itu, laptop saya tidak cukup
-                            kuat untuk menjalankan <a href="https://visualstudio.microsoft.com/">Visual Studio</a> dengan lancar, yang menambah tingkat
-                            kesulitan.
-                        </span>
-                    </p>
-                    <p>
-                        <span lang="en">
-                            In January 2021, I gave up on desktop app development due to the lack of a
-                            straightforward advertising platform. Instead, I turned to mobile app
-                            development and began learning <a href="https://flutter.dev/">Flutter</a> to build <a href="https://www.android.com/">Android</a> apps. I developed
-                            around 10 apps and uploaded them to the <a href="https://play.google.com/">Google Play Store</a>. However, in
-                            October 2024 I had to hide them all due to Google's new policy requiring my
-                            personal address to be displayed. If you're curious, you can still check out
-                            my developer account <a href="https://play.google.com/store/apps/dev?id=8392660381147653639">here</a>.
-                        </span>
-                        <span lang="id">
-                            Pada Januari 2021, saya berhenti mengembangkan aplikasi desktop karena tidak
-                            ada platform periklanan yang sederhana. Sebagai gantinya, saya beralih ke
-                            pengembangan aplikasi seluler dengan <a href="https://flutter.dev/">Flutter</a> untuk membuat aplikasi <a href="https://www.android.com/">Android</a>.
-                            Saya berhasil mengembangkan sekitar 10 aplikasi dan mengunggahnya ke <a href="https://play.google.com/">Google
-                            Play Store</a>. Namun, pada Oktober 2024, saya harus menyembunyikan semua
-                            aplikasi tersebut karena kebijakan baru Google yang mengharuskan alamat
-                            pribadi ditampilkan. Jika kamu penasaran, kamu masih bisa melihat akun
-                            pengembang saya di <a href="https://play.google.com/store/apps/dev?id=8392660381147653639">sini</a>.
-                        </span>
-                    </p>
-                    <p>
-                        <span lang="en">
-                            In August 2022, I purchased a domain called <a href="http://redmerah.com">redmerah.com</a> and hosting
-                            services. I learned <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>,
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>, and <a href="https://expressjs.com/">Express</a> for back-end development, and built an article web
-                            app. This marked my first foray into web app development. Since then, I've
-                            explored various web frameworks and libraries like <a href="https://react.dev/">React</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://nuxt.com/">Nuxt</a>,
-                            <a href="https://nextjs.org/">Next.js</a>, <a href="https://svelte.dev/">Svelte</a>, <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, <a href="https://www.solidjs.com/">SolidJS</a>, <a href="https://start.solidjs.com/">SolidStart</a>, and <a href="https://astro.build/">Astro</a>. Among these, I
-                            frequently use <a href="https://react.dev/">React</a> (industry standard), <a href="https://svelte.dev/">Svelte</a> + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> (great for
-                            multi-page apps), <a href="https://www.solidjs.com/">SolidJS</a> (incredibly fast), and <a href="https://astro.build/">Astro</a> (for static site
-                            generation).
-                        </span>
-                        <span lang="id">
-                            Pada Agustus 2022, saya membeli domain bernama <a href="http://redmerah.com">redmerah.com</a> dan layanan
-                            hosting. Saya mulai mempelajari <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>, dan <a href="https://expressjs.com/">Express</a>
-                            untuk pengembangan back-end, serta membangun aplikasi web artikel. Ini
-                            menandai langkah pertama saya dalam pengembangan aplikasi web. Sejak saat
-                            itu, saya telah menjelajahi berbagai framework dan library web seperti
-                            <a href="https://react.dev/">React</a>, <a href="https://vuejs.org/">Vue.js</a>, <a href="https://nuxt.com/">Nuxt</a>, <a href="https://nextjs.org/">Next.js</a>, <a href="https://svelte.dev/">Svelte</a>, <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>, <a href="https://www.solidjs.com/">SolidJS</a>, <a href="https://start.solidjs.com/">SolidStart</a>, dan <a href="https://astro.build/">Astro</a>.
-                            Di antara semuanya, saya sering menggunakan <a href="https://react.dev/">React</a> (standar industri), <a href="https://svelte.dev/">Svelte</a>
-                            + <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a> (hebat untuk aplikasi multi-halaman), <a href="https://www.solidjs.com/">SolidJS</a> (super kencang), dan
-                            <a href="https://astro.build/">Astro</a> (untuk generasi situs statis).
-                        </span>
-                    </p>
-                    <p>
-                        <span lang="en">
-                            One key tool I rely on is <a href="https://figma.com/">Figma</a> for prototyping any app I create, including
-                            layouts, icons, logos, and overall design.
-                        </span>
-                        <span lang="id">
-                            Salah satu alat utama yang saya andalkan adalah <a href="https://figma.com/">Figma</a> untuk membuat
-                            prototipe aplikasi apa pun yang saya buat, termasuk tata letak, ikon, logo,
-                            dan desain keseluruhan.
-                        </span>
-                    </p>
-                    <p>
-                        <span lang="en">
-                            While my primary focus is on web UI/UX, I'm eager to expand my skill set to
-                            include desktop and mobile app development, bringing cohesive and innovative
-                            designs across multiple platforms.
-                        </span>
-                        <span lang="id">
-                            Walaupun fokus utama saya adalah pada UI/UX web, saya sangat ingin
-                            memperluas keterampilan saya untuk mencakup pengembangan aplikasi desktop
-                            dan seluler, sehingga bisa menghadirkan desain yang kohesif dan inovatif di
-                            berbagai platform.
-                        </span>
-                    </p>
+        <div id="about" role="tabpanel" tabindex="0" aria-labelledby="tab-about-id">
+            <h2>About Me</h2>
+            <p>What you need to know about me</p>
+            <div>
+                <div class="m-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"/></svg>
+                    <h3>Full name</h3>
+                    <p>Muhammad Sulais</p>
                 </div>
-            </details>
-            <details>
-                <summary>
-                    <span lang="en">What I can do</span>
-                    <span lang="id">Apa yang bisa saya lakukan</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M440-313v-447q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v447l196-196q12-12 28-11.5t28 12.5q11 12 11.5 28T772-452L508-188q-6 6-13 8.5t-15 2.5q-8 0-15-2.5t-13-8.5L188-452q-11-11-11-27.5t11-28.5q12-12 28.5-12t28.5 12l195 195Z"/></svg>
-                </summary>
-                <div>
-                    <ul class="mp-about-whatICanDo">
-                        <li><strong>Front-End Web Development</strong><br>
-                            <span lang="en">Proficient in HTML/CSS/Javascript and frameworks like React, Solid, Svelte, and more.</span>
-                            <span lang="id">Mahir dalam HTML/CSS/Javascript serta framework seperti React, Solid, Svelte, dan lainnya.</span>
-                        </li>
-                        <li><strong>
-                            <span lang="en">Responsive Design</span>
-                            <span lang="id">Desain Responsif</span>
-                        </strong><br>
-                            <span lang="en">Creating user-friendly interfaces that work seamlessly across devices.</span>
-                            <span lang="id">Menciptakan antarmuka yang ramah pengguna dan berfungsi dengan baik di berbagai perangkat.</span>
-                        </li>
-                        <li><strong>
-                            <span lang="en">UI/UX Design</span>
-                            <span lang="id">Desain UI/UX</span>
-                        </strong><br>
-                            <span lang="en">Designing intuitive user experiences and interfaces using Figma.</span>
-                            <span lang="id">Merancang pengalaman dan antarmuka pengguna yang intuitif menggunakan Figma.</span>
-                        </li>
-                        <li><strong>
-                            <span lang="en">Site Optimization</span>
-                            <span lang="id">Optimasi situs</span>
-                        </strong><br>
-                            <span lang="en">Enhancing performance and speed of web applications.</span>
-                            <span lang="id">Meningkatkan kinerja dan kecepatan aplikasi web.</span>
-                        </li>
-                        <li><strong>
-                            <span lang="en">Interactive Features</span>
-                            <span lang="id">Fitur Interaktif</span>
-                        </strong><br>
-                            <span lang="en">Implementing interactive elements to boost user engagement.</span>
-                            <span lang="id">Mengimplementasikan elemen interaktif untuk meningkatkan keterlibatan pengguna.</span>
-                        </li>
+                <div class="m-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z"/></svg>
+                    <h3>Address</h3>
+                    <p>Yogyakarta, Indonesia</p>
+                </div>
+                <div class="m-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg>
+                    <h3>Web experience</h3>
+                    <p><span id="m-about-year-id">0</span> Years</p>
+                </div>
+                <div class="m-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Indonesia</li>
+                        <li>English</li>
                     </ul>
                 </div>
-            </details>
-            <details open>
-                <summary>
-                    <span lang="en">Social media</span>
-                    <span lang="id">Media sosial</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M440-313v-447q0-17 11.5-28.5T480-800q17 0 28.5 11.5T520-760v447l196-196q12-12 28-11.5t28 12.5q11 12 11.5 28T772-452L508-188q-6 6-13 8.5t-15 2.5q-8 0-15-2.5t-13-8.5L188-452q-11-11-11-27.5t11-28.5q12-12 28.5-12t28.5 12l195 195Z"/></svg>
-                </summary>
-                <div>
-                    <ul class="mp-about-socialMedia">
-                        <li>
-                            <a href="https://www.instagram.com/muh.sulais/">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_203_37)"> <path d="M8.00064 12C8.00064 9.79094 9.79094 7.99968 12 7.99968C14.2091 7.99968 16.0003 9.79094 16.0003 12C16.0003 14.2091 14.2091 16.0003 12 16.0003C9.79094 16.0003 8.00064 14.2091 8.00064 12ZM5.83814 12C5.83814 15.4032 8.5968 18.1619 12 18.1619C15.4032 18.1619 18.1619 15.4032 18.1619 12C18.1619 8.5968 15.4032 5.83814 12 5.83814C8.5968 5.83814 5.83814 8.5968 5.83814 12ZM16.9658 5.59382C16.9657 5.87863 17.05 6.15707 17.2082 6.39394C17.3663 6.63081 17.5911 6.81547 17.8542 6.92457C18.1173 7.03366 18.4068 7.06229 18.6862 7.00684C18.9655 6.95139 19.2221 6.81435 19.4236 6.61304C19.6251 6.41173 19.7623 6.15521 19.818 5.8759C19.8737 5.59658 19.8453 5.30704 19.7364 5.04387C19.6275 4.7807 19.443 4.55573 19.2063 4.3974C18.9695 4.23908 18.6912 4.15451 18.4064 4.1544H18.4058C18.024 4.15458 17.658 4.30627 17.388 4.57616C17.118 4.84605 16.9661 5.21207 16.9658 5.59382ZM7.152 21.7677C5.98205 21.7144 5.34614 21.5196 4.92355 21.3549C4.3633 21.1368 3.96355 20.877 3.54326 20.4573C3.12298 20.0376 2.86282 19.6382 2.64566 19.078C2.48093 18.6556 2.28605 18.0195 2.23286 16.8495C2.17469 15.5846 2.16307 15.2047 2.16307 12.0001C2.16307 8.79552 2.17565 8.41661 2.23286 7.15066C2.28614 5.9807 2.48246 5.34586 2.64566 4.92221C2.86378 4.36195 3.12355 3.96221 3.54326 3.54192C3.96298 3.12163 4.36234 2.86147 4.92355 2.64432C5.34595 2.47958 5.98205 2.2847 7.152 2.23152C8.4169 2.17334 8.79686 2.16173 12 2.16173C15.2031 2.16173 15.5835 2.1743 16.8494 2.23152C18.0194 2.2848 18.6542 2.48112 19.0779 2.64432C19.6381 2.86147 20.0379 3.12221 20.4582 3.54192C20.8785 3.96163 21.1377 4.36195 21.3558 4.92221C21.5205 5.34461 21.7154 5.9807 21.7686 7.15066C21.8268 8.41661 21.8384 8.79552 21.8384 12.0001C21.8384 15.2047 21.8268 15.5836 21.7686 16.8495C21.7153 18.0195 21.5195 18.6554 21.3558 19.078C21.1377 19.6382 20.8779 20.038 20.4582 20.4573C20.0385 20.8766 19.6381 21.1368 19.0779 21.3549C18.6555 21.5196 18.0194 21.7145 16.8494 21.7677C15.5845 21.8259 15.2046 21.8375 12 21.8375C8.79542 21.8375 8.41651 21.8259 7.152 21.7677ZM7.05264 0.072672C5.77517 0.130848 4.90224 0.333408 4.1399 0.630048C3.3504 0.936384 2.68205 1.34736 2.01418 2.01418C1.3463 2.68099 0.936384 3.3504 0.630048 4.1399C0.333408 4.90272 0.130848 5.77517 0.072672 7.05264C0.013536 8.33213 0 8.74118 0 12C0 15.2588 0.013536 15.6679 0.072672 16.9474C0.130848 18.2249 0.333408 19.0973 0.630048 19.8601C0.936384 20.6491 1.3464 21.3193 2.01418 21.9858C2.68195 22.6524 3.3504 23.0628 4.1399 23.37C4.90368 23.6666 5.77517 23.8692 7.05264 23.9273C8.3328 23.9855 8.74118 24 12 24C15.2588 24 15.6679 23.9865 16.9474 23.9273C18.2249 23.8692 19.0973 23.6666 19.8601 23.37C20.6491 23.0628 21.318 22.6526 21.9858 21.9858C22.6537 21.319 23.0628 20.6491 23.37 19.8601C23.6666 19.0973 23.8701 18.2248 23.9273 16.9474C23.9855 15.6669 23.999 15.2588 23.999 12C23.999 8.74118 23.9855 8.33213 23.9273 7.05264C23.8692 5.77507 23.6666 4.90224 23.37 4.1399C23.0628 3.35088 22.6526 2.68205 21.9858 2.01418C21.319 1.3463 20.6491 0.936384 19.8611 0.630048C19.0973 0.333408 18.2248 0.129888 16.9483 0.072672C15.6688 0.014496 15.2598 0 12.001 0C8.74214 0 8.3328 0.013536 7.05264 0.072672Z" fill="url(#paint0_radial_203_37)"/> <path d="M8.00064 12C8.00064 9.79094 9.79094 7.99968 12 7.99968C14.2091 7.99968 16.0003 9.79094 16.0003 12C16.0003 14.2091 14.2091 16.0003 12 16.0003C9.79094 16.0003 8.00064 14.2091 8.00064 12ZM5.83814 12C5.83814 15.4032 8.5968 18.1619 12 18.1619C15.4032 18.1619 18.1619 15.4032 18.1619 12C18.1619 8.5968 15.4032 5.83814 12 5.83814C8.5968 5.83814 5.83814 8.5968 5.83814 12ZM16.9658 5.59382C16.9657 5.87863 17.05 6.15707 17.2082 6.39394C17.3663 6.63081 17.5911 6.81547 17.8542 6.92457C18.1173 7.03366 18.4068 7.06229 18.6862 7.00684C18.9655 6.95139 19.2221 6.81435 19.4236 6.61304C19.6251 6.41173 19.7623 6.15521 19.818 5.8759C19.8737 5.59658 19.8453 5.30704 19.7364 5.04387C19.6275 4.7807 19.443 4.55573 19.2063 4.3974C18.9695 4.23908 18.6912 4.15451 18.4064 4.1544H18.4058C18.024 4.15458 17.658 4.30627 17.388 4.57616C17.118 4.84605 16.9661 5.21207 16.9658 5.59382ZM7.152 21.7677C5.98205 21.7144 5.34614 21.5196 4.92355 21.3549C4.3633 21.1368 3.96355 20.877 3.54326 20.4573C3.12298 20.0376 2.86282 19.6382 2.64566 19.078C2.48093 18.6556 2.28605 18.0195 2.23286 16.8495C2.17469 15.5846 2.16307 15.2047 2.16307 12.0001C2.16307 8.79552 2.17565 8.41661 2.23286 7.15066C2.28614 5.9807 2.48246 5.34586 2.64566 4.92221C2.86378 4.36195 3.12355 3.96221 3.54326 3.54192C3.96298 3.12163 4.36234 2.86147 4.92355 2.64432C5.34595 2.47958 5.98205 2.2847 7.152 2.23152C8.4169 2.17334 8.79686 2.16173 12 2.16173C15.2031 2.16173 15.5835 2.1743 16.8494 2.23152C18.0194 2.2848 18.6542 2.48112 19.0779 2.64432C19.6381 2.86147 20.0379 3.12221 20.4582 3.54192C20.8785 3.96163 21.1377 4.36195 21.3558 4.92221C21.5205 5.34461 21.7154 5.9807 21.7686 7.15066C21.8268 8.41661 21.8384 8.79552 21.8384 12.0001C21.8384 15.2047 21.8268 15.5836 21.7686 16.8495C21.7153 18.0195 21.5195 18.6554 21.3558 19.078C21.1377 19.6382 20.8779 20.038 20.4582 20.4573C20.0385 20.8766 19.6381 21.1368 19.0779 21.3549C18.6555 21.5196 18.0194 21.7145 16.8494 21.7677C15.5845 21.8259 15.2046 21.8375 12 21.8375C8.79542 21.8375 8.41651 21.8259 7.152 21.7677ZM7.05264 0.072672C5.77517 0.130848 4.90224 0.333408 4.1399 0.630048C3.3504 0.936384 2.68205 1.34736 2.01418 2.01418C1.3463 2.68099 0.936384 3.3504 0.630048 4.1399C0.333408 4.90272 0.130848 5.77517 0.072672 7.05264C0.013536 8.33213 0 8.74118 0 12C0 15.2588 0.013536 15.6679 0.072672 16.9474C0.130848 18.2249 0.333408 19.0973 0.630048 19.8601C0.936384 20.6491 1.3464 21.3193 2.01418 21.9858C2.68195 22.6524 3.3504 23.0628 4.1399 23.37C4.90368 23.6666 5.77517 23.8692 7.05264 23.9273C8.3328 23.9855 8.74118 24 12 24C15.2588 24 15.6679 23.9865 16.9474 23.9273C18.2249 23.8692 19.0973 23.6666 19.8601 23.37C20.6491 23.0628 21.318 22.6526 21.9858 21.9858C22.6537 21.319 23.0628 20.6491 23.37 19.8601C23.6666 19.0973 23.8701 18.2248 23.9273 16.9474C23.9855 15.6669 23.999 15.2588 23.999 12C23.999 8.74118 23.9855 8.33213 23.9273 7.05264C23.8692 5.77507 23.6666 4.90224 23.37 4.1399C23.0628 3.35088 22.6526 2.68205 21.9858 2.01418C21.319 1.3463 20.6491 0.936384 19.8611 0.630048C19.0973 0.333408 18.2248 0.129888 16.9483 0.072672C15.6688 0.014496 15.2598 0 12.001 0C8.74214 0 8.3328 0.013536 7.05264 0.072672Z" fill="url(#paint1_radial_203_37)"/> </g> <defs> <radialGradient id="paint0_radial_203_37" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(3.18854 24.1134) scale(31.33 31.33)"> <stop offset="0.09" stop-color="#FA8F21"/> <stop offset="0.78" stop-color="#D82D7E"/> </radialGradient> <radialGradient id="paint1_radial_203_37" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.5549 25.1886) scale(24.6924)"> <stop offset="0.64" stop-color="#8C3AAA" stop-opacity="0"/> <stop offset="1" stop-color="#8C3AAA"/> </radialGradient> <clipPath id="clip0_203_37"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg>
-                                muh.sulais
-                            </a>
-                        </li>
-                        <li>
-                            <a href="www.linkedin.com/in/muhammad-sulais-a39a36256">
-                                <svg height="24" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB"/><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF"/></g></svg>
-                                Muhammad Sulais
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://github.com/msulais">
-                                <svg width="24" viewBox="0 0 98 96" data-theme="light" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"/></svg>
-                                <svg width="24" viewBox="0 0 98 96" data-theme="dark" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"/></svg>
-                                msulais
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://x.com/muh_sulais">
-                                <svg height="24" data-theme="light" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#000"/></svg>
-                                <svg height="24" data-theme="dark" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#fff"/></svg>
-                                muh_sulais
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://pin.it/Mjb3lapM2">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_476_88)"> <path d="M24.0016 12C24.0016 18.6281 18.6297 24 12.0016 24C5.37346 24 0.00158691 18.6281 0.00158691 12C0.00158691 5.37189 5.37346 1.52588e-05 12.0016 1.52588e-05C18.6297 1.52588e-05 24.0016 5.37189 24.0016 12Z" fill="white"/> <path d="M12.002 -0.000366211C5.37383 -0.000366211 0.00195312 5.37151 0.00195312 11.9996C0.00195312 17.0856 3.16602 21.4309 7.62852 23.1793C7.52539 22.2278 7.42695 20.7699 7.6707 19.734C7.89102 18.7965 9.07695 13.7715 9.07695 13.7715C9.07695 13.7715 8.71602 13.0543 8.71602 11.9903C8.71602 10.3215 9.68164 9.07463 10.8863 9.07463C11.9082 9.07463 12.4051 9.84338 12.4051 10.7668C12.4051 11.7981 11.7488 13.3356 11.4113 14.7606C11.1301 15.9559 12.0113 16.9309 13.1879 16.9309C15.3207 16.9309 16.9613 14.6809 16.9613 11.4371C16.9613 8.5637 14.8988 6.55276 11.9504 6.55276C8.5332 6.54807 6.53164 9.10745 6.53164 11.7559C6.53164 12.7871 6.93008 13.8934 7.42695 14.4934C7.52539 14.6106 7.53945 14.7184 7.51133 14.8356C7.42227 15.2153 7.21602 16.0309 7.17852 16.1949C7.12695 16.4153 7.00508 16.4621 6.77539 16.3543C5.27539 15.6559 4.33789 13.4668 4.33789 11.7043C4.33789 7.91682 7.08945 4.44338 12.2645 4.44338C16.427 4.44338 19.6613 7.41057 19.6613 11.3762C19.6613 15.5153 17.0551 18.8434 13.4363 18.8434C12.2223 18.8434 11.0785 18.2106 10.6848 17.4653C10.6848 17.4653 10.0848 19.7574 9.93945 20.3199C9.66758 21.3606 8.93633 22.6684 8.44883 23.4653C9.57383 23.8121 10.7645 23.9996 12.002 23.9996C18.6301 23.9996 24.002 18.6278 24.002 11.9996C24.002 5.37151 18.6254 -0.000366211 12.002 -0.000366211Z" fill="#E60023"/> </g> <defs> <clipPath id="clip0_476_88"> <rect width="24" height="24" fill="white"/> </clipPath> </defs> </svg>
-                                muhammadsulais
-                            </a>
-                        </li>
+                <div class="m-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M480-80q-26 0-47-12.5T400-126q-33 0-56.5-23.5T320-206v-142q-59-39-94.5-103T190-590q0-121 84.5-205.5T480-880q121 0 205.5 84.5T770-590q0 77-35.5 140T640-348v142q0 33-23.5 56.5T560-126q-12 21-33 33.5T480-80Zm-80-126h160v-36H400v36Zm0-76h160v-38H400v38Zm110-118v-108l88-88-42-42-76 76-76-76-42 42 88 88v108h60Z"/></svg>
+                    <h3>Skills</h3>
+                    <ul style="list-style: none;">
+                        <li><img src="/logos/html.svg" alt="HTML logo">HTML</li>
+                        <li><img src="/logos/css.svg" alt="CSS logo"> CSS</li>
+                        <li><img src="/logos/javascript.svg" alt="JavaScript logo"> JavaScript</li>
+                        <li><img src="/logos/solid.svg" alt="SolidJS logo"> Solid</li>
+                        <li><img src="/logos/react.svg" alt="React lovo"> React</li>
+                        <li><img src="/logos/svelte.svg" alt="Svelte logo"> Svelte</li>
+                        <li><img src="/logos/vue.svg" alt="Vue logo"> Vue</li>
+                        <li><img src="/logos/figma.svg" alt="Figma logo"> Figma</li>
                     </ul>
                 </div>
-            </details>
-        </div>
-        <div data-page-target="#works">
-            <h2>
-                <span lang="en">My Works</span>
-                <span lang="id">Karya Saya</span>
-            </h2>
-            <p>
-                <span lang="en">Transforming ideas into digital reality ✨</span>
-                <span lang="id">Mengubah ide menjadi realita digital ✨</span>
-            </p>
-            <div class="mp-works-portfolio">
-                <div data-none></div>
-                <div data-none></div>
-                <div data-none></div>
-                <div data-none></div>
             </div>
-            <dialog id="mp-works-dialog">
-                <div>
-                    <div data-images></div>
-                    <div data-images-indicator></div>
-                    <h2></h2>
-                    <ul></ul>
-                    <a target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="rgb(var(--g-color-on-surface))"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h240q17 0 28.5 11.5T480-800q0 17-11.5 28.5T440-760H200v560h560v-240q0-17 11.5-28.5T800-480q17 0 28.5 11.5T840-440v240q0 33-23.5 56.5T760-120H200Zm560-584L416-360q-11 11-28 11t-28-11q-11-11-11-28t11-28l344-344H600q-17 0-28.5-11.5T560-800q0-17 11.5-28.5T600-840h200q17 0 28.5 11.5T840-800v200q0 17-11.5 28.5T800-560q-17 0-28.5-11.5T760-600v-104Z"/></svg>
-                        <span lang="en">Show more</span>
-                        <span lang="id">Lihat lebih</span>
-                    </a>
-                    <div data-description></div>
-                    <button id="mp-works-dialog-close">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="rgb(var(--g-color-on-surface-dark))"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
-                    </button>
-                </div>
-            </dialog>
         </div>
-        <div data-page-target="#contact">
-            <h2>
-                <span lang="en">Contact Me</span>
-                <span lang="id">Hubungi Saya</span>
-            </h2>
-            <p>
-                <span lang="en">Love to hear from you, get in touch 👋</span>
-                <span lang="id">Senang mendengarkan darimu, mari terhubung 👋</span>
-            </p>
-            <address>
-                <span>Email:</span> <!-- for style only -->
-                <br><a href="mailto:muh.sulais@gmail.com">muh.sulais@gmail.com</a><br><br>
-                <span lang="en">Name:</span>
-                <span lang="id">Nama:</span><br>Muhammad Sulais<br><br>
-                <span lang="en">Address:</span>
-                <span lang="id">Alamat:</span><br><a href="https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8">Yogyakarta, Indonesia</a>
-            </address>
+        <div id="works" style="display:none;" role="tabpanel" tabindex="0" aria-labelledby="tab-works-id">
+            <h2>My Works</h2>
+            <p>Transforming ideas into digital reality</p>
+        </div>
+        <div id="contact" style="display:none;" role="tabpanel" tabindex="0" aria-labelledby="tab-contact-id">
+            <h2>Contact Me</h2>
+            <p>Love to hear from you, get in touch</p>
+            <div>
+                <a class="m-card" href="mailto:muh.sulais@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="rgb(var(--g-color-on-surface))"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280 320-200v-80L480-520 160-720v80l320 200Z"/></svg>
+                    <h3>Email</h3>
+                    <p>muh.sulais@gmail.com</p>
+                </a>
+                <a class="m-card" href="https://msulais.github.io/www.linkedin.com/in/muhammad-sulais-a39a36256">
+                    <svg height="24" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB"></path><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF"></path></g></svg>
+                    <h3>LinkedIn</h3>
+                    <p>Muhammad Sulais</p>
+                </a>
+                <a class="m-card" href="https://www.instagram.com/muh.sulais/">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_203_37)"> <path d="M8.00064 12C8.00064 9.79094 9.79094 7.99968 12 7.99968C14.2091 7.99968 16.0003 9.79094 16.0003 12C16.0003 14.2091 14.2091 16.0003 12 16.0003C9.79094 16.0003 8.00064 14.2091 8.00064 12ZM5.83814 12C5.83814 15.4032 8.5968 18.1619 12 18.1619C15.4032 18.1619 18.1619 15.4032 18.1619 12C18.1619 8.5968 15.4032 5.83814 12 5.83814C8.5968 5.83814 5.83814 8.5968 5.83814 12ZM16.9658 5.59382C16.9657 5.87863 17.05 6.15707 17.2082 6.39394C17.3663 6.63081 17.5911 6.81547 17.8542 6.92457C18.1173 7.03366 18.4068 7.06229 18.6862 7.00684C18.9655 6.95139 19.2221 6.81435 19.4236 6.61304C19.6251 6.41173 19.7623 6.15521 19.818 5.8759C19.8737 5.59658 19.8453 5.30704 19.7364 5.04387C19.6275 4.7807 19.443 4.55573 19.2063 4.3974C18.9695 4.23908 18.6912 4.15451 18.4064 4.1544H18.4058C18.024 4.15458 17.658 4.30627 17.388 4.57616C17.118 4.84605 16.9661 5.21207 16.9658 5.59382ZM7.152 21.7677C5.98205 21.7144 5.34614 21.5196 4.92355 21.3549C4.3633 21.1368 3.96355 20.877 3.54326 20.4573C3.12298 20.0376 2.86282 19.6382 2.64566 19.078C2.48093 18.6556 2.28605 18.0195 2.23286 16.8495C2.17469 15.5846 2.16307 15.2047 2.16307 12.0001C2.16307 8.79552 2.17565 8.41661 2.23286 7.15066C2.28614 5.9807 2.48246 5.34586 2.64566 4.92221C2.86378 4.36195 3.12355 3.96221 3.54326 3.54192C3.96298 3.12163 4.36234 2.86147 4.92355 2.64432C5.34595 2.47958 5.98205 2.2847 7.152 2.23152C8.4169 2.17334 8.79686 2.16173 12 2.16173C15.2031 2.16173 15.5835 2.1743 16.8494 2.23152C18.0194 2.2848 18.6542 2.48112 19.0779 2.64432C19.6381 2.86147 20.0379 3.12221 20.4582 3.54192C20.8785 3.96163 21.1377 4.36195 21.3558 4.92221C21.5205 5.34461 21.7154 5.9807 21.7686 7.15066C21.8268 8.41661 21.8384 8.79552 21.8384 12.0001C21.8384 15.2047 21.8268 15.5836 21.7686 16.8495C21.7153 18.0195 21.5195 18.6554 21.3558 19.078C21.1377 19.6382 20.8779 20.038 20.4582 20.4573C20.0385 20.8766 19.6381 21.1368 19.0779 21.3549C18.6555 21.5196 18.0194 21.7145 16.8494 21.7677C15.5845 21.8259 15.2046 21.8375 12 21.8375C8.79542 21.8375 8.41651 21.8259 7.152 21.7677ZM7.05264 0.072672C5.77517 0.130848 4.90224 0.333408 4.1399 0.630048C3.3504 0.936384 2.68205 1.34736 2.01418 2.01418C1.3463 2.68099 0.936384 3.3504 0.630048 4.1399C0.333408 4.90272 0.130848 5.77517 0.072672 7.05264C0.013536 8.33213 0 8.74118 0 12C0 15.2588 0.013536 15.6679 0.072672 16.9474C0.130848 18.2249 0.333408 19.0973 0.630048 19.8601C0.936384 20.6491 1.3464 21.3193 2.01418 21.9858C2.68195 22.6524 3.3504 23.0628 4.1399 23.37C4.90368 23.6666 5.77517 23.8692 7.05264 23.9273C8.3328 23.9855 8.74118 24 12 24C15.2588 24 15.6679 23.9865 16.9474 23.9273C18.2249 23.8692 19.0973 23.6666 19.8601 23.37C20.6491 23.0628 21.318 22.6526 21.9858 21.9858C22.6537 21.319 23.0628 20.6491 23.37 19.8601C23.6666 19.0973 23.8701 18.2248 23.9273 16.9474C23.9855 15.6669 23.999 15.2588 23.999 12C23.999 8.74118 23.9855 8.33213 23.9273 7.05264C23.8692 5.77507 23.6666 4.90224 23.37 4.1399C23.0628 3.35088 22.6526 2.68205 21.9858 2.01418C21.319 1.3463 20.6491 0.936384 19.8611 0.630048C19.0973 0.333408 18.2248 0.129888 16.9483 0.072672C15.6688 0.014496 15.2598 0 12.001 0C8.74214 0 8.3328 0.013536 7.05264 0.072672Z" fill="url(#paint0_radial_203_37)"></path> <path d="M8.00064 12C8.00064 9.79094 9.79094 7.99968 12 7.99968C14.2091 7.99968 16.0003 9.79094 16.0003 12C16.0003 14.2091 14.2091 16.0003 12 16.0003C9.79094 16.0003 8.00064 14.2091 8.00064 12ZM5.83814 12C5.83814 15.4032 8.5968 18.1619 12 18.1619C15.4032 18.1619 18.1619 15.4032 18.1619 12C18.1619 8.5968 15.4032 5.83814 12 5.83814C8.5968 5.83814 5.83814 8.5968 5.83814 12ZM16.9658 5.59382C16.9657 5.87863 17.05 6.15707 17.2082 6.39394C17.3663 6.63081 17.5911 6.81547 17.8542 6.92457C18.1173 7.03366 18.4068 7.06229 18.6862 7.00684C18.9655 6.95139 19.2221 6.81435 19.4236 6.61304C19.6251 6.41173 19.7623 6.15521 19.818 5.8759C19.8737 5.59658 19.8453 5.30704 19.7364 5.04387C19.6275 4.7807 19.443 4.55573 19.2063 4.3974C18.9695 4.23908 18.6912 4.15451 18.4064 4.1544H18.4058C18.024 4.15458 17.658 4.30627 17.388 4.57616C17.118 4.84605 16.9661 5.21207 16.9658 5.59382ZM7.152 21.7677C5.98205 21.7144 5.34614 21.5196 4.92355 21.3549C4.3633 21.1368 3.96355 20.877 3.54326 20.4573C3.12298 20.0376 2.86282 19.6382 2.64566 19.078C2.48093 18.6556 2.28605 18.0195 2.23286 16.8495C2.17469 15.5846 2.16307 15.2047 2.16307 12.0001C2.16307 8.79552 2.17565 8.41661 2.23286 7.15066C2.28614 5.9807 2.48246 5.34586 2.64566 4.92221C2.86378 4.36195 3.12355 3.96221 3.54326 3.54192C3.96298 3.12163 4.36234 2.86147 4.92355 2.64432C5.34595 2.47958 5.98205 2.2847 7.152 2.23152C8.4169 2.17334 8.79686 2.16173 12 2.16173C15.2031 2.16173 15.5835 2.1743 16.8494 2.23152C18.0194 2.2848 18.6542 2.48112 19.0779 2.64432C19.6381 2.86147 20.0379 3.12221 20.4582 3.54192C20.8785 3.96163 21.1377 4.36195 21.3558 4.92221C21.5205 5.34461 21.7154 5.9807 21.7686 7.15066C21.8268 8.41661 21.8384 8.79552 21.8384 12.0001C21.8384 15.2047 21.8268 15.5836 21.7686 16.8495C21.7153 18.0195 21.5195 18.6554 21.3558 19.078C21.1377 19.6382 20.8779 20.038 20.4582 20.4573C20.0385 20.8766 19.6381 21.1368 19.0779 21.3549C18.6555 21.5196 18.0194 21.7145 16.8494 21.7677C15.5845 21.8259 15.2046 21.8375 12 21.8375C8.79542 21.8375 8.41651 21.8259 7.152 21.7677ZM7.05264 0.072672C5.77517 0.130848 4.90224 0.333408 4.1399 0.630048C3.3504 0.936384 2.68205 1.34736 2.01418 2.01418C1.3463 2.68099 0.936384 3.3504 0.630048 4.1399C0.333408 4.90272 0.130848 5.77517 0.072672 7.05264C0.013536 8.33213 0 8.74118 0 12C0 15.2588 0.013536 15.6679 0.072672 16.9474C0.130848 18.2249 0.333408 19.0973 0.630048 19.8601C0.936384 20.6491 1.3464 21.3193 2.01418 21.9858C2.68195 22.6524 3.3504 23.0628 4.1399 23.37C4.90368 23.6666 5.77517 23.8692 7.05264 23.9273C8.3328 23.9855 8.74118 24 12 24C15.2588 24 15.6679 23.9865 16.9474 23.9273C18.2249 23.8692 19.0973 23.6666 19.8601 23.37C20.6491 23.0628 21.318 22.6526 21.9858 21.9858C22.6537 21.319 23.0628 20.6491 23.37 19.8601C23.6666 19.0973 23.8701 18.2248 23.9273 16.9474C23.9855 15.6669 23.999 15.2588 23.999 12C23.999 8.74118 23.9855 8.33213 23.9273 7.05264C23.8692 5.77507 23.6666 4.90224 23.37 4.1399C23.0628 3.35088 22.6526 2.68205 21.9858 2.01418C21.319 1.3463 20.6491 0.936384 19.8611 0.630048C19.0973 0.333408 18.2248 0.129888 16.9483 0.072672C15.6688 0.014496 15.2598 0 12.001 0C8.74214 0 8.3328 0.013536 7.05264 0.072672Z" fill="url(#paint1_radial_203_37)"></path> </g> <defs> <radialGradient id="paint0_radial_203_37" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(3.18854 24.1134) scale(31.33 31.33)"> <stop offset="0.09" stop-color="#FA8F21"></stop> <stop offset="0.78" stop-color="#D82D7E"></stop> </radialGradient> <radialGradient id="paint1_radial_203_37" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.5549 25.1886) scale(24.6924)"> <stop offset="0.64" stop-color="#8C3AAA" stop-opacity="0"></stop> <stop offset="1" stop-color="#8C3AAA"></stop> </radialGradient> <clipPath id="clip0_203_37"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </svg>
+                    <h3>Instagram</h3>
+                    <p>muh.sulais</p>
+                </a>
+                <a class="m-card" href="https://x.com/muh_sulais">
+                    <svg height="24" data-theme="light" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#000"></path></svg>
+                    <svg height="24" data-theme="dark" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="#fff"></path></svg>
+                    <h3>Twitter/X</h3>
+                    <p>muh_sulais</p>
+                </a>
+                <a class="m-card" href="http://github.com/msulais">
+                    <svg width="24" viewBox="0 0 98 96" data-theme="light" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg>
+                    <svg width="24" viewBox="0 0 98 96" data-theme="dark" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"></path></svg>
+                    <h3>Github</h3>
+                    <p>msulais</p>
+                </a>
+            </div>
         </div>
     </main>
-    <footer>
-        <div>&copy; <span id="f-year">0000</span> Muhammad Sulais</div>
-        <p>
-            <button id="f-theme"><span style="display:inline-block;">
-                <span data-theme="system">
-                    <span lang="en">System theme</span>
-                    <span lang="id">Tema sistem</span>
-                </span>
-                <span data-theme="light">
-                    <span lang="en">Light</span>
-                    <span lang="id">Terang</span>
-                </span>
-                <span data-theme="dark">
-                    <span lang="en">Dark</span>
-                    <span lang="id">Gelap</span>
-                </span>
-            </span></button>
-            /
-            <button id="f-language"><span style="display:inline-block;">
-                <span lang="en">English</span>
-                <span lang="id">Indonesia</span>
-            </span></button>
-            /
-            <a href="https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8">Yogyakarta</a>
-            /
-            <a href="https://www.timeanddate.com/time/zones/wib">
-                <time id="f-time" datetime="08:30:00">08:30:00 AM (WIB)</time>
-            </a>
-        </p>
-    </footer>
-    <script src="/scripts/header/logo.js"></script>
-    <script src="/scripts/header/navigation.js"></script>
-    <script src="/scripts/footer/time.js"></script>
-    <script src="/scripts/footer/year.js"></script>
-    <script src="/scripts/footer/language.js"></script>
-    <script src="/scripts/footer/theme.js"></script>
-    <script src="/scripts/main/year.js"></script>
-    <script src="/scripts/main/about.js"></script>
-    <script src="/scripts/main/works.js"></script>
-    <script src="/scripts/blocks-effect.js"></script>
+    <script src="/scripts/page.js"></script>
+    <script src="/scripts/time.js"></script>
 </body>
 
 </html>

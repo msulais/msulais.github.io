@@ -1,7 +1,0 @@
-.block-effect {
-	position: fixed;
-	z-index: -1;
-	background-color: rgb(var(--g-color-accent));
-	transition-duration: 1s;
-	border-radius: 4px;
-}
