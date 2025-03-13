@@ -23,16 +23,6 @@ main {
 			margin-top: 8px;
 			text-align: center;
 		}
-
-		> div {
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			margin-top: 16px;
-			gap: 8px;
-			width: 1080px;
-			max-width: 100%;
-		}
 	}
 }
 
@@ -85,6 +75,16 @@ main {
 			}
 		}
 	}
+}
+
+.m-card-group {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 16px;
+	gap: 8px;
+	width: 1080px;
+	max-width: 100%;
 }
 
 #m-tabs-id {
