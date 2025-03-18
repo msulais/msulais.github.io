@@ -44,7 +44,7 @@ header {
 			transition-duration: .2s;
 
 			@media (hover: hover) {
-				&:hover {
+				&:is(:hover,:focus-visible) {
 					width: 190px;
 
 					> [data-state=false] {opacity: 0}
