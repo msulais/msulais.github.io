@@ -43,35 +43,37 @@
         </div>
     </header>
     <main>
-        <div
-            role="tablist"
-            aria-label="Options"
-            id='m-tabs-id'>
-            <button
-                role="tab"
-                tabindex="0"
-                aria-selected="true"
-                aria-controls="about"
-                id="tab-about-id">
-                About
-            </button>
-            <button
-                role="tab"
-                tabindex="-1"
-                aria-selected="false"
-                aria-controls="works"
-                id="tab-works-id">
-                Works
-            </button>
-            <button
-                role="tab"
-                tabindex="-1"
-                aria-selected="false"
-                aria-controls="contact"
-                id="tab-contact-id">
-                Contact
-            </button>
-            <div aria-hidden="true"></div>
+        <div style="position: sticky;top:8px;z-index: 9;">
+            <div
+                role="tablist"
+                aria-label="Options"
+                id='m-tabs-id'>
+                <button
+                    role="tab"
+                    tabindex="0"
+                    aria-selected="true"
+                    aria-controls="about"
+                    id="tab-about-id">
+                    About
+                </button>
+                <button
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    aria-controls="works"
+                    id="tab-works-id">
+                    Works
+                </button>
+                <button
+                    role="tab"
+                    tabindex="-1"
+                    aria-selected="false"
+                    aria-controls="contact"
+                    id="tab-contact-id">
+                    Contact
+                </button>
+                <div aria-hidden="true"></div>
+            </div>
         </div>
         <div id="about" role="tabpanel" tabindex="0" aria-labelledby="tab-about-id">
             <h2>About Me</h2>
