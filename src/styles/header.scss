@@ -1,18 +1,20 @@
+@use './units' as u;
+
 header {
-	padding: 64px;
+	padding: u.Rem(64px);
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	gap: 32px;
+	gap: u.Rem(32px);
 
-	@media (max-width: 720px) {
+	@media (max-width: u.Rem(720px)) {
 		flex-direction: column;
-		padding: 32px;
+		padding: u.Rem(32px);
 	}
 
 	> img {
 		display: block;
-		width: min(80%, 256px);
+		width: min(80%, u.Rem(256px));
 		aspect-ratio: 1;
 		border-radius: 50%;
 		object-fit: cover;
@@ -23,36 +25,36 @@ header {
 .h-actions {
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	margin-top: 16px;
+	gap: u.Rem(16px);
+	margin-top: u.Rem(16px);
 
 	> a {
 		&:first-child {
 			background-color: rgb(var(--g-color-accent));
-			padding: 4px 20px;
-			min-height: 36px;
+			padding: u.Rem(4px) u.Rem(20px);
+			min-height: u.Rem(36px);
 			font-weight: 600;
 			justify-content: center;
-			font-size: 14px;
+			font-size: u.Rem(14px);
 			color: rgb(var(--g-color-on-accent));
-			border-radius: 999px;
+			border-radius: u.Rem(999px);
 			display: flex;
 			align-items: center;
-			width: 120px;
+			width: u.Rem(120px);
 			overflow: hidden;
 			position: relative;
-			transition-duration: .2s;
+			transition-duration: var(--g-duration-transition);
 
 			@media (hover: hover) {
 				&:is(:hover,:focus-visible) {
-					width: 190px;
+					width: u.Rem(190px);
 
 					> [data-state=false] {opacity: 0}
 					> [data-state=true] {opacity: 1}
 				}
 
 				&:active {
-					width: 190px;
+					width: u.Rem(190px);
 					scale: .9;
 
 					> [data-state=false] {opacity: 0}
@@ -69,7 +71,7 @@ header {
 			> [data-state] {
 				position: absolute;
 				display: inline-block;
-				transition-duration: .4s;
+				transition-duration: var(--g-duration-transition);
 				left: 50%;
 				top: 50%;
 				white-space: nowrap;
@@ -82,7 +84,8 @@ header {
 		}
 
 		&:not(:first-child) {
-			transition-duration: .2s;
+			transition-duration: var(--g-duration-transition);
+
 			&:hover {
 				scale: 1.15;
 			}
@@ -92,7 +95,7 @@ header {
 			}
 
 			> img {
-				width: 24px;
+				width: u.Rem(24px);
 			}
 		}
 	}
@@ -100,20 +103,36 @@ header {
 
 .h-header {
 	> h1 {
-		font-size: 64px;
+		font-size: u.Rem(64px);
 		font-weight: 500;
 
-		@media (max-width: 880px) {
-			font-size: 48px;
+		@media (max-width: u.Rem(880px)) {
+			font-size: u.Rem(48px);
 		}
 
-		@media (max-width: 720px) {
+		@media (max-width: u.Rem(720px)) {
 			font-size: 11vw;
 		}
 	}
 
 	> p {
-		margin-top: 16px;
+		margin-top: u.Rem(16px);
+
+		> a {
+			display: inline-block;
+			text-decoration: underline;
+			text-underline-offset: .4em;
+			text-decoration-color: rgb(var(--g-color-accent));
+			transition-duration: var(--g-duration-transition);
+
+			&:hover {
+				color: rgb(var(--g-color-accent));
+			}
+
+			&:active {
+				text-underline-offset: .8em;
+			}
+		}
 	}
 }
 
@@ -121,13 +140,14 @@ header {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 8px;
-	margin-top: 16px;
+	gap: u.Rem(8px);
+	margin-top: u.Rem(16px);
 	position: relative;
+	list-style: none;
 
-	> img {
+	& img {
 		display: block;
-		width: 32px;
+		width: u.Rem(32px);
 		aspect-ratio: 1;
 	}
 }

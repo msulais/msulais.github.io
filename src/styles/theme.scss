@@ -1,0 +1,13 @@
+[data-theme]{
+	@media (prefers-color-scheme: dark) {
+		&:not([data-theme=dark]) {
+			display: none;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		&:not([data-theme=light]) {
+			display: none;
+		}
+	}
+}

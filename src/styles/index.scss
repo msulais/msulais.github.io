@@ -1,3 +1,5 @@
+@use './units' as u;
+
 * {
     background-color: transparent;
     box-sizing: border-box;
@@ -6,15 +8,15 @@
     letter-spacing: inherit;
     margin: 0;
     padding: 0;
-    outline-offset: 4px;
-    transition-timing-function: var(--g-transition-spring);
-    -webkit-tap-highlight-color: transparent;
+    outline-offset: u.Rem(4px);
+    transition-timing-function: inherit;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 button, button * {
