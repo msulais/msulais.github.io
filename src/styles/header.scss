@@ -19,6 +19,22 @@ header {
 		border-radius: 50%;
 		object-fit: cover;
 		box-shadow: var(--g-elevation2);
+		outline: u.Rem(2px) solid transparent;
+		cursor: pointer;
+		transition-duration: var(--g-duration-transition);
+
+		:root[data-creative-mode=true] & {
+			border-radius: 0;
+		}
+
+		&:hover {
+			outline-color: rgb(var(--g-color-accent));
+			outline-offset: u.Rem(16px);
+		}
+
+		&:active {
+			scale: .9;
+		}
 	}
 }
 
@@ -104,7 +120,6 @@ header {
 .h-header {
 	> h1 {
 		font-size: u.Rem(64px);
-		font-weight: 500;
 
 		@media (max-width: u.Rem(880px)) {
 			font-size: u.Rem(48px);

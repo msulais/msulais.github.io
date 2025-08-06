@@ -2,7 +2,6 @@
 
 main {
 	padding: u.Rem(64px);
-	padding-bottom: u.Rem(80px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,13 +9,12 @@ main {
 
 	@media (max-width: u.Rem(720px)) {
 		padding: u.Rem(32px);
-		padding-bottom: u.Rem(80px);
 	}
 
 	> div[role=tabpanel] {
 		margin-top: u.Rem(16px);
 		max-width: 100%;
-		min-height: calc(100dvh - u.Rem(150px));
+		min-height: calc(100dvh - u.Rem(136px));
 
 		> h2 {
 			font-size: u.Rem(32px);

@@ -1,8 +1,3 @@
-export enum RootAttributes {
-	fancyMode = 'data-fancy-mode'
-}
-
-export enum FancyMode {
-	on = 'on',
-	off = 'off'
+export enum AnimationEasing {
+	spring = 'cubic-bezier(.15,0,0,1)'
 }

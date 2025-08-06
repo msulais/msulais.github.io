@@ -8,5 +8,4 @@ export enum ElementIds {
 	works = 'works',
 	worksDialog = 'm-works-dialog-id',
 	contact = 'contact',
-	fab = 'fab'
 }
