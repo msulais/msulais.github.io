@@ -63,11 +63,12 @@ main {
 	}
 
 	& h3 {
-		margin-top: u.Rem(8px);
+		margin: u.Rem(8px) 0;
 		font-size: 1.5rem;
 		text-transform: capitalize;
 		font-weight: normal;
 		text-decoration: underline;
+		text-underline-offset: .2em;
 		color: rgb(var(--g-color-accent));
 	}
 
