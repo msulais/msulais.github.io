@@ -295,8 +295,8 @@ main {
 	> li {
 		display: inline;
 		margin: 1ch 1ch 0 0;
-		border: u.Rem(1px) solid;
-		padding: .3em 1em;
+		border: u.Rem(1px) solid rgba(var(--g-color-on-surface), var(--g-opacity-inv3));
+		padding: .2em .6em;
 		border-radius: u.Rem(4px);
 	}
 }
@@ -422,12 +422,16 @@ main {
 		> a {
 			color: rgb(var(--g-color-accent));
 			padding: .1em 0;
-			border-radius: u.Rem(4px);
+			margin-bottom: u.Rem(8px);
+			display: block;
+			width: fit-content;
+			border-bottom: 1px solid rgb(var(--g-color-accent));
 			transition-duration: var(--g-duration-transition);
 
 			@media (hover: hover) {
 				&:hover {
 					padding: .1em .4em;
+					border-radius: u.Rem(2px);
 					background-color: rgb(var(--g-color-accent));
 					color: rgb(var(--g-color-on-accent));
 				}
