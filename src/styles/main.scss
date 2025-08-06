@@ -102,6 +102,29 @@ main {
 			}
 		}
 	}
+
+	& ol {
+		font-size: 1.25rem;
+		list-style: none;
+
+		& ul {
+			margin-top: 0;
+			display: block;
+			list-style: disc;
+			margin-left: 1.5em;
+
+			> li {
+				display: list-item;
+				margin-top: 0;
+				font-size: 1rem;
+				color: rgba(var(--g-color-on-surface),var(--g-opacity-inv3));
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .m-contact-list {
