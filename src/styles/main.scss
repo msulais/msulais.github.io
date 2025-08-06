@@ -104,6 +104,12 @@ main {
 	}
 }
 
+.m-contact-list {
+	> .m-card {
+		flex: 1 1 u.Rem(192px);
+	}
+}
+
 .m-exp-info {
 	&:hover {
 		> svg {
