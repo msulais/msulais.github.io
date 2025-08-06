@@ -1,6 +1,7 @@
 import page from './core/page'
 import works from './core/works'
 import time from './core/time'
+import header from './core/header'
 import '../styles/variables.scss'
 import '../styles/index.scss'
 import '../styles/theme.scss'
@@ -10,3 +11,4 @@ import '../styles/main.scss'
 time()
 page()
 works()
+header()

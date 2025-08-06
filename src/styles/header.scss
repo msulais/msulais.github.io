@@ -12,20 +12,14 @@ header {
 		padding: u.Rem(32px);
 	}
 
-	> img {
-		display: block;
-		width: min(80%, u.Rem(256px));
-		aspect-ratio: 1;
-		border-radius: 50%;
-		object-fit: cover;
-		box-shadow: var(--g-elevation2);
+	> button {
+		border: none;
 		outline: u.Rem(2px) solid transparent;
 		cursor: pointer;
+		display: block;
+		width: min(80%, u.Rem(256px));
 		transition-duration: var(--g-duration-transition);
-
-		:root[data-creative-mode=true] & {
-			border-radius: 0;
-		}
+		border-radius: 50%;
 
 		&:hover {
 			outline-color: rgb(var(--g-color-accent));
@@ -34,6 +28,19 @@ header {
 
 		&:active {
 			scale: .9;
+		}
+
+		> img {
+			width: 100%;
+			display: block;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: var(--g-elevation2);
+
+			&[hidden] {
+				display: none;
+			}
 		}
 	}
 }
