@@ -26,6 +26,11 @@ header {
 			outline-offset: u.Rem(16px);
 		}
 
+		&:focus-visible {
+			outline-offset: u.Rem(16px);
+			outline: auto;
+		}
+
 		&:active {
 			scale: .9;
 		}

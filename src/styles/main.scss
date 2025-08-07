@@ -46,6 +46,10 @@ main {
 		> a {
 			display: block;
 			padding: u.Rem(20px);
+
+			&:focus-visible {
+				outline: none;
+			}
 		}
 	}
 
