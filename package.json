@@ -1,19 +1,16 @@
 {
   "name": "msulais.github.io",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "typescript": "~5.8.3",
-    "vite": "^7.0.4"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "gsap": "^3.13.0",
-    "sass": "^1.89.2"
+    "astro": "^5.16.6",
+    "marked": "^17.0.1",
+    "sass": "^1.97.1"
   }
 }
