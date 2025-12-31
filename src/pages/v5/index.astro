@@ -3,8 +3,7 @@ import favicon from './_assets/favicon/favicon.svg'
 import Html from "../../layouts/Html.astro"
 ---
 
-<Html>
-	<link slot="favicon" rel="icon" type="image/svg+xml" href={favicon.src} />
+<Html favicon_url={favicon.src}>
 	<img src="https://redmerah.com/test" alt="haha error"/>
 	<script src="./_scripts/index.ts"/>
 </Html>

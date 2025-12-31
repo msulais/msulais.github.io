@@ -3,12 +3,14 @@ type Props = {
 	title?: string
 	description?: string
 	lang?: string
+	favicon_url?: string
 }
 
 const {
 	title = 'Muhammad Sulais',
 	description = 'Crafting digital experiences that users love. Front End Developer specializing in pixel-perfect UI, accessibility, and responsive design. See my latest projects.',
 	lang = 'en-US',
+	favicon_url = '/favicon.svg'
 } = Astro.props
 ---
 <!doctype html>
@@ -19,7 +21,7 @@ const {
 		<meta name="description" content={ description }>
 		<title>{ title }</title>
 		<slot name="favicon">
-			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<link rel="icon" type="image/svg+xml" href={favicon_url} />
 		</slot>
 		<slot name="open-graph-protocol" />
 	</head>
