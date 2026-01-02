@@ -1,23 +1,7 @@
-import { Ids } from "../../_scripts/shared/ids"
+import { Refs } from "./refs"
+import { PageTransition } from "./transition"
 
 let _isSplashOpen = true
-
-namespace _Refs {
-	const fn_id = (id: string) => document.getElementById(id) as Element | undefined
-
-	export const splash = fn_id(Ids.splash) as HTMLDialogElement
-	export const checkbox = fn_id(Ids.splash_checkbox) as HTMLInputElement
-	export const path1 = fn_id(Ids.splash_path1) as SVGPathElement
-	export const path2 = fn_id(Ids.splash_path2) as SVGPathElement
-	export const path3 = fn_id(Ids.splash_path3) as SVGPathElement
-	export const waveCoordiate = fn_id(Ids.splash_waveCoordinate) as HTMLSpanElement
-	export const time = fn_id(Ids.splash_time) as HTMLSpanElement
-	export const date = fn_id(Ids.splash_date) as HTMLSpanElement
-	export const progressValue = fn_id(Ids.splash_progressValue) as HTMLDivElement
-	export const progressText = fn_id(Ids.splash_progressText) as HTMLSpanElement
-	export const button = fn_id(Ids.splash_button) as HTMLButtonElement
-	export const triangle = fn_id(Ids.splash_triangle) as HTMLSpanElement
-}
 
 namespace _WavePath {
 	const SVG_WIDTH = 1280
@@ -71,14 +55,14 @@ namespace _WavePath {
 			minS + (Math.random() * rangeS),
 			minS + (Math.random() * rangeS),
 		]
-		_Refs.path1.setAttribute('d', generateWavePath(x[0], y[0], s[0]))
-		_Refs.path2.setAttribute('d', generateWavePath(x[1], y[1], s[1]))
-		_Refs.path3.setAttribute('d', generateWavePath(x[2], y[2], s[2]))
+		Refs.splash_path1.setAttribute('d', generateWavePath(x[0], y[0], s[0]))
+		Refs.splash_path2.setAttribute('d', generateWavePath(x[1], y[1], s[1]))
+		Refs.splash_path3.setAttribute('d', generateWavePath(x[2], y[2], s[2]))
 
 		const fn_coordinate = (v: number[]) => (
 			(1 << 24) + ((v[0] & 0xff) << 16) + ((v[1] & 0xff) << 8) + (v[2] & 0xff)
 		).toString(16).substring(1).toUpperCase()
-		_Refs.waveCoordiate.textContent = `X: ${fn_coordinate(x)} / Y: ${fn_coordinate(y)}`
+		Refs.splash_waveCoordinate.textContent = `X: ${fn_coordinate(x)} / Y: ${fn_coordinate(y)}`
 	}
 
 	function idleAnimation(): void {
@@ -110,13 +94,13 @@ namespace _Datetime {
 
 	function updateDatetime(): void {
 		const date = new Date()
-		_Refs.date.textContent = date.toLocaleDateString('en', {
+		Refs.splash_date.textContent = date.toLocaleDateString('en', {
 			timeZone: 'Asia/Jakarta',
 			day: 'numeric',
 			month: 'long',
 			year: 'numeric'
 		})
-		_Refs.time.textContent = date.toLocaleTimeString('en', {
+		Refs.splash_time.textContent = date.toLocaleTimeString('en', {
 			timeZone: 'Asia/Jakarta',
 			minute: '2-digit',
 			second: '2-digit',
@@ -125,7 +109,7 @@ namespace _Datetime {
 	}
 }
 
-namespace _Progress {
+export namespace SplashProgress {
 	const key_autoClose = 'auto-close-splash'
 	const delay = 500
 	let progress = 0
@@ -144,16 +128,16 @@ namespace _Progress {
 			return
 		}
 
-		_Refs.checkbox.checked = true
+		Refs.splash_checkbox.checked = true
 	}
 
 	function events(): void {
-		_Refs.button.onclick = () => {
+		Refs.splash_button.onclick = () => {
 			closeSplash()
 		}
 
-		_Refs.checkbox.onchange = () => {
-			localStorage.setItem(key_autoClose, _Refs.checkbox.checked + '')
+		Refs.splash_checkbox.onchange = () => {
+			localStorage.setItem(key_autoClose, Refs.splash_checkbox.checked + '')
 		}
 
 		window.addEventListener('load', () => {
@@ -174,18 +158,18 @@ namespace _Progress {
 			}
 
 			++visualProgress
-			_Refs.progressValue.style.setProperty('--c-progress', visualProgress + '%')
-			_Refs.progressValue.setAttribute('aria-valuenow', visualProgress + '')
-			_Refs.progressValue.setAttribute('aria-valuetext', visualProgress + ' percent')
-			_Refs.progressText.textContent = visualProgress + '%'
+			Refs.splash_progressValue.style.setProperty('--c-progress', visualProgress + '%')
+			Refs.splash_progressValue.setAttribute('aria-valuenow', visualProgress + '')
+			Refs.splash_progressValue.setAttribute('aria-valuetext', visualProgress + ' percent')
+			Refs.splash_progressText.textContent = visualProgress + '%'
 			if (visualProgress < 100) {
 				return
 			}
 
-			_Refs.button.disabled = false
-			_Refs.button.focus()
-			_Refs.triangle.remove()
-			if (!_Refs.checkbox.checked) {
+			Refs.splash_button.disabled = false
+			Refs.splash_button.focus()
+			Refs.splash_triangle.remove()
+			if (!Refs.splash_checkbox.checked) {
 				return
 			}
 
@@ -217,15 +201,34 @@ namespace _Progress {
 		updateVisual(100)
 	}
 
-	function closeSplash(): void {
-		// TODO
+	export async function closeSplash(): Promise<void> {
+		if (!_isSplashOpen) {
+			return
+		}
+
+		_isSplashOpen = false
+		await PageTransition.topToFull()
+		Refs.splash.style.setProperty('display', 'none')
+		PageTransition.fullToBottom()
+	}
+
+	export async function openSplash(): Promise<void> {
+		if (_isSplashOpen) {
+			return
+		}
+
+		_isSplashOpen = true
+		await PageTransition.bottomToFull()
+		Refs.splash.style.removeProperty('display')
+		PageTransition.fullToTop()
+		Refs.splash_button.focus()
 	}
 }
 
-function _main(): void {
+const _ = () => {
 	_WavePath.init()
 	_Datetime.init()
-	_Progress.init()
+	SplashProgress.init()
 }
 
-_main()
+export default _

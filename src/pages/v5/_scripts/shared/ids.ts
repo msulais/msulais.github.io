@@ -16,4 +16,6 @@ export namespace Ids {
 	export const splash_progressText = fn_id()
 	export const splash_time = fn_id()
 	export const splash_triangle = fn_id()
+
+	export const transition = fn_id()
 }

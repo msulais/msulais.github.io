@@ -107,6 +107,7 @@
 	position: fixed;
 	left: 0px;
 	top: 0px;
+	z-index: var(--z-index-splash);
 
 	* {
 		color: #fff;
