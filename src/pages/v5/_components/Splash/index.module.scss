@@ -201,9 +201,9 @@
 			scale: 1.1;
 		}
 
-		&:active {
-			scale: 1;
-		}
+		// &:active {
+		// 	scale: 1;
+		// }
 
 		> input {
 			appearance: none;
@@ -214,7 +214,12 @@
 				}
 				~ [data-css-state-2] {
 					display: block;
+					animation: swap-element .25s cubic-bezier(.25, 0, 0, 1);
 				}
+			}
+
+			&:not(:checked) ~ [data-css-state-1] {
+				animation: swap-element .25s cubic-bezier(.25, 0, 0, 1);
 			}
 		}
 
@@ -227,6 +232,17 @@
 		> [data-css-state-2] {
 			display: none;
 		}
+	}
+}
+
+@keyframes swap-element {
+	from {
+		opacity: 0;
+		scale: 0;
+	}
+	to {
+		opacity: 1;
+		scale: 1;
 	}
 }
 
