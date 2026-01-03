@@ -34,12 +34,6 @@
 	top: u.Rem(12px);
 }
 
-.system {
-	right: u.Rem(12px);
-	top: u.Rem(24px + 16px);
-	writing-mode: vertical-lr;
-}
-
 .topInfo {
 	position: fixed;
 	top: 0;
@@ -68,4 +62,10 @@
 			color: #ffc400;
 		}
 	}
+}
+
+.version {
+	right: u.Rem(12px);
+	top: u.Rem(24px + 16px);
+	writing-mode: vertical-lr;
 }
