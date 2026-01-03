@@ -17,5 +17,9 @@ export namespace Ids {
 	export const splash_time = fn_id()
 	export const splash_triangle = fn_id()
 
+	export const topInfo_stopwatch = fn_id()
+	export const topInfo_scroll = fn_id()
+
 	export const transition = fn_id()
+
 }

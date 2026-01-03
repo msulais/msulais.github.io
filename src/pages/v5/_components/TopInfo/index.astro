@@ -1,0 +1,16 @@
+---
+import { Ids } from '../../_scripts/shared/ids'
+import CSS from './index.module.scss'
+---
+<header class={CSS.topInfo}>
+	<p class={CSS.profileName}>MUHAMMAD SULAIS</p>
+	<p class={CSS.stopwatchPageScroll} aria-live="off">ST <span id={Ids.topInfo_stopwatch}>00000</span> / <span id={Ids.topInfo_scroll}>000%</span></p>
+	<button class={CSS.system}>SYSTEM 5.0</button>
+	<button class={CSS.idleMode}>IDLE MODE</button>
+	<svg class={CSS.iconRight} width="24" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M22.2242 3.92285V9.79004L17.1431 12.7236L12.0611 9.78906V3.92383L17.1431 0.989258L22.2242 3.92285Z" fill="#FFFF00" stroke="black" stroke-width="1.71429"/>
+		<path d="M17.0813 12.4943V18.3615L12.0003 21.2951L6.91824 18.3605V12.4953L12.0003 9.56069L17.0813 12.4943Z" stroke="black" stroke-width="1.71429"/>
+		<path d="M11.9385 3.92285V9.79004L6.85742 12.7236L1.77539 9.78906V3.92383L6.85742 0.989258L11.9385 3.92285Z" stroke="black" stroke-width="1.71429"/>
+	</svg>
+	<div class={CSS.iconLeft}/>
+</header>
