@@ -1,0 +1,136 @@
+@use '../../_styles/_units.scss' as u;
+
+.about {
+	> h1 {
+		font-size: min(u.Rem(108px), 9vw);
+		line-height: 1;
+		position: relative;
+		top: -0.2em;
+		font-weight: 900;
+
+		@media (max-width: u.Rem(500px)) {
+			top: 0;
+			font-size: 13vw;
+			text-align: center;
+		}
+	}
+}
+
+.hero {
+	padding: u.Rem(40px);
+	width: u.Rem(1080px);
+	max-width: calc(100% - u.Rem(80px));
+	display: flex;
+	align-items: flex-start;
+	gap: u.Rem(32px);
+
+	@media (max-width: u.Rem(500px)) {
+		flex-direction: column;
+		align-items: center;
+		gap: u.Rem(16px)
+	}
+}
+
+.image {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 12%;
+		height: 12%;
+		position: absolute;
+		background-color: #202020;
+		right: 0px;
+		top: 0px;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+	}
+
+	> img {
+		display: block;
+		width: min(u.Rem(360px), 30vw);
+		aspect-ratio: 1;
+		object-fit: cover;
+		clip-path: polygon(
+			0% 0%, 80% 0%, 100% 20%, 100% 100%,
+			20% 100%, 0% 80%, 0% 100%
+		);
+
+		@media (max-width: u.Rem(500px)) {
+			width: 50vw;
+		}
+	}
+}
+
+.info {
+	@media (max-width: u.Rem(500px)) {
+		margin-top: u.Rem(16px);
+	}
+
+	> a {
+		color: #000;
+		text-decoration: none;
+		position: relative;
+
+		&:hover::after {
+			animation: stroke-left-right 1s cubic-bezier(.25, 0, 0, 1);
+		}
+
+		&::after {
+			pointer-events: none;
+			content: '';
+			position: absolute;
+			left: 0px;
+			top: 105%;
+			width: 100%;
+			height: u.Rem(1.5px);
+			background-color: #ffa500;
+		}
+	}
+}
+
+@keyframes stroke-left-right {
+	0% {
+		clip-path: xywh(0% 0% 0% 100%);
+	}
+	25% {
+		clip-path: xywh(0% 0% 100% 100%);
+	}
+	50% {
+		clip-path: xywh(100% 0% 0% 100%);
+	}
+	100% {
+		clip-path: xywh(0% 0% 100% 100%);
+	}
+}
+
+.role {
+	margin-top: u.Rem(16px);
+	font-size: min(u.Rem(48px), 4vw);
+	line-height: 1.14;
+	position: relative;
+	width: fit-content;
+
+	@media (max-width: u.Rem(500px)) {
+		text-align: center;
+		width: 100%;
+
+		&::before {
+			width: 110% !important;
+		}
+	}
+
+	&:hover::before {
+		width: 110%;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 20%;
+		height: 100%;
+		left: -2.5%;
+		background-color: #ffff00;
+		z-index: -1;
+		transition: .25s;
+	}
+}
