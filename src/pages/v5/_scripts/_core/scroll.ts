@@ -17,7 +17,12 @@ function _updatePercentage(): void {
 		/ Math.max(1, getDocumentScrollHeight() - window.innerHeight)
 		* 100
 	)))
-	Refs.topInfo_scroll.textContent = percentage.toString().padStart(3, '0') + '%'
+	let text = percentage.toString().padStart(3, '0') + '%'
+	if (getDocumentScrollHeight() <= window.innerHeight) {
+		text = '100%'
+	}
+
+	Refs.topInfo_scroll.textContent = text
 }
 
 function _initEvents() {
