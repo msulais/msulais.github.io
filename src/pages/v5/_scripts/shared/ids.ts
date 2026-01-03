@@ -23,6 +23,7 @@ export namespace Ids {
 
 	export const topInfo_stopwatch = fn_id()
 	export const topInfo_scroll = fn_id()
+	export const topInfo_idle = fn_id()
 
 	export const transition = fn_id()
 

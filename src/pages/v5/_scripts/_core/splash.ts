@@ -140,6 +140,10 @@ export namespace SplashProgress {
 			localStorage.setItem(key_autoClose, Refs.splash_checkbox.checked + '')
 		}
 
+		Refs.topInfo_idle.addEventListener('click', () => {
+			openSplash()
+		})
+
 		window.addEventListener('load', () => {
 			finish()
 		})

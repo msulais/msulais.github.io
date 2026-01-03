@@ -18,4 +18,5 @@ export namespace Refs {
 
 	export const topInfo_stopwatch = fn_id(Ids.topInfo_stopwatch) as HTMLSpanElement
 	export const topInfo_scroll = fn_id(Ids.topInfo_scroll) as HTMLSpanElement
+	export const topInfo_idle = fn_id(Ids.topInfo_idle) as HTMLButtonElement
 }
