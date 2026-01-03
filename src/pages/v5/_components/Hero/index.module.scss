@@ -114,8 +114,14 @@
 		text-align: center;
 		width: 100%;
 
+		> br {
+			display: none;
+		}
+
 		&::before {
 			width: 110% !important;
+			top: -.2em;
+			height: 140% !important;
 		}
 	}
 
