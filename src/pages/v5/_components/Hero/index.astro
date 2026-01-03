@@ -2,6 +2,7 @@
 import CSS from './index.module.scss'
 import profilePicture from '../../../../assets/images/muhammad_sulais.jpg'
 import { C_Contacts } from '../../../../constants/contact'
+import { C_About } from '../../../../constants/about'
 ---
 
 <section class={CSS.hero} aria-label="Home">
@@ -10,7 +11,7 @@ import { C_Contacts } from '../../../../constants/contact'
 	</div>
 	<div class={CSS.about}>
 		<h1>MUHAMMAD<br/>SULAIS</h1>
-		<p class={CSS.info}>Based in Yogyakarta, Indonesia / <a href={C_Contacts.linkedin.url}>LinkedIn</a> / <a href={C_Contacts.github.url}>Github</a></p>
+		<p class={CSS.info}>Based in {C_About.location} / <a href={C_Contacts.linkedin.url}>LinkedIn</a> / <a href={C_Contacts.github.url}>Github</a></p>
 		<p class={CSS.role}>Frontend <br/>Web Developer</p>
 	</div>
 </section>
