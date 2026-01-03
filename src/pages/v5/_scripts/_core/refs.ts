@@ -15,4 +15,7 @@ export namespace Refs {
 	export const splash_progressText = fn_id(Ids.splash_progressText) as HTMLSpanElement
 	export const splash_button = fn_id(Ids.splash_button) as HTMLButtonElement
 	export const splash_triangle = fn_id(Ids.splash_triangle) as HTMLSpanElement
+
+	export const topInfo_stopwatch = fn_id(Ids.topInfo_stopwatch) as HTMLSpanElement
+	export const topInfo_scroll = fn_id(Ids.topInfo_scroll) as HTMLSpanElement
 }
