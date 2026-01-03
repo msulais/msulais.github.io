@@ -1,0 +1,68 @@
+@use '../../_styles/_units.scss' as u;
+
+.navigation {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	display: block;
+	translate: -50% 0;
+	background-color: #ffffff33;
+	backdrop-filter: blur(u.Rem(16px));
+	z-index: var(--z-index-navigation);
+
+	@media (max-width: u.Rem(340px)) {
+		width: 100%;
+	}
+
+	> ul {
+		list-style: none;
+		display: grid;
+		align-items: center;
+		padding: u.Rem(8px);
+		gap: u.Rem(8px);
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	& a {
+		--color: #fff;
+		display: flex;
+		background-color: #EBEBEB;
+		background-color: #202020;
+		align-items: center;
+		gap: u.Rem(8px);
+		padding: u.Rem(4px) u.Rem(8px);
+		color: var(--color);
+		text-decoration: none;
+		justify-content: center;
+		font-weight: 500;
+		font-size: u.Rem(14px);
+		transition-duration: .25s;
+
+		&:hover {
+			--color: #ffff00;
+			scale: 1.1;
+		}
+
+		&:active {
+			scale: 1;
+		}
+
+		&[data-css-selected=true] {
+			background-color: #ffff00;
+			--color: #000;
+		}
+
+		@media (max-width: u.Rem(340px)) {
+			gap: u.Rem(2px);
+			flex-direction: column;
+		}
+
+		> svg {
+			width: u.Rem(24px);
+
+			> path {
+				fill: var(--color);
+			}
+		}
+	}
+}

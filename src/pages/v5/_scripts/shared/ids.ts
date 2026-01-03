@@ -4,6 +4,10 @@ export namespace Ids {
 	const idPrefix = fn_hex(2026)
 	const fn_id = () => idPrefix + fn_hex(++id)
 
+	export const page_about = 'about'
+	export const page_projects = 'projects'
+	export const page_contact = 'contact'
+
 	export const splash = fn_id()
 	export const splash_button = fn_id()
 	export const splash_checkbox = fn_id()
