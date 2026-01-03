@@ -124,11 +124,11 @@ export namespace SplashProgress {
 
 	function checkIsAutoClose(): void {
 		const value = localStorage.getItem(key_autoClose)
-		if (!value || value !== 'true') {
+		if (!value || value !== 'false') {
 			return
 		}
 
-		Refs.splash_checkbox.checked = true
+		Refs.splash_checkbox.checked = false
 	}
 
 	function events(): void {
