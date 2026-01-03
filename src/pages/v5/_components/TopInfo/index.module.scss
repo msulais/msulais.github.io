@@ -15,6 +15,13 @@
 	right: u.Rem(8px);
 	top: u.Rem(8px);
 	width: u.Rem(24px);
+	animation: rotate-forever 3s infinite linear;
+}
+
+@keyframes rotate-forever {
+	to {
+		rotate: 360deg;
+	}
 }
 
 .idleMode {
