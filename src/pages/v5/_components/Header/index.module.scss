@@ -31,8 +31,8 @@
 }
 
 .iconLeft {
-	left: u.Rem(8px);
-	top: u.Rem(8px);
+	left: calc(u.Rem(8px) + env(safe-area-inset-left));
+	top: calc(u.Rem(8px) + env(safe-area-inset-top));
 	min-width: u.Rem(24px);
 	max-width: u.Rem(24px);
 	max-height: u.Rem(24px);
@@ -42,8 +42,8 @@
 }
 
 .iconRight {
-	right: u.Rem(8px);
-	top: u.Rem(8px);
+	right: calc(u.Rem(8px) + env(safe-area-inset-right));
+	top: calc(u.Rem(8px) + env(safe-area-inset-top));
 	width: u.Rem(24px);
 	animation: rotate-forever 3s infinite linear;
 }
@@ -55,24 +55,24 @@
 }
 
 .idleMode {
-	right: u.Rem(24px + 18px);
-	top: u.Rem(12px);
+	right: calc(u.Rem(24px + 18px) + env(safe-area-inset-right));
+	top: calc(u.Rem(12px) + env(safe-area-inset-top));
 }
 
 .profileName {
-	left: u.Rem(12px);
-	top: u.Rem(24px + 16px);
+	left: calc(u.Rem(12px) + env(safe-area-inset-left));
+	top: calc(u.Rem(24px + 16px) + env(safe-area-inset-top));
 	writing-mode: vertical-lr;
 	rotate: 180deg;
 }
 
 .stopwatchPageScroll {
-	left: u.Rem(24px + 18px);
-	top: u.Rem(12px);
+	left: calc(u.Rem(24px + 18px) + env(safe-area-inset-left));
+	top: calc(u.Rem(12px) + env(safe-area-inset-top));
 }
 
 .version {
-	right: u.Rem(12px);
-	top: u.Rem(24px + 16px);
+	right: calc(u.Rem(12px) + env(safe-area-inset-right));
+	top: calc(u.Rem(24px + 16px) + env(safe-area-inset-top));
 	writing-mode: vertical-lr;
 }

@@ -2,7 +2,7 @@
 
 .navigation {
 	position: fixed;
-	bottom: 0;
+	bottom: env(safe-area-inset-bottom);
 	left: 50%;
 	display: block;
 	translate: -50% 0;
