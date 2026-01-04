@@ -1,0 +1,78 @@
+@use '../../_styles/units' as u;
+
+.about {
+	margin: u.Rem(64px);
+	padding: u.Rem(32px);
+	width: u.Rem(1080px);
+	max-width: calc(100% - 142px);
+	background-color: #202020;
+	background-image: url(../../_assets/images/background-satelite.svg);
+	background-repeat: repeat;
+	background-size: 64px;
+	scroll-margin: u.Rem(40px);
+
+	& * {
+		color: #fff;
+	}
+}
+
+.content {
+	list-style: none;
+	margin-top: u.Rem(16px);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: u.Rem(-32px);
+		top: u.Rem(-4px);
+		width: u.Rem(8px);
+		height: calc(100% + u.Rem(8px));
+		background-color: #ffff00;
+		clip-path: polygon(0% 0%, 100% u.Rem(4px), 100% calc(100% - u.Rem(4px)), 0% 100%);
+	}
+
+	> li {
+		&:first-child {
+			> ul {
+				list-style: none;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+				gap: 1rem;
+
+				> li {
+					font-weight: bold;
+					color: #ffff00;
+
+					> span {
+						font-weight: normal;
+					}
+				}
+			}
+		}
+
+		&:not(:first-child) {
+			color: #ffff00;
+			font-weight: bold;
+			margin-top: 1rem;
+
+			> ul {
+				list-style: disc;
+				font-weight: normal;
+				margin-left: 1.25em;
+
+				&[data-css-only-one] {
+					list-style: none;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.title {
+	> svg {
+		width: u.Rem(64px);
+		height: u.Rem(64px);
+	}
+}
