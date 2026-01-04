@@ -32,7 +32,7 @@
 		gap: u.Rem(8px);
 		padding: u.Rem(4px) u.Rem(16px);
 		color: var(--color);
-		min-height: 40px;
+		min-height: u.Rem(40px);
 		text-decoration: none;
 		justify-content: center;
 		font-weight: 500;
