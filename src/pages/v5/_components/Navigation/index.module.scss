@@ -10,7 +10,7 @@
 	backdrop-filter: blur(u.Rem(16px));
 	z-index: var(--z-index-navigation);
 
-	@media (max-width: u.Rem(340px)) {
+	@media (max-width: u.Rem(400px)) {
 		width: 100%;
 	}
 
@@ -30,8 +30,9 @@
 		background-color: #202020;
 		align-items: center;
 		gap: u.Rem(8px);
-		padding: u.Rem(4px) u.Rem(8px);
+		padding: u.Rem(4px) u.Rem(16px);
 		color: var(--color);
+		min-height: 40px;
 		text-decoration: none;
 		justify-content: center;
 		font-weight: 500;
@@ -52,7 +53,7 @@
 			--color: #000;
 		}
 
-		@media (max-width: u.Rem(340px)) {
+		@media (max-width: u.Rem(400px)) {
 			gap: u.Rem(2px);
 			flex-direction: column;
 		}
