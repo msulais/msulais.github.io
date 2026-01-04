@@ -4,6 +4,10 @@ export namespace Ids {
 	const idPrefix = fn_hex(2026)
 	const fn_id = () => idPrefix + fn_hex(++id)
 
+	export const header_stopwatch = fn_id()
+	export const header_scroll = fn_id()
+	export const header_idle = fn_id()
+
 	export const page_about = 'about'
 	export const page_projects = 'projects'
 	export const page_contact = 'contact'
@@ -20,10 +24,6 @@ export namespace Ids {
 	export const splash_progressText = fn_id()
 	export const splash_time = fn_id()
 	export const splash_triangle = fn_id()
-
-	export const topInfo_stopwatch = fn_id()
-	export const topInfo_scroll = fn_id()
-	export const topInfo_idle = fn_id()
 
 	export const transition = fn_id()
 

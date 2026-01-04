@@ -16,7 +16,7 @@ export namespace Refs {
 	export const splash_button = fn_id(Ids.splash_button) as HTMLButtonElement
 	export const splash_triangle = fn_id(Ids.splash_triangle) as HTMLSpanElement
 
-	export const topInfo_stopwatch = fn_id(Ids.topInfo_stopwatch) as HTMLSpanElement
-	export const topInfo_scroll = fn_id(Ids.topInfo_scroll) as HTMLSpanElement
-	export const topInfo_idle = fn_id(Ids.topInfo_idle) as HTMLButtonElement
+	export const header_stopwatch = fn_id(Ids.header_stopwatch) as HTMLSpanElement
+	export const header_scroll = fn_id(Ids.header_scroll) as HTMLSpanElement
+	export const header_idle = fn_id(Ids.header_idle) as HTMLButtonElement
 }

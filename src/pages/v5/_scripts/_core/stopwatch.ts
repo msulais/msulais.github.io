@@ -6,7 +6,7 @@ function startStopwatch(): void {
 	setInterval(() => {
 		++i
 		const text = i.toString(16).toUpperCase().padStart(digits, '0')
-		Refs.topInfo_stopwatch.textContent = text
+		Refs.header_stopwatch.textContent = text
 	}, 1000);
 }
 

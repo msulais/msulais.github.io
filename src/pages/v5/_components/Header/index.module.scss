@@ -1,5 +1,35 @@
 @use '../../_styles/_units.scss' as u;
 
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: var(--z-index-top-info);
+
+	& * {
+		font-size: u.Rem(14px);
+		font-weight: bold;
+		white-space: nowrap;
+	}
+
+	> * {
+		position: absolute;
+	}
+
+	> button {
+		background-color: transparent;
+		padding: 0;
+		border: none;
+		cursor: pointer;
+		transition-duration: .25s;
+
+		&:hover {
+			color: #ffa500;
+		}
+	}
+}
+
 .iconLeft {
 	left: u.Rem(8px);
 	top: u.Rem(8px);
@@ -39,36 +69,6 @@
 .stopwatchPageScroll {
 	left: u.Rem(24px + 18px);
 	top: u.Rem(12px);
-}
-
-.topInfo {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	left: 0;
-	z-index: var(--z-index-top-info);
-
-	& * {
-		font-size: u.Rem(14px);
-		font-weight: bold;
-		white-space: nowrap;
-	}
-
-	> * {
-		position: absolute;
-	}
-
-	> button {
-		background-color: transparent;
-		padding: 0;
-		border: none;
-		cursor: pointer;
-		transition-duration: .25s;
-
-		&:hover {
-			color: #ffa500;
-		}
-	}
 }
 
 .version {

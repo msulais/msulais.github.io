@@ -22,7 +22,7 @@ function _updatePercentage(): void {
 		text = '100%'
 	}
 
-	Refs.topInfo_scroll.textContent = text
+	Refs.header_scroll.textContent = text
 }
 
 function _initEvents() {

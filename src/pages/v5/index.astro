@@ -2,7 +2,7 @@
 import favicon from './_assets/favicon/favicon.svg'
 import Html from "../../layouts/Html.astro"
 import Splash from './_components/Splash/index.astro'
-import TopInfo from './_components/TopInfo/index.astro'
+import Header from './_components/Header/index.astro'
 import Transition from './_components/Transition/index.astro'
 import Navigation from './_components/Navigation/index.astro'
 import Hero from './_components/Hero/index.astro'
@@ -13,7 +13,7 @@ import './_styles/index.scss'
 <Html favicon_url={favicon.src}>
 	<Splash />
 	<Transition/>
-	<TopInfo/>
+	<Header/>
 	<Navigation/>
 	<Hero/>
 	<script src="./_scripts/index.ts"/>
