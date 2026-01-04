@@ -1,7 +1,7 @@
-import images from "./_core/images";
-import splash from "./_core/splash";
-import stopwatch from "./_core/stopwatch";
-import scroll from "./_core/scroll"
+import images from "./core/images";
+import splash from "./core/splash";
+import stopwatch from "./core/stopwatch";
+import scroll from "./core/scroll"
 
 images()
 splash()
