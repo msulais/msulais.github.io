@@ -18,8 +18,6 @@
 	}
 
 	> button {
-		background-color: transparent;
-		padding: 0;
 		border: none;
 		cursor: pointer;
 		transition-duration: .25s;
@@ -56,23 +54,39 @@
 
 .idleMode {
 	right: calc(u.Rem(24px + 18px) + env(safe-area-inset-right));
-	top: calc(u.Rem(12px) + env(safe-area-inset-top));
+	top: calc(u.Rem(10px) + env(safe-area-inset-top));
+	background-color: #ffffffcc;
+	backdrop-filter: blur(u.Rem(8px));
+	border-radius: u.Rem(2px);
+	padding: .1em .4em;
 }
 
 .profileName {
-	left: calc(u.Rem(12px) + env(safe-area-inset-left));
+	padding: .4em .1em;
+	left: calc(u.Rem(10px) + env(safe-area-inset-left));
 	top: calc(u.Rem(24px + 16px) + env(safe-area-inset-top));
 	writing-mode: vertical-lr;
 	rotate: 180deg;
+	background-color: #ffffffcc;
+	backdrop-filter: blur(u.Rem(8px));
+	border-radius: u.Rem(2px);
 }
 
 .stopwatchPageScroll {
+	padding: .1em .4em;
 	left: calc(u.Rem(24px + 18px) + env(safe-area-inset-left));
-	top: calc(u.Rem(12px) + env(safe-area-inset-top));
+	top: calc(u.Rem(10px) + env(safe-area-inset-top));
+	background-color: #ffffffcc;
+	backdrop-filter: blur(u.Rem(8px));
+	border-radius: u.Rem(2px);
 }
 
 .version {
-	right: calc(u.Rem(12px) + env(safe-area-inset-right));
+	padding: .4em .1em;
+	right: calc(u.Rem(10px) + env(safe-area-inset-right));
 	top: calc(u.Rem(24px + 16px) + env(safe-area-inset-top));
 	writing-mode: vertical-lr;
+	background-color: #ffffffcc;
+	backdrop-filter: blur(u.Rem(8px));
+	border-radius: u.Rem(2px);
 }
