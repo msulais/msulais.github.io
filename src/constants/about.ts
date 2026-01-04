@@ -1,3 +1,12 @@
+import logo_html from '../assets/logos/html.svg'
+import logo_css from '../assets/logos/css.svg'
+import logo_typescript from '../assets/logos/typescript.svg'
+import logo_solid from '../assets/logos/solid.svg'
+import logo_react from '../assets/logos/react.svg'
+import logo_svelte from '../assets/logos/svelte.svg'
+import logo_vue from '../assets/logos/vue.svg'
+import logo_figma from '../assets/logos/figma.svg'
+
 function _dateDiffInDays(date1: Date, date2: Date) {
 	const MS_PER_DAY = 1000 * 60 * 60 * 24
 	const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate())
@@ -16,29 +25,94 @@ function _initExpYear() {
 
 export namespace C_About {
 	export const fullname = 'Muhammad Sulais'
+	export const fullnameHTML = 'Muhammad <br>Sulais'
 	export const role = 'Frontend Web Developer'
-	export const roleHTML = 'Frontend<br>Web Developer'
+	export const roleHTML = 'Frontend <br>Web Developer'
 	export const location = 'Yogyakarta, Indonesia'
 	export const locationURL = 'https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8'
 	export const timezone = 'GMT+7'
 	export const timezoneURL = 'https://time.is/GMT+7'
 	export const webExperienceYear = () => _initExpYear()
 
-	export enum Languages {
-		Indonesia = 'Indonesia',
-		English = 'English'
+	export namespace Languages {
+		type Lang = {
+			name: string
+			difficulty: 'Beginner' | 'Intermediate' | 'Expert' | 'Fluent' | 'Native'
+		}
+
+		export const Indonesia: Lang = {
+			name: 'Indonesia',
+			difficulty: 'Native'
+		}
+
+		export const English: Lang = {
+			name: 'English',
+			difficulty: 'Intermediate'
+		}
+
+		export const all: Lang[] = [
+			Indonesia,
+			English
+		]
 	}
 
-	export enum Skills {
-		HTML = 'HTML',
-		CSS = 'CSS',
-		JavaScript = 'JavaScript',
-		TypeScript = 'TypeScript',
-		SolidJS = 'SolidJS',
-		React = 'React',
-		Svelte = 'Svelte',
-		VueJS = 'VueJS',
-		Figma = 'Figma'
+	export namespace Skills {
+		type Skill = {
+			name: string
+			imgURL: string
+		}
+
+		export const HTML: Skill = {
+			imgURL: logo_html.src,
+			name: 'HTML'
+		}
+
+		export const CSS: Skill = {
+			imgURL: logo_css.src,
+			name: 'CSS'
+		}
+
+		export const TypeScript: Skill = {
+			imgURL: logo_typescript.src,
+			name: 'TypeScript'
+		}
+
+		export const SolidJS: Skill = {
+			imgURL: logo_solid.src,
+			name: 'SolidJS'
+		}
+
+		export const React: Skill = {
+			imgURL: logo_react.src,
+			name: 'React'
+		}
+
+		export const Svelte: Skill = {
+			imgURL: logo_svelte.src,
+			name: 'Svelte'
+		}
+
+		export const VueJS: Skill = {
+			imgURL: logo_vue.src,
+			name: 'VueJS'
+		}
+
+		export const Figma: Skill = {
+			imgURL: logo_figma.src,
+			name: 'Figma'
+		}
+
+		export const all: Skill[] = [
+			HTML, CSS, TypeScript,
+			SolidJS, React, Svelte, VueJS,
+			Figma,
+		]
+
+		export const allGroup: Skill[][] = [
+			[HTML, CSS, TypeScript],
+			[SolidJS, React, Svelte, VueJS],
+			[Figma]
+		]
 	}
 
 	export namespace Educations {
@@ -51,7 +125,7 @@ export namespace C_About {
 		}
 
 		export const OpenUniversity: Education = {
-			degree: 'Information System',
+			degree: 'Bachelor of Information System',
 			from_year: 2023,
 			grade: '3.52',
 			to_year: 2027,
@@ -80,8 +154,16 @@ export namespace C_About {
 			to_year: -1
 		}
 
+		export const Hexacompare: Work = {
+			company: 'Hexacompare',
+			from_year: 2022,
+			to_year: 2022,
+			role: 'Programming Language Teacher',
+		}
+
 		export const all: Work[] = [
-			AlItishamPlayen
+			AlItishamPlayen,
+			Hexacompare
 		]
 	}
 }
