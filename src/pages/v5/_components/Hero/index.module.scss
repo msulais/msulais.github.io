@@ -1,6 +1,8 @@
 @use '../../_styles/_units.scss' as u;
 
 .about {
+	width: 100%;
+
 	> h1 {
 		font-size: min(u.Rem(108px), 9vw);
 		line-height: 1;

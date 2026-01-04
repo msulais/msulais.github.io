@@ -3,8 +3,8 @@
 .about {
 	margin: u.Rem(64px);
 	padding: u.Rem(32px);
-	width: u.Rem(1080px);
-	max-width: calc(100% - 142px);
+	width: calc(u.Rem(1080px) - 64px);
+	max-width: calc(100% - u.Rem(142px));
 	background-color: #202020;
 	background-image: url(../../_assets/images/background-satelite.svg);
 	background-repeat: repeat;
