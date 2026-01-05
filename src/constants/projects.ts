@@ -12,9 +12,9 @@ import artic_img2 from '../assets/images/projects/artic/artic-2.png'
 import artic_img3 from '../assets/images/projects/artic/artic-3.png'
 
 export namespace C_Projects {
-	type Project = {
+	export type Project = {
 		name: string
-		url: string
+		urls: string[]
 		images: [url: string, alt: string][]
 		technology: string[]
 		description: string
@@ -22,7 +22,7 @@ export namespace C_Projects {
 
 	export const redmerah: Project = {
 		name: 'Redmerah / Productivity Tools',
-		url: 'https://redmerah.com',
+		urls: ['https://redmerah.com'],
 		images: [
 			[redmerah_img1.src, 'Redmerah'],
 			[redmerah_img2.src, 'All Redmerah apps'],
@@ -37,7 +37,7 @@ export namespace C_Projects {
 
 	export const artic: Project = {
 		name: 'Artic / Blog or News Template',
-		url: 'https://artic-delta.vercel.app/',
+		urls: ['https://artic-delta.vercel.app/'],
 		images: [
 			[artic_img1.src, 'Artic homepage'],
 			[artic_img2.src, 'Artic article page'],
