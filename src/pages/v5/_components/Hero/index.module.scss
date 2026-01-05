@@ -45,14 +45,6 @@
 		right: 0px;
 		top: 0px;
 		clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
-
-		@media (max-width: u.Rem(500px)) {
-			left: 0px;
-			top: auto;
-			bottom: 0px;
-			right: auto;
-			clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
-		}
 	}
 
 	> img {
