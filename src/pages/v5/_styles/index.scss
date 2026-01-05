@@ -1,10 +1,11 @@
 :root {
 	font-family: 'Barlow', sans-serif;
 
-	--z-index-top-info: 10;
+	--z-index-header: 10;
 	--z-index-navigation: 11;
-	--z-index-splash: 12;
-	--z-index-transition: 13;
+	--z-index-project-detail: 13;
+	--z-index-splash: 14;
+	--z-index-transition: 15;
 }
 
 * {
