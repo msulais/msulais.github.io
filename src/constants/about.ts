@@ -30,8 +30,10 @@ export namespace C_About {
 	export const roleHTML = 'Frontend <br>Web Developer'
 	export const location = 'Yogyakarta, Indonesia'
 	export const locationURL = 'https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8'
-	export const timezone = 'GMT+7'
-	export const timezoneURL = 'https://time.is/GMT+7'
+	export const timezoneValue = +7
+	export const timezonePlace = 'Asia/Jakarta'
+	export const timezoneText = 'UTC' + (timezoneValue >= 0? '+' : '') + timezoneValue
+	export const timezoneURL = 'https://time.is/GMT' + (timezoneValue >= 0? '+' : '') + timezoneValue
 	export const webExperienceYear = () => _initExpYear()
 
 	export namespace Languages {
