@@ -11,7 +11,7 @@ const _dlg_imagesRef = dialog.querySelector('.m-works-dialog-images')
 const _dlg_imgIndicatorRef = dialog.querySelector('.m-works-dialog-images-indicator')
 const _dlg_titleRef = dialog.querySelector('h2')
 const _dlg_tagsRef = dialog.querySelector('.m-works-dialog-tags')
-const _dlg_linkRef = dialog.querySelector('a')
+const _dlg_urlsRef = dialog.querySelector('.m-works-dialog-link')
 const _dlg_descRef = dialog.querySelector('.m-works-dialog-description')
 const _dlg_closeBtnRef = document.getElementById('m-works-dialog-close-id')
 let _stopGlobalClick = false
@@ -51,11 +51,11 @@ function _initEvents(){
 
 		const dataset = button.dataset
 		const tags = dataset.tags
-		const url = dataset.url
+		const links = dataset.links
 		const h3 = button.querySelector('h3')
 		const descriptionTemplate = button.querySelector('div[data-description]')
 		const imagesTemplate = button.querySelector('div[data-images]')
-		if (!tags || !url || !imagesTemplate || !descriptionTemplate || !h3) return
+		if (!tags || !links || !imagesTemplate || !descriptionTemplate || !h3) return
 
 		// update title
 		if (_dlg_titleRef) {
@@ -63,10 +63,14 @@ function _initEvents(){
 		}
 
 		// update link
-		if (_dlg_linkRef) {
-			_dlg_linkRef.href = url
-			_dlg_linkRef.textContent = url
-		}
+		_dlg_urlsRef?.replaceChildren(...links.split(',').map(v => {
+			const li = document.createElement('li')
+			const a = document.createElement('a')
+			a.href = v.trim()
+			a.textContent = v.trim()
+			li.appendChild(a)
+			return li
+		}))
 
 		// update tags
 		_dlg_tagsRef?.replaceChildren(...tags.split(',').map(v => {

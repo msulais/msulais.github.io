@@ -176,7 +176,7 @@ import { C_Projects } from '../../constants/projects'
             <p>Transforming ideas into digital reality</p>
             <ul class="m-works-group">
                 {C_Projects.all.map(v => <li>
-                    <button data-url={v.url} data-tags={v.technology.join(',')}>
+                    <button data-links={v.urls.join(',')} data-tags={v.technology.join(',')}>
                         <img draggable="false" src={v.images[0][0]} alt={v.images[0][1]}/>
                         <h3>{v.name}</h3>
                         <div hidden data-images>
@@ -200,7 +200,7 @@ import { C_Projects } from '../../constants/projects'
                         aria-label="Tabs between images"
                     ></div>
                     <h2></h2>
-                    <a href="#"></a>
+                    <ul class="m-works-dialog-link"></ul>
                     <ul class="m-works-dialog-tags"></ul>
                     <div class="m-works-dialog-description"></div>
                 </div>
