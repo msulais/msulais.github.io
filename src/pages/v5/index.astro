@@ -11,9 +11,17 @@ import Projects from './_components/Projects/index.astro'
 import ProjectDetail from './_components/ProjectDetail/index.astro'
 import './_styles/fonts.scss'
 import './_styles/index.scss'
+import { C_Projects } from '../../constants/projects'
 ---
 
 <Html favicon_url={favicon.src}>
+	<Fragment slot='link'>
+		{C_Projects.all.map(v => <Fragment>
+			{v.images.map(image =>
+				<link rel="prefetch" href={image[0]} as="image">
+			)}
+		</Fragment>)}
+	</Fragment>
 	<Splash />
 	<Transition/>
 	<Header/>
