@@ -19,11 +19,11 @@ import CSS from './index.module.scss'
 				<p>Every ideas that I turn into digital reality</p>
 			</div>
 		</div>
-		<ul class={CSS.list}>
+		<ul class={CSS.list} id={Ids.projects_list}>
 			<li aria-label="Projects count">{C_Projects.all.length} PROJECTS</li>
-			{C_Projects.all.map(v =>
+			{C_Projects.all.map((v, i) =>
 				<li>
-					<button>
+					<button data-index={i}>
 						<div data-css-image>
 							<img src={v.images[0]?.[0] ?? fallbackImg.src} alt={v.name}/>
 						</div>

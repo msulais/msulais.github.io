@@ -3,6 +3,22 @@ import { Ids } from "../shared/ids"
 export namespace Refs {
 	const fn_id = (id: string) => document.getElementById(id) as Element | undefined
 
+	export const header_stopwatch = fn_id(Ids.header_stopwatch) as HTMLSpanElement
+	export const header_scroll = fn_id(Ids.header_scroll) as HTMLSpanElement
+	export const header_idle = fn_id(Ids.header_idle) as HTMLButtonElement
+
+	export const projects_list = fn_id(Ids.projects_list) as HTMLUListElement
+
+	export const projectDetail = fn_id(Ids.projectDetail) as HTMLDialogElement
+	export const projectDetail_close = fn_id(Ids.projectDetail_close) as HTMLButtonElement
+	export const projectDetail_title = fn_id(Ids.projectDetail_title) as HTMLHeadingElement
+	export const projectDetail_content = fn_id(Ids.projectDetail_content) as HTMLDivElement
+	export const projectDetail_images = fn_id(Ids.projectDetail_images) as HTMLUListElement
+	export const projectDetail_urls = fn_id(Ids.projectDetail_urls) as HTMLUListElement
+	export const projectDetail_technology = fn_id(Ids.projectDetail_technology) as HTMLUListElement
+	export const projectDetail_prev = fn_id(Ids.projectDetail_prev) as HTMLButtonElement
+	export const projectDetail_next = fn_id(Ids.projectDetail_next) as HTMLButtonElement
+
 	export const splash = fn_id(Ids.splash) as HTMLDialogElement
 	export const splash_checkbox = fn_id(Ids.splash_checkbox) as HTMLInputElement
 	export const splash_path1 = fn_id(Ids.splash_path1) as SVGPathElement
@@ -15,8 +31,4 @@ export namespace Refs {
 	export const splash_progressText = fn_id(Ids.splash_progressText) as HTMLSpanElement
 	export const splash_button = fn_id(Ids.splash_button) as HTMLButtonElement
 	export const splash_triangle = fn_id(Ids.splash_triangle) as HTMLSpanElement
-
-	export const header_stopwatch = fn_id(Ids.header_stopwatch) as HTMLSpanElement
-	export const header_scroll = fn_id(Ids.header_scroll) as HTMLSpanElement
-	export const header_idle = fn_id(Ids.header_idle) as HTMLButtonElement
 }

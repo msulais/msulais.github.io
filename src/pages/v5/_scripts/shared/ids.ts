@@ -12,6 +12,18 @@ export namespace Ids {
 	export const page_projects = 'projects'
 	export const page_contact = 'contact'
 
+	export const projects_list = fn_id()
+
+	export const projectDetail = fn_id()
+	export const projectDetail_close = fn_id()
+	export const projectDetail_title = fn_id()
+	export const projectDetail_urls = fn_id()
+	export const projectDetail_technology = fn_id()
+	export const projectDetail_content = fn_id()
+	export const projectDetail_images = fn_id()
+	export const projectDetail_prev = fn_id()
+	export const projectDetail_next = fn_id()
+
 	export const splash = fn_id()
 	export const splash_button = fn_id()
 	export const splash_checkbox = fn_id()
@@ -26,5 +38,4 @@ export namespace Ids {
 	export const splash_triangle = fn_id()
 
 	export const transition = fn_id()
-
 }
