@@ -3,6 +3,8 @@ import { Ids } from "../shared/ids"
 export namespace Refs {
 	const fn_id = (id: string) => document.getElementById(id) as Element | undefined
 
+	export const about_experience = fn_id(Ids.about_experience) as HTMLSpanElement
+
 	export const contact_status = fn_id(Ids.contact_status) as HTMLUListElement
 	export const contact_onOff = fn_id(Ids.contact_onOff) as HTMLSpanElement
 	export const contact_time = fn_id(Ids.contact_time) as HTMLSpanElement

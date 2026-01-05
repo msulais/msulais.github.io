@@ -10,6 +10,10 @@ function _startInterval(): void {
 	}, 1000)
 }
 
+function _getYearExperience(): void {
+	Refs.about_experience.textContent = C_About.webExperienceYear() + ''
+}
+
 function _updateFrequency(): void {
 	const value = Math.round(Math.random() * 0xff)
 	Refs.contact_frequency.textContent = value + 'Hz'
@@ -48,6 +52,7 @@ function _updateDatetime(): void {
 const _ = () => {
 	_updateDatetime()
 	_startInterval()
+	_getYearExperience()
 }
 
 export default _

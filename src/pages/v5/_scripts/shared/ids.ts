@@ -4,6 +4,8 @@ export namespace Ids {
 	const idPrefix = fn_hex(2026)
 	const fn_id = () => idPrefix + fn_hex(++id)
 
+	export const about_experience = fn_id()
+
 	export const contact_status = fn_id()
 	export const contact_onOff = fn_id()
 	export const contact_time = fn_id()
