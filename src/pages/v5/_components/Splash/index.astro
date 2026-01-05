@@ -1,4 +1,5 @@
 ---
+import { C_About } from '../../../../constants/about'
 import { Ids } from '../../_scripts/shared/ids'
 import CSS from './index.module.scss'
 ---
@@ -58,15 +59,15 @@ import CSS from './index.module.scss'
 	</div>
 	<ul class={CSS.footer}>
 		<li aria-label="Version" style={{'text-align': 'start'}}>
-			Indonesia
-			<br/>
 			Version 5.0
+			<br/>
+			{C_About.location}
 			<br/>
 			<span id={Ids.splash_waveCoordinate}>X: 000000 / Y: 000000</span>
 		</li>
 		<li style="flex:1"></li>
 		<li aria-label="Date & time">
-			GMT+7
+			{C_About.timezone}
 			<br/>
 			<span id={Ids.splash_time}>17:33</span>
 			<br/>
