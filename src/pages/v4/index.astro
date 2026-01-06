@@ -8,15 +8,6 @@ import Html from '../../layouts/Html.astro'
 import VersionWarning from '../../components/VersionWarning/index.astro'
 import favicon from './_assets/favicon.svg'
 import { C_About } from '../../constants/about'
-import profilePicture from '../../assets/images/muhammad_sulais.jpg'
-import logo_html from '../../assets/logos/html.svg'
-import logo_css from '../../assets/logos/css.svg'
-import logo_javascript from '../../assets/logos/javascript.svg'
-import logo_solid from '../../assets/logos/solid.svg'
-import logo_react from '../../assets/logos/react.svg'
-import logo_vue from '../../assets/logos/vue.svg'
-import logo_figma from '../../assets/logos/figma.svg'
-import logo_svelte from '../../assets/logos/svelte.svg'
 import logo_linkedin from '../../assets/logos/linkedin.svg'
 import { C_Contacts } from '../../constants/contact'
 import { C_Projects } from '../../constants/projects'
@@ -25,21 +16,14 @@ import { C_Projects } from '../../constants/projects'
 <Html favicon_url={favicon.src}>
     <header>
         <button>
-            <img src={profilePicture.src} alt="Muhammad Sulais Photo Selfie">
-            <img loading="lazy" hidden src="https://cdn.pixabay.com/photo/2025/07/20/07/37/hand-9723837_1280.jpg" alt="">
-            <img loading="lazy" hidden src="https://cdn.pixabay.com/photo/2016/08/04/08/07/code-1568556_1280.jpg" alt="">
+            <img src={C_About.profilePicture} alt={C_About.fullname}>
         </button>
         <div class="h-header">
             <h1 set:html={C_About.roleHTML}/>
             <ul class="h-skills">
-                <li><img src={logo_html.src} alt="HTML logo"></li>
-                <li><img src={logo_css.src} alt="CSS logo"></li>
-                <li><img src={logo_javascript.src} alt="JavaScript logo"></li>
-                <li><img src={logo_solid.src} alt="SolidJS logo"></li>
-                <li><img src={logo_react.src} alt="React lovo"></li>
-                <li><img src={logo_svelte.src} alt="Svelte logo"></li>
-                <li><img src={logo_vue.src} alt="Vue logo"></li>
-                <li><img src={logo_figma.src} alt="Figma logo"></li>
+                {C_About.Skills.all.slice(0, 8).map(v =>
+                    <li><img src={v.imgURL} alt={v.name}></li>
+                )}
             </ul>
             <p><strong>{C_About.fullname}</strong> • <a href={C_About.locationURL}>{C_About.location}</a> • <a href={C_About.timezoneURL}>{C_About.timezoneText}</a></p>
             <div class="h-actions">
