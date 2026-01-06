@@ -1,0 +1,39 @@
+---
+import { C_LatestVersion } from '../../constants/version'
+import CSS from './index.module.scss'
+
+type Props = {
+	theme?: 'light' | 'dark'
+}
+
+const props = Astro.props
+---
+
+<dialog
+	id="version-warning"
+	class={CSS.dialog}
+	data-warning-theme={props.theme ?? 'light'}
+	style={{
+		width: '512px'
+	}}>
+	<div class={CSS.container}>
+		<div class={CSS.header}>Portfolio Version Warning</div>
+		<div class={CSS.content}>
+			<p>
+				This portfolio is not the latest version. Although the content is the same as
+				the latest version, some content may different from the latest version.
+			</p>
+			<p style="margin-top:1em">
+				Even so, feel free to look around at this portfolio version.
+			</p>
+		</div>
+		<form method="dialog" class={CSS.footer}>
+			<button class={CSS.button}>Continue</button>
+			<a autofocus="" class={CSS.button} href={'/v' + C_LatestVersion}>Go to version {C_LatestVersion}</a>
+		</form>
+	</div>
+</dialog>
+<script>
+	const ref_warning = document.getElementById('version-warning') as HTMLDialogElement
+	ref_warning.showModal()
+</script>

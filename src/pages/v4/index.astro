@@ -5,6 +5,7 @@ import './_styles/theme.scss'
 import './_styles/header.scss'
 import './_styles/main.scss'
 import Html from '../../layouts/Html.astro'
+import VersionWarning from '../../components/VersionWarning/index.astro'
 import favicon from './_assets/favicon.svg'
 import { C_About } from '../../constants/about'
 import profilePicture from '../../assets/images/muhammad_sulais.jpg'
@@ -251,4 +252,5 @@ import { C_Projects } from '../../constants/projects'
         </div>
     </main>
     <script src="./_scripts/index.ts"></script>
+    <VersionWarning theme='dark'/>
 </Html>

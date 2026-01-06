@@ -1,0 +1,149 @@
+.button {
+	flex: 1 1 100px;
+	max-width: 340px;
+	padding: 4px 10px;
+	border: none;
+	display: flex;
+	align-items: center;
+	border-radius: 4px;
+	background-color: #ffff00;
+	color: #1f1f1f !important;
+	display: flex;
+	font-size: 14px;
+	line-height: normal;
+	justify-content: center;
+	min-height: 32px;
+	scrollbar-width: none;
+	user-select: none;
+	-ms-overflow-style: none;
+	transition-property: background-color;
+	cursor: pointer;
+	transition-duration: .25s;
+
+	& * {
+		user-select: none;
+	}
+
+	&:hover {
+		background-color: #ffa500;
+	}
+}
+
+.content {
+	padding: 24px;
+	flex: 1;
+	max-height: 100%;
+	width: 100%;
+	overflow: auto;
+
+	.dialog[data-warning-theme=dark] & {
+		color-scheme: dark;
+	}
+}
+
+.container {
+	position: relative;
+	max-height: inherit;
+	max-width: 100%;
+	width: 100%;
+	border-radius: inherit;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.dialog {
+	color-scheme: light;
+	position: fixed;
+	background-color: #fbfbfb;
+	border: 1px solid #1f1f1f1f;
+	border-radius: 8px;
+	max-height: calc(100dvh - 16px);
+	max-width: calc(100% - 16px);
+	width: max-content;
+	outline: none;
+	overflow: hidden;
+	color-scheme: dark;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	box-shadow: 0px 32px 64px #00000029;
+	opacity: 0;
+	scale: .85;
+	transition-timing-function: cubic-bezier(1, 0, 0.75, 1);
+	transition-property: display, overlay, opacity, scale;
+	transition-duration: .25s;
+	transition-behavior: allow-discrete;
+
+	& * {
+		color: #1f1f1f;
+	}
+
+	&[data-warning-theme=dark] {
+		background-color: #2b2b2b;
+		border-color: #fafafa1f;
+		color-scheme: dark;
+
+		& * {
+			color: #fafafa;
+		}
+	}
+
+	&[open] {
+		opacity: 1;
+		scale: 1;
+		transition-timing-function: cubic-bezier(.25, 0, 0, 1);
+
+		&::backdrop {
+			background-color: #00000085;
+		}
+	}
+
+	&::backdrop {
+		background-color: transparent;
+		transition-property: display, overlay, background-color;
+		transition-duration: .25s;
+		transition-behavior: allow-discrete;
+	}
+}
+
+@starting-style {
+	.dialog {
+		&[open] {
+			opacity: 0;
+			scale: .85;
+
+			&::backdrop {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.footer {
+	align-items: center;
+	background-color: #f3f3f3;
+	border-top: 1px solid #1f1f1f14;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: flex-end;
+	padding: 24px;
+
+	.dialog[data-warning-theme=dark] & {
+		background-color: #2b2b2b;
+		border-color: #fafafa14;
+	}
+}
+
+.header {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 16px 24px 0 24px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
