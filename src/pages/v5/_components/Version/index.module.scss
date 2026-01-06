@@ -1,0 +1,126 @@
+@use '../../_styles/units' as u;
+
+.close {
+	background-color: #ffff00;
+	color: #202020 !important;
+	min-height: u.Rem(40px);
+	position: fixed;
+	top: u.Rem(8px);
+	left: u.Rem(8px);
+	padding: 0 u.Rem(16px) 0 u.Rem(12px);
+	font-size: u.Rem(14px);
+	font-weight: 600;
+	border: none;
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	gap: u.Rem(8px);
+	cursor: pointer;
+	box-shadow: 0 u.Rem(4px) u.Rem(8px) rgba(0, 0, 0, .25);
+	transition-duration: .25s;
+
+	&:hover {
+		background-color: #ffa500;
+		scale: 1.1;
+
+		> svg {
+			rotate: 90deg;
+		}
+	}
+
+	&:active {
+		scale: 1;
+	}
+
+	> svg {
+		transition-duration: .25s;
+		width: u.Rem(24px)
+	}
+}
+
+.list {
+	width: u.Rem(1080px);
+	max-width: calc(100% - u.Rem(64px));
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(u.Rem(160px), 1fr));
+	gap: u.Rem(16px);
+	flex-wrap: wrap;
+	margin-top: u.Rem(32px);
+
+	& a {
+		text-decoration: none;
+		font-weight: 900;
+		background-color: rgba(65, 65, 65, 0.5);
+		font-size: u.Rem(64px);
+		border: u.Rem(4px) solid transparent;
+		display: block;
+		padding: 0.5em .8em;
+		text-align: center;
+
+		&[data-selected] {
+			color: #ffff00;
+			border-color: #ffff00;
+		}
+
+		&:hover:not([data-selected]) {
+			border-color: currentColor;
+		}
+
+		@media (max-width: u.Rem(600px)) {
+			font-size: u.Rem(40px);
+		}
+
+		@media (max-width: u.Rem(400px)) {
+			font-size: u.Rem(28px);
+		}
+	}
+}
+
+.title {
+	width: u.Rem(1080px);
+	max-width: calc(100% - u.Rem(64px));
+	color: #ffff00 !important;
+	font-weight: 900;
+	font-size: u.Rem(64px);
+
+	@media (max-width: u.Rem(600px)) {
+		font-size: u.Rem(40px);
+	}
+
+	@media (max-width: u.Rem(400px)) {
+		font-size: u.Rem(28px);
+	}
+}
+
+.version {
+	z-index: var(--z-index-version);
+	background-color: #202020;
+	background-image: url(../../_assets/images/background-satelite.svg);
+	background-repeat: repeat;
+	background-size: 64px;
+	color-scheme: dark;
+	min-height: calc(100dvh - u.Rem(80px));
+	height: calc(100dvh - u.Rem(80px));
+	max-height: calc(100dvh - u.Rem(80px));
+	position: fixed;
+	top: 0;
+	border: none;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	padding-top: u.Rem(32px + 40px + 8px);
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	outline: none;
+
+	&:not([open]) {
+		display: none;
+	}
+
+	& * {
+		color: #fff;
+	}
+}

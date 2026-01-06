@@ -14,6 +14,7 @@ export namespace Ids {
 	export const header_time = fn_id()
 	export const header_scroll = fn_id()
 	export const header_idle = fn_id()
+	export const header_version = fn_id()
 
 	export const page_about = 'about'
 	export const page_projects = 'projects'
@@ -45,4 +46,7 @@ export namespace Ids {
 	export const splash_triangle = fn_id()
 
 	export const transition = fn_id()
+
+	export const version = fn_id()
+	export const version_close = fn_id()
 }

@@ -13,6 +13,7 @@ export namespace Refs {
 	export const header_time = fn_id(Ids.header_time) as HTMLSpanElement
 	export const header_scroll = fn_id(Ids.header_scroll) as HTMLSpanElement
 	export const header_idle = fn_id(Ids.header_idle) as HTMLButtonElement
+	export const header_version = fn_id(Ids.header_version) as HTMLButtonElement
 
 	export const projects_list = fn_id(Ids.projects_list) as HTMLUListElement
 
@@ -38,4 +39,7 @@ export namespace Refs {
 	export const splash_progressText = fn_id(Ids.splash_progressText) as HTMLSpanElement
 	export const splash_button = fn_id(Ids.splash_button) as HTMLButtonElement
 	export const splash_triangle = fn_id(Ids.splash_triangle) as HTMLSpanElement
+
+	export const version = fn_id(Ids.version) as HTMLDialogElement
+	export const version_close = fn_id(Ids.version_close) as HTMLButtonElement
 }
