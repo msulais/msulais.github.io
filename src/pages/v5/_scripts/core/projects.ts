@@ -17,7 +17,7 @@ async function _openDetail(work: C_Projects.Project): Promise<void> {
 		li.appendChild(img)
 		li.tabIndex = 0
 		li.onclick = () => {
-			window.open(image[0], '_blank', 'noopener noreferrer')
+			li.toggleAttribute('data-fullscreen')
 		}
 		refs_image.push(li)
 	}
