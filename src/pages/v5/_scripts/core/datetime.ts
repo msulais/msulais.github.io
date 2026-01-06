@@ -4,8 +4,6 @@ import { Refs } from "./refs"
 function _startInterval(): void {
 	setInterval(() => {
 		_updateDatetime()
-	}, 300)
-	setInterval(() => {
 		_updateFrequency()
 	}, 1000)
 }
