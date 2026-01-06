@@ -10,7 +10,7 @@ import { C_About } from '../../../../constants/about'
 	</div>
 	<div class={CSS.about}>
 		<h1 set:html={C_About.fullnameHTML.toUpperCase()}/>
-		<p class={CSS.info}>Based in {C_About.location} / <a href={C_Contacts.linkedin.url}>LinkedIn</a> / <a href={C_Contacts.github.url}>Github</a></p>
+		<p class={CSS.info}>Based in {C_About.location} / <a href={C_Contacts.linkedin.url} rel="noopener noreferrer" target="_blank">LinkedIn</a> / <a href={C_Contacts.github.url} rel="noopener noreferrer" target="_blank">Github</a></p>
 		<p class={CSS.role} set:html={C_About.roleHTML}/>
 	</div>
 </section>
