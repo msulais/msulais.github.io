@@ -11,7 +11,7 @@ export namespace Ids {
 	export const contact_time = fn_id()
 	export const contact_frequency = fn_id()
 
-	export const header_stopwatch = fn_id()
+	export const header_time = fn_id()
 	export const header_scroll = fn_id()
 	export const header_idle = fn_id()
 

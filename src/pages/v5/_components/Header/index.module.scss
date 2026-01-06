@@ -70,7 +70,7 @@
 	backdrop-filter: blur(u.Rem(8px));
 }
 
-.stopwatchPageScroll {
+.timeAndScroll {
 	padding: .1em .4em;
 	left: calc(u.Rem(24px + 18px) + env(safe-area-inset-left));
 	top: calc(u.Rem(10px) + env(safe-area-inset-top));

@@ -1,13 +1,13 @@
 import images from "./core/images";
 import splash from "./core/splash";
-import stopwatch from "./core/stopwatch";
+import time from "./core/time";
 import scroll from "./core/scroll"
 import projects from "./core/projects";
 import datetime from "./core/datetime";
 
 images()
 splash()
-stopwatch()
+time()
 scroll()
 projects()
 datetime()

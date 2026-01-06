@@ -10,7 +10,7 @@ export namespace Refs {
 	export const contact_time = fn_id(Ids.contact_time) as HTMLSpanElement
 	export const contact_frequency = fn_id(Ids.contact_frequency) as HTMLSpanElement
 
-	export const header_stopwatch = fn_id(Ids.header_stopwatch) as HTMLSpanElement
+	export const header_time = fn_id(Ids.header_time) as HTMLSpanElement
 	export const header_scroll = fn_id(Ids.header_scroll) as HTMLSpanElement
 	export const header_idle = fn_id(Ids.header_idle) as HTMLButtonElement
 
