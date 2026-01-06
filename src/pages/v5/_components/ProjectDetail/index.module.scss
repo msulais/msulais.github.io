@@ -78,6 +78,10 @@
 			font-weight: bold;
 			color: #ffff00;
 
+			&:first-child {
+				word-break: break-all;
+			}
+
 			&:not(:first-child) {
 				margin-top: 1em;
 			}
