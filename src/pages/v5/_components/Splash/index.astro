@@ -23,7 +23,7 @@ import CSS from './index.module.scss'
 		</p>
 		<p data-css-about>
 			<span>Portfolio of</span>
-			<Fragment set:html={C_About.fullnameHTML}/>
+			<Fragment set:html={C_About.fullnameHTML.toUpperCase()}/>
 		</p>
 	</div>
 	<div class={CSS.waitIndicator}>
