@@ -1,0 +1,35 @@
+@use '../../_styles/units' as u;
+
+.copyright {
+	margin-top: .5rem;
+	font-weight: bold;
+}
+
+.footer {
+	width: u.Rem(1080px);
+	max-width: calc(100% - u.Rem(64px));
+	margin: u.Rem(32px);
+}
+
+.name {
+	width: calc(100% - u.Rem(64px));
+	background-color: #ffff00;
+	background-image: url(../../_assets/images/background-strips-yellow.svg);
+	background-repeat: repeat;
+	background-size: 80px;
+	padding: u.Rem(32px);
+	font-size: u.Rem(64px);
+	text-align: center;
+	font-weight: 900;
+	animation: move-background 20s linear infinite;
+
+	@media (max-width: u.Rem(500px)) {
+		font-size: u.Rem(32px);
+	}
+}
+
+@keyframes move-background {
+	to {
+		background-position: 200% 0;
+	}
+}
