@@ -23,7 +23,7 @@ import CSS from './index.module.scss'
 		</p>
 		<p data-css-about>
 			<span>Portfolio of</span>
-			MUHAMMAD<br/>SULAIS
+			<Fragment set:html={C_About.fullnameHTML}/>
 		</p>
 	</div>
 	<div class={CSS.waitIndicator}>
@@ -59,7 +59,7 @@ import CSS from './index.module.scss'
 	</div>
 	<ul class={CSS.footer}>
 		<li aria-label="Version" style={{'text-align': 'start'}}>
-			Version 5.0
+			Version 5
 			<br/>
 			{C_About.location}
 			<br/>
@@ -69,7 +69,7 @@ import CSS from './index.module.scss'
 		<li aria-label="Date & time">
 			{C_About.timezoneText}
 			<br/>
-			<span id={Ids.splash_time}>17:33</span>
+			<span id={Ids.splash_time}>17:33:00</span>
 			<br/>
 			<span id={Ids.splash_date}>December 31, 2025</span>
 		</li>

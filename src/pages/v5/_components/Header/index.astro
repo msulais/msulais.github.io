@@ -1,11 +1,12 @@
 ---
+import { C_About } from '../../../../constants/about'
 import { Ids } from '../../_scripts/shared/ids'
 import CSS from './index.module.scss'
 ---
 <header class={CSS.header}>
-	<p class={CSS.profileName}>MUHAMMAD SULAIS</p>
+	<p class={CSS.profileName}>{C_About.fullname.toUpperCase()}</p>
 	<p class={CSS.timeAndScroll} aria-live="off">T <span id={Ids.header_time}>00000</span> / SC <span id={Ids.header_scroll}>000%</span></p>
-	<button class={CSS.version}>VERSION 5.0</button>
+	<button class={CSS.version}>VERSION 5</button>
 	<button id={Ids.header_idle} class={CSS.idleMode}>IDLE MODE</button>
 	<svg class={CSS.iconRight} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path d="M21.4445 6.54863V11.9861L16.7345 14.7059L12.0255 11.9861V6.54863L16.7345 3.82988L21.4445 6.54863Z" fill="#FFFF00" stroke="black" stroke-width="2"/>

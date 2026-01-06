@@ -6,6 +6,7 @@ import logo_react from '../assets/logos/react.svg'
 import logo_svelte from '../assets/logos/svelte.svg'
 import logo_vue from '../assets/logos/vue.svg'
 import logo_figma from '../assets/logos/figma.svg'
+import profilePictureImg from '../assets/images/profile-picture.jpg'
 
 function _dateDiffInDays(date1: Date, date2: Date) {
 	const MS_PER_DAY = 1000 * 60 * 60 * 24
@@ -24,6 +25,7 @@ function _initExpYear() {
 }
 
 export namespace C_About {
+	export const profilePicture = profilePictureImg.src
 	export const fullname = 'Muhammad Sulais'
 	export const fullnameHTML = 'Muhammad <br>Sulais'
 	export const role = 'Frontend Web Developer'

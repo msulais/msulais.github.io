@@ -1,18 +1,17 @@
 ---
 import CSS from './index.module.scss'
-import profilePicture from '../../../../assets/images/muhammad_sulais.jpg'
 import { C_Contacts } from '../../../../constants/contact'
 import { C_About } from '../../../../constants/about'
 ---
 
 <section class={CSS.hero} aria-label="Home">
 	<div class={CSS.image}>
-		<img src={profilePicture.src} alt="MUHAMMAD SULAIS">
+		<img src={C_About.profilePicture} alt={C_About.fullname}>
 	</div>
 	<div class={CSS.about}>
-		<h1>MUHAMMAD<br/>SULAIS</h1>
+		<h1 set:html={C_About.fullnameHTML.toUpperCase()}/>
 		<p class={CSS.info}>Based in {C_About.location} / <a href={C_Contacts.linkedin.url}>LinkedIn</a> / <a href={C_Contacts.github.url}>Github</a></p>
-		<p class={CSS.role}>Frontend <br/>Web Developer</p>
+		<p class={CSS.role} set:html={C_About.roleHTML}/>
 	</div>
 </section>
 <svg class={CSS.wave} viewBox="0 0 1280 509" fill="none" xmlns="http://www.w3.org/2000/svg">
