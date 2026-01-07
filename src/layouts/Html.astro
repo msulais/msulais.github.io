@@ -1,5 +1,5 @@
 ---
-type Props = {
+type Props = astroHTML.JSX.HtmlHTMLAttributes & {
 	title?: string
 	description?: string
 	lang?: string
@@ -10,11 +10,12 @@ const {
 	title = 'Muhammad Sulais',
 	description = 'Crafting digital experiences that users love. Front End Developer specializing in pixel-perfect UI, accessibility, and responsive design. See my latest projects.',
 	lang = 'en-US',
-	favicon_url = '/favicon.svg'
+	favicon_url = '/favicon.svg',
+	...other
 } = Astro.props
 ---
 <!doctype html>
-<html lang={ lang }>
+<html lang={ lang } {...other}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
