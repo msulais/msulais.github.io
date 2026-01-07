@@ -1,5 +1,6 @@
 ---
 import Html from "../../layouts/Html.astro";
+import VersionWarning from '../../components/VersionWarning/index.astro'
 import './_styles/variables.scss'
 import './_styles/index.scss'
 import './_styles/block-effect.scss'
@@ -250,5 +251,6 @@ import { C_About } from "../../constants/about";
         </p>
     </footer>
 
+    <VersionWarning theme="dark"/>
 	<script src="./_scripts/index.ts"/>
 </Html>
