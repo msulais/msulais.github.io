@@ -2,5 +2,8 @@
 import Html from "../layouts/Html.astro"
 ---
 <Html>
-	<script>location.href = '/v5'</script>
+	<script>
+import { C_LatestVersion } from "../constants/version";
+
+location.href = '/v' + C_LatestVersion</script>
 </Html>
