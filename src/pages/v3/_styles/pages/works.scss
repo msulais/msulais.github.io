@@ -267,6 +267,10 @@
 			&[data-links] {
 				color: rgb(var(--g-color-accent));
 				text-decoration: underline;
+
+				& a {
+					word-break: break-all;
+				}
 			}
 
 			&[data-technology] {
