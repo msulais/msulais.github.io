@@ -1,0 +1,46 @@
+#logo {
+	--logo-color1: #1CDC30;
+	--logo-color2: #00A811;
+	min-width: 32px;
+	max-width: 32px;
+	min-height: 32px;
+	max-height: 32px;
+	position: relative;
+	border: none;
+
+	> div {
+		transition-duration: .2s;
+	}
+
+	button:is(:active,:hover) > & {
+		--logo-color1: #3DE64E;
+		--logo-color2: #00D115;
+		cursor: pointer;
+	}
+
+	> div {
+		position: absolute;
+		height: 8px;
+		border-radius: 2px;
+
+		&:nth-child(1) {
+			top: 0px;
+			left: 0px;
+			width: 20px;
+			background-color: var(--logo-color1);
+		}
+
+		&:nth-child(2) {
+			top: 12px;
+			width: 32px;
+			background: linear-gradient(45deg, var(--logo-color1), var(--logo-color2));
+		}
+
+		&:nth-child(3) {
+			top: 24px;
+			right: 0px;
+			width: 20px;
+			background-color: var(--logo-color2);
+		}
+	}
+}

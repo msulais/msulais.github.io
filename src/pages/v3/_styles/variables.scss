@@ -1,0 +1,51 @@
+:root {
+	--g-color-background-light: 243, 243, 243;
+	--g-color-background-dark :  32,  32,  32;
+
+	--g-color-surface-light   : 251, 251, 251;
+	--g-color-on-surface-light:  31,  31,  31;
+	--g-color-surface-dark    :  43,  43,  43;
+	--g-color-on-surface-dark : 250, 250, 250;
+
+	--g-color-accent-light   :   0, 110,  37;
+	--g-color-on-accent-light: 255, 255, 255;
+	--g-color-accent-dark    :  51, 227,  94;
+	--g-color-on-accent-dark :   0,  57,  15;
+
+	--g-color-background: var(--g-color-background-light);
+	--g-color-accent    : var(--g-color-accent-light    );
+	--g-color-on-accent : var(--g-color-on-accent-light );
+	--g-color-surface   : var(--g-color-surface-light   );
+	--g-color-on-surface: var(--g-color-on-surface-light);
+
+	--g-font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+	--g-font-family-monospace : ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+	--g-transition-spring       : cubic-bezier(.15, 0, 0, 1);
+	--g-transition-spring-bounce: cubic-bezier(.15, 0, 0, 2);
+
+	background-color: rgb(var(--g-color-background));
+	color: rgb(var(--g-color-on-surface));
+	font-family: var(--g-font-family-sans-serif);
+
+	&[data-theme="dark"] {
+		--g-color-background: var(--g-color-background-dark);
+		--g-color-accent: var(--g-color-accent-dark);
+		--g-color-on-accent: var(--g-color-on-accent-dark);
+		--g-color-surface: var(--g-color-surface-dark);
+		--g-color-on-surface: var(--g-color-on-surface-dark);
+
+		color-scheme: dark;
+	}
+
+	&[data-theme="system"] {
+		@media (prefers-color-scheme: dark) {
+				--g-color-background: var(--g-color-background-dark);
+				--g-color-accent: var(--g-color-accent-dark);
+				--g-color-on-accent: var(--g-color-on-accent-dark);
+				--g-color-surface: var(--g-color-surface-dark);
+				--g-color-on-surface: var(--g-color-on-surface-dark);
+
+				color-scheme: dark;
+		}
+	}
+}

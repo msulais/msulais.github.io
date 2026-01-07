@@ -1,0 +1,30 @@
+* {
+    background-color: transparent;
+    box-sizing: border-box;
+    color: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    margin: 0;
+    padding: 0;
+    outline-offset: 4px;
+    transition-timing-function: var(--g-transition-spring);
+    -webkit-tap-highlight-color: transparent;
+}
+
+button, button * {
+    user-select: none;
+    text-decoration: none;
+    -webkit-user-select: none;
+}
+
+a, a * {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+.no-view {
+    visibility: hidden;
+}

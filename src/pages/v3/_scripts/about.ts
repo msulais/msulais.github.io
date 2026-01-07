@@ -1,0 +1,54 @@
+function init_details(){
+	const animation_options: KeyframeAnimationOptions = {
+		duration: 300,
+		easing: 'cubic-bezier(.15, 0, 0, 1)',
+	}
+
+	const details = document.querySelectorAll<HTMLDetailsElement>('[data-page-target="#about"] details')
+	if (details.length == 0) return
+
+	for (const detail of details) {
+		let animation_done = true
+
+		/** @type HTMLDivElement */
+		const div = detail.children.item(1)
+		if (!div) continue
+
+		/** @type HTMLSummaryElement */
+		const summary = detail.children.item(0)
+		if (!summary) continue
+
+		summary.addEventListener('click', ev => {
+			ev.preventDefault()
+			if (!animation_done) return
+
+			const is_open = detail.open
+			const rect = div.getBoundingClientRect()
+			const small_screen = window.matchMedia('(max-width: 600px)').matches
+			animation_done = false
+			if (is_open) {
+				div.animate({
+					opacity: [1, 0],
+					height: [rect.height + 'px', '0px'],
+					paddingTop: [small_screen? '16px' : '32px', '0px']
+				}, animation_options).finished.then(() => {
+					animation_done = true
+					detail.open = false
+				})
+			} else {
+				detail.open = true
+				div.animate({
+					opacity: [0, 1],
+					height: ['0px', rect.height + 'px'],
+					paddingTop: ['0px', small_screen? '16px' : '32px']
+				}, animation_options).finished.then(() => animation_done = true)
+			}
+		})
+	}
+}
+
+const _ = () => {
+	init_details()
+}
+
+export default _

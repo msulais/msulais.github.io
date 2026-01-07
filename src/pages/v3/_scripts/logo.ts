@@ -1,0 +1,108 @@
+const max_animation_type = 5
+let animation_type = 5
+
+let animation1: Animation | undefined
+let animation2: Animation | undefined
+let animation3: Animation | undefined
+
+function animate_logo(logo: HTMLDivElement) {
+	const animation_options: KeyframeAnimationOptions = {
+		duration: 1000,
+		easing: 'cubic-bezier(.15, 0, 0, 1)',
+	}
+	const children = logo.children
+	const block1 = children.item(0) as HTMLDivElement
+	const block2 = children.item(1) as HTMLDivElement
+	const block3 = children.item(2) as HTMLDivElement
+
+	if ((animation1 && animation1.playState != 'finished')
+		|| (animation2 && animation2.playState != 'finished')
+		|| (animation3 && animation3.playState != 'finished')
+	) return
+
+	let width1, width2, width3
+	let left1, left2, left3
+	let right1, right2, right3
+	let opacity1, opacity2, opacity3
+	let option1 = animation_options, option2 = animation_options, option3 = animation_options
+	switch (animation_type) {
+	case 1:
+		width1  = width3 = ['20px', '0px', '20px']
+		width2  = ['32px', '0px', '32px']
+		left1   = ['0px', '20px', '0px']
+		left2   = ['0px', '32px', '0px']
+		option2 = {...animation_options, delay: 250}
+		option3 = {...animation_options, delay: 500}
+		break
+	case 2:
+		width1  = width3 = ['20px', '0px', '20px']
+		width2  = ['32px', '0px', '32px']
+		right3  = ['0px', '20px', '0px']
+		option2 = {...animation_options, delay: 250}
+		option3 = {...animation_options, delay: 500}
+		break
+	case 3:
+		width1  = width3 = ['20px', '0px', '20px', '0px', '20px']
+		width2  = ['32px', '0px', '32px', '0px', '32px']
+		left1   = ['0px', '20px', '0px', '0px', '0px']
+		left2   = ['0px', '32px', '0px', '0px', '0px']
+		right3  = ['0px', '0px', '0px', '20px', '0px']
+		option2 = {...animation_options, delay: 250}
+		option3 = {...animation_options, delay: 500}
+		break
+	case 4:
+		opacity1 = opacity2 = opacity3 = [1, 0, 1, 0, 1]
+		option2  = {...animation_options, delay: 500}
+		option3  = {...animation_options, delay: 1000}
+		break
+	case 5:
+		width1  = width3 = ['20px', '32px',  '0px', '20px', '32px', '0px', '20px']
+		left1   = right3 = [ '0px',  '0px', '32px', '12px',  '0px', '0px',  '0px']
+		width2  = ['32px', '0px', '32px', '0px', '32px']
+		left2   = ['0px', '32px', '0px', '0px', '0px']
+		option2 = {...animation_options, delay: 500}
+		break
+	}
+
+
+	const properties1 = { width: width1, left: left1, right: right1, opacity: opacity1 }
+	const properties2 = { width: width2, left: left2, right: right2, opacity: opacity2 }
+	const properties3 = { width: width3, left: left3, right: right3, opacity: opacity3 }
+
+	// @ts-ignore
+	for (const key in properties1) if (!properties1[key]) delete properties1[key]
+
+	// @ts-ignore
+	for (const key in properties2) if (!properties2[key]) delete properties2[key]
+
+	// @ts-ignore
+	for (const key in properties3) if (!properties3[key]) delete properties3[key]
+
+	if (width1 || left1 || right1 || opacity1) animation1 = block1.animate(properties1, option1)
+	if (width2 || left2 || right2 || opacity2) animation2 = block2.animate(properties2, option2)
+	if (width3 || left3 || right3 || opacity3) animation3 = block3.animate(properties3, option3)
+
+	const old_animation_type = animation_type
+	let i = 0
+	do {
+		animation_type = Math.max(1, Math.min(
+			max_animation_type,
+			Math.round(Math.random() * max_animation_type)
+		))
+		++i
+
+	// make sure it's different from before
+	} while (old_animation_type == animation_type && i < 0xff)
+}
+
+function init_logos() {
+	const logo = document.getElementById('logo') as HTMLDivElement
+	const button = logo.parentElement as HTMLButtonElement
+	button.onclick = () => animate_logo(logo)
+}
+
+const _ = () => {
+	init_logos()
+}
+
+export default _

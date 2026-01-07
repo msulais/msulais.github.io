@@ -1,0 +1,73 @@
+[data-page-target="#contact"] {
+	padding: 32px;
+
+	@media (max-width: 600px) {
+		padding: 32px 16px;
+	}
+
+	> h2 {
+		font-size: 64px;
+		max-width: min(100%, 840px);
+		text-wrap: balance;
+
+		@media (max-width: 740px) {
+			font-size: 8dvw;
+		}
+	}
+
+	> p {
+		font-size: 32px;
+		margin-top: 16px;
+
+		@media (max-width: 740px) {
+			font-size: max(16px, 4dvw);
+		}
+	}
+
+	> address {
+		background-color: rgba(var(--g-color-surface), 0.85);
+		width: min(840px, 100%);
+		padding: 32px;
+		border-radius: 4px;
+		margin-top: 32px;
+		font-style: normal;
+		font-size: 24px;
+
+		@media (max-width: 600px) {
+			padding: 16px;
+		}
+
+		@media (max-width: 555px) {
+			font-size: max(16px, 4dvw);
+		}
+
+		> span {
+			color: rgba(var(--g-color-on-surface), .72)
+		}
+
+		> a {
+			display: inline-block;
+			border: none;
+			border-bottom: 2px solid rgb(var(--g-color-accent));
+			transition-property: all, outline;
+			padding: 4px 0;
+			white-space: nowrap;
+			transition-duration: .3s, 0s;
+
+			@media (hover: hover) {
+				border-bottom-color: transparent;
+
+				&:hover {
+					border-bottom-color: rgb(var(--g-color-accent));
+					cursor: pointer;
+				}
+			}
+
+			&:active {
+				padding-bottom: 8px;
+				padding-top: 0px;
+				border-bottom-color: rgb(var(--g-color-accent));
+			}
+		}
+	}
+}
