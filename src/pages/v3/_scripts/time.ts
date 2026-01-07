@@ -10,7 +10,7 @@ function update_time(element: HTMLTimeElement) {
 		(hour > 12? hour - 12 : hour).toString().padStart(2, '0'),
 		minute.toString().padStart(2, '0'),
 		second.toString().padStart(2, '0')
-	].join(':') + (hour > 12? ' PM ' : ' AM ') + ` (${C_About.timezoneText})`
+	].join(':') + (hour > 12? ' PM ' : ' AM ') + ` (${C_About.TimezoneText})`
 	element.dateTime = [hour, minute, second].map(v => v.toString().padStart(2, '0')).join(':')
 }
 
@@ -36,7 +36,7 @@ function sync_time(element: HTMLTimeElement) {
 
 function reset_time() {
 	const this_date = new Date()
-	hour = this_date.getUTCHours() + C_About.timezoneValue
+	hour = this_date.getUTCHours() + C_About.TimezoneValue
 	minute = this_date.getUTCMinutes()
 	second = this_date.getUTCSeconds()
 }

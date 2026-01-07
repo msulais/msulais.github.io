@@ -26,7 +26,7 @@ export namespace C_Projects {
 		description: string
 	}
 
-	export const redmerah: Project = {
+	export const Redmerah: Project = {
 		name: 'Redmerah / Productivity Tools',
 		urls: ['https://redmerah.com'],
 		images: [
@@ -41,7 +41,7 @@ export namespace C_Projects {
 		description: MD_REDMERAH
 	}
 
-	export const artic: Project = {
+	export const Artic: Project = {
 		name: 'Artic / Blog or News Template',
 		urls: ['https://artic-delta.vercel.app/'],
 		images: [
@@ -53,7 +53,7 @@ export namespace C_Projects {
 		description: MD_ARTIC
 	}
 
-	export const flutterApps: Project = {
+	export const FlutterApps: Project = {
 		name: 'Flutter Apps',
 		urls: [
 			'https://github.com/msulais/flutter-sensors',
@@ -74,7 +74,7 @@ export namespace C_Projects {
 		description: MD_FLUTTER_APPS
 	}
 
-	export const loripsum: Project = {
+	export const Loripsum: Project = {
 		name: 'Loripsum / Figma Plugin',
 		urls: [
 			'https://www.figma.com/community/plugin/1539232405802126137/loripsum',
@@ -88,10 +88,10 @@ export namespace C_Projects {
 		description: MD_LORIPSUM
 	}
 
-	export const all: Project[] = [
-		redmerah,
-		artic,
-		loripsum,
-		flutterApps
+	export const All: Project[] = [
+		Redmerah,
+		Artic,
+		Loripsum,
+		FlutterApps
 	]
 }

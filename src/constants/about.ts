@@ -25,23 +25,23 @@ function _initExpYear() {
 }
 
 export namespace C_About {
-	export const intro: string[] = [
+	export const Intro: string[] = [
 		'My name is Muhammad Sulais. A frontend web developer from Indonesia. I love designing UI/UX and develop the design into real apps.',
 		'I\'ve learned a lot of programming languages, frameworks, and libraries. I have also made several android applications and several websites that you can access via the internet.',
 		'In terms of design, I usually design logos, icons, backgrounds, mobile & web UI (user interface). Usually, I made a design because it was for the needs of my programming project, not for sale to other people.'
 	]
-	export const profilePicture = profilePictureImg.src
-	export const fullname = 'Muhammad Sulais'
-	export const fullnameHTML = 'Muhammad <br>Sulais'
-	export const role = 'Frontend Web Developer'
-	export const roleHTML = 'Frontend <br>Web Developer'
-	export const location = 'Yogyakarta, Indonesia'
-	export const locationURL = 'https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8'
-	export const timezoneValue = +7
-	export const timezonePlace = 'Asia/Jakarta'
-	export const timezoneText = 'UTC' + (timezoneValue >= 0? '+' : '') + timezoneValue
-	export const timezoneURL = 'https://time.is/GMT' + (timezoneValue >= 0? '+' : '') + timezoneValue
-	export const webExperienceYear = () => _initExpYear()
+	export const ProfilePicture = profilePictureImg.src
+	export const FullName = 'Muhammad Sulais'
+	export const FullNameHTML = 'Muhammad <br>Sulais'
+	export const Role = 'Frontend Web Developer'
+	export const RoleHTML = 'Frontend <br>Web Developer'
+	export const Location = 'Yogyakarta, Indonesia'
+	export const LocationURL = 'https://maps.app.goo.gl/bZE8Mq4BN4oqJrDq8'
+	export const TimezoneValue = +7
+	export const TimezonePlace = 'Asia/Jakarta'
+	export const TimezoneText = 'UTC' + (TimezoneValue >= 0? '+' : '') + TimezoneValue
+	export const TimezoneURL = 'https://time.is/GMT' + (TimezoneValue >= 0? '+' : '') + TimezoneValue
+	export const WebExperienceYear = () => _initExpYear()
 
 	export namespace Languages {
 		type Lang = {
@@ -111,13 +111,13 @@ export namespace C_About {
 			name: 'Figma'
 		}
 
-		export const all: Skill[] = [
+		export const All: Skill[] = [
 			HTML, CSS, TypeScript,
 			SolidJS, React, Svelte, VueJS,
 			Figma,
 		]
 
-		export const allGroup: Skill[][] = [
+		export const AllGroup: Skill[][] = [
 			[HTML, CSS, TypeScript],
 			[SolidJS, React, Svelte, VueJS],
 			[Figma]
@@ -141,7 +141,7 @@ export namespace C_About {
 			university: 'Indonesia Open University'
 		}
 
-		export const all: Education[] = [
+		export const All: Education[] = [
 			OpenUniversity
 		]
 	}
@@ -170,7 +170,7 @@ export namespace C_About {
 			role: 'Programming Language Teacher',
 		}
 
-		export const all: Work[] = [
+		export const All: Work[] = [
 			AlItishamPlayen,
 			Hexacompare
 		]

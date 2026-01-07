@@ -6,12 +6,12 @@ import { C_About } from '../../../../constants/about'
 
 <section class={CSS.hero} aria-label="Home">
 	<div class={CSS.image}>
-		<img src={C_About.profilePicture} alt={C_About.fullname}>
+		<img src={C_About.ProfilePicture} alt={C_About.FullName}>
 	</div>
 	<div class={CSS.about}>
-		<h1 set:html={C_About.fullnameHTML.toUpperCase()}/>
-		<p class={CSS.info}>Based in {C_About.location} / <a href={C_Contacts.linkedin.url} rel="noopener noreferrer" target="_blank">LinkedIn</a> / <a href={C_Contacts.github.url} rel="noopener noreferrer" target="_blank">Github</a></p>
-		<p class={CSS.role} set:html={C_About.roleHTML}/>
+		<h1 set:html={C_About.FullNameHTML.toUpperCase()}/>
+		<p class={CSS.info}>Based in {C_About.Location} / <a href={C_Contacts.Linkedin.url} rel="noopener noreferrer" target="_blank">LinkedIn</a> / <a href={C_Contacts.Github.url} rel="noopener noreferrer" target="_blank">Github</a></p>
+		<p class={CSS.role} set:html={C_About.RoleHTML}/>
 	</div>
 </section>
 <svg class={CSS.wave} viewBox="0 0 1280 509" fill="none" xmlns="http://www.w3.org/2000/svg">

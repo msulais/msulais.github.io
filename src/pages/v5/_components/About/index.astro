@@ -17,15 +17,15 @@ import CSS from './index.module.scss'
 	<ul class={CSS.content}>
 		<li>
 			<ul>
-				<li>Full Name:<br/><span>{C_About.fullname}</span></li>
-				<li>Location:<br/><span>{C_About.location}</span></li>
-				<li>Web Experience:<br/><span><span id={Ids.about_experience}>{C_About.webExperienceYear()}</span> years (hobby only)</span></li>
+				<li>Full Name:<br/><span>{C_About.FullName}</span></li>
+				<li>Location:<br/><span>{C_About.Location}</span></li>
+				<li>Web Experience:<br/><span><span id={Ids.about_experience}>{C_About.WebExperienceYear()}</span> years (hobby only)</span></li>
 			</ul>
 		</li>
 		<li>
 			Skills:
 			<ul>
-				{C_About.Skills.allGroup.map(v =>
+				{C_About.Skills.AllGroup.map(v =>
 					<li>{v.map(v => v.name).join(', ')}</li>
 				)}
 			</ul>
@@ -41,7 +41,7 @@ import CSS from './index.module.scss'
 		<li>
 			Educations:
 			<ul>
-				{C_About.Educations.all.map(v =>
+				{C_About.Educations.All.map(v =>
 					<li>{v.university} / {v.degree} / {v.from_year}-{v.to_year}</li>
 				)}
 			</ul>
@@ -49,7 +49,7 @@ import CSS from './index.module.scss'
 		<li>
 			Work history:
 			<ul>
-				{C_About.Works.all.map(v =>
+				{C_About.Works.All.map(v =>
 					<li>{v.role} at {v.company} / {v.from_year}-{v.to_year < 0? 'present' : v.to_year}</li>
 				)}
 			</ul>

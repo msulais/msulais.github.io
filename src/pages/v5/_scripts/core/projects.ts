@@ -105,13 +105,13 @@ function _initEvents(): void {
 		if (!index
 			|| (
 				parsedIndex = Number.parseInt(index),
-				!C_Projects.all[parsedIndex]
+				!C_Projects.All[parsedIndex]
 			)
 		) {
 			return
 		}
 
-		const project = C_Projects.all[parsedIndex]
+		const project = C_Projects.All[parsedIndex]
 		_openDetail(project)
 	})
 }

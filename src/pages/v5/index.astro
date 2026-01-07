@@ -19,7 +19,7 @@ import { C_Projects } from '../../constants/projects'
 
 <Html favicon_url={favicon.src}>
 	<Fragment slot='link'>
-		{C_Projects.all.map(v => <Fragment>
+		{C_Projects.All.map(v => <Fragment>
 			{v.images.map(image =>
 				<link rel="prefetch" href={image[0]} as="image">
 			)}

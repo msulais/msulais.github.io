@@ -13,7 +13,7 @@ const dialog = document.getElementById('mp-works-dialog') as HTMLDialogElement
 let is_animating = false
 
 function show_detail_work(index: number) {
-	const work = C_Projects.all[index]
+	const work = C_Projects.All[index]
 	if (!work) {
 		return
 	}
@@ -235,8 +235,8 @@ function init_works() {
 	div.addEventListener('keydown', handle_keydown)
 	div.addEventListener('click', handle_click)
 
-	for (let i = 0; i < C_Projects.all.length; i++) {
-		const work = C_Projects.all[i]
+	for (let i = 0; i < C_Projects.All.length; i++) {
+		const work = C_Projects.All[i]
 		const container = document.createElement('div')
 		const header = document.createElement('h3')
 		const image = document.createElement('img')
@@ -245,7 +245,7 @@ function init_works() {
 		image.alt = work.name
 		image.onload = () => {
 			containers.push(container)
-			if (containers.length < C_Projects.all.length) return
+			if (containers.length < C_Projects.All.length) return
 
 			const skeletons = div.querySelectorAll('[data-none]')
 			for (let i = 0; i < skeletons.length; i++) {

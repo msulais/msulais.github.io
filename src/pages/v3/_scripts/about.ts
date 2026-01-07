@@ -10,12 +10,10 @@ function init_details(){
 	for (const detail of details) {
 		let animation_done = true
 
-		/** @type HTMLDivElement */
-		const div = detail.children.item(1)
+		const div = detail.children.item(1) as HTMLDivElement
 		if (!div) continue
 
-		/** @type HTMLSummaryElement */
-		const summary = detail.children.item(0)
+		const summary = detail.children.item(0) as HTMLElement
 		if (!summary) continue
 
 		summary.addEventListener('click', ev => {

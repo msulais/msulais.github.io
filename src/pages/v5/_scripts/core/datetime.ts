@@ -9,7 +9,7 @@ function _startInterval(): void {
 }
 
 function _getYearExperience(): void {
-	Refs.about_experience.textContent = C_About.webExperienceYear() + ''
+	Refs.about_experience.textContent = C_About.WebExperienceYear() + ''
 }
 
 function _updateFrequency(): void {
@@ -21,19 +21,19 @@ function _updateFrequency(): void {
 function _updateDatetime(): void {
 	const date = new Date()
 	const utcHours = date.getUTCHours()
-	let localHours = utcHours + C_About.timezoneValue
+	let localHours = utcHours + C_About.TimezoneValue
 	while (localHours > 24) {
 		localHours = localHours - 24
 	}
 
 	Refs.splash_date.textContent = date.toLocaleDateString('en', {
-		timeZone: C_About.timezonePlace,
+		timeZone: C_About.TimezonePlace,
 		day: 'numeric',
 		month: 'long',
 		year: 'numeric'
 	})
 	Refs.splash_time.textContent = date.toLocaleTimeString('en', {
-		timeZone: C_About.timezonePlace,
+		timeZone: C_About.TimezonePlace,
 		minute: '2-digit',
 		second: '2-digit',
 		hour: '2-digit',
@@ -41,7 +41,7 @@ function _updateDatetime(): void {
 	})
 	Refs.contact_onOff.textContent = localHours >= 22 || localHours <= 6? 'OFFLINE' : 'ONLINE'
 	Refs.contact_time.textContent = date.toLocaleTimeString('en', {
-		timeZone: C_About.timezonePlace,
+		timeZone: C_About.TimezonePlace,
 		minute: '2-digit',
 		hour: '2-digit',
 	})
