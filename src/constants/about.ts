@@ -25,6 +25,11 @@ function _initExpYear() {
 }
 
 export namespace C_About {
+	export const intro: string[] = [
+		'My name is Muhammad Sulais. A frontend web developer from Indonesia. I love designing UI/UX and develop the design into real apps.',
+		'I\'ve learned a lot of programming languages, frameworks, and libraries. I have also made several android applications and several websites that you can access via the internet.',
+		'In terms of design, I usually design logos, icons, backgrounds, mobile & web UI (user interface). Usually, I made a design because it was for the needs of my programming project, not for sale to other people.'
+	]
 	export const profilePicture = profilePictureImg.src
 	export const fullname = 'Muhammad Sulais'
 	export const fullnameHTML = 'Muhammad <br>Sulais'
