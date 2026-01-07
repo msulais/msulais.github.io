@@ -1,8 +1,3 @@
-import { marked } from 'marked'
-import {rawContent as redmerah_desc} from '../projects/redmerah.md'
-import {rawContent as artic_desc} from '../projects/artic.md'
-import {rawContent as flutter_desc} from '../projects/flutter-apps.md'
-import {rawContent as loripsum_desc} from '../projects/loripsum.md'
 import redmerah_img1 from '../assets/images/projects/redmerah/redmerah-1.png'
 import redmerah_img2 from '../assets/images/projects/redmerah/redmerah-2.png'
 import redmerah_img3 from '../assets/images/projects/redmerah/redmerah-3.png'
@@ -17,6 +12,10 @@ import flutter_img2 from '../assets/images/projects/flutter-apps/flutter-2.png'
 import flutter_img3 from '../assets/images/projects/flutter-apps/flutter-3.png'
 import loripsum_img1 from '../assets/images/projects/loripsum/loripsum-1.png'
 import loripsum_img2 from '../assets/images/projects/loripsum/loripsum-2.png'
+import { MD_REDMERAH } from '../projects/redmerah'
+import { MD_ARTIC } from '../projects/artic'
+import { MD_FLUTTER_APPS } from '../projects/flutter-apps'
+import { MD_LORIPSUM } from '../projects/loripsum'
 
 export namespace C_Projects {
 	export type Project = {
@@ -39,7 +38,7 @@ export namespace C_Projects {
 			[redmerah_img6.src, 'QR Code Scanner & Generator app in Redmerah'],
 		],
 		technology: ['Astro', 'TypeScript', 'SASS'],
-		description: marked(redmerah_desc(), {async: false})
+		description: MD_REDMERAH
 	}
 
 	export const artic: Project = {
@@ -51,7 +50,7 @@ export namespace C_Projects {
 			[artic_img3.src, 'Artic category page'],
 		],
 		technology: ['Next.js', 'React', 'SASS'],
-		description: marked(artic_desc(), {async: false})
+		description: MD_ARTIC
 	}
 
 	export const flutterApps: Project = {
@@ -72,7 +71,7 @@ export namespace C_Projects {
 			[flutter_img3.src, 'Apps schreenshot'],
 		],
 		technology: ['Flutter'],
-		description: marked(flutter_desc(), {async: false})
+		description: MD_FLUTTER_APPS
 	}
 
 	export const loripsum: Project = {
@@ -86,7 +85,7 @@ export namespace C_Projects {
 			[loripsum_img2.src, 'Plugin screenshot']
 		],
 		technology: ['Figma', 'Typescript'],
-		description: marked(loripsum_desc(), {async: false})
+		description: MD_LORIPSUM
 	}
 
 	export const all: Project[] = [
