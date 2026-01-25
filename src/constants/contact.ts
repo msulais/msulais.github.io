@@ -4,8 +4,8 @@ export namespace C_Contacts {
 		url: string
 	}
 	export const Email: Link = {
-		name: 'muh.sulais@gmail.com',
-		url: 'mailto:muh.sulais@gmail.com'
+		name: 'sulaismuhammad@gmail.com',
+		url: 'mailto:sulaismuhammad@gmail.com'
 	}
 	export const Linkedin: Link = {
 		name: 'muhammad-sulais',
