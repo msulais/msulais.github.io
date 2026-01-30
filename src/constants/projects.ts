@@ -56,7 +56,6 @@ export namespace C_Projects {
 	export const FlutterApps: Project = {
 		name: 'Flutter Apps',
 		urls: [
-			'https://github.com/msulais/flutter-sensors',
 			'https://github.com/msulais/flutter-tasks',
 			'https://github.com/msulais/flutter-baterai',
 			'https://github.com/msulais/flutter-randomizer',
