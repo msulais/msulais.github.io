@@ -1,0 +1,74 @@
+---
+import { Picture } from 'astro:assets'
+import * as Works from '../../../configs/work-history.js'
+import * as Educations from '../../../configs/educations.js'
+import * as Styles from '../_styles/styles.enum.js'
+---
+
+<section class:list={[Styles.Section, Styles.About]}>
+	<h2><code>01 About</code></h2>
+	<div>
+		<p style="text-align:justify;">
+			Do in occaecat do tempor irure officia ad commodo sit duis occaecat. Nulla dolor ex sint
+			anim ipsum laboris consequat voluptate et pariatur ut cupidatat reprehenderit velit.
+			Consequat adipiscing sed elit proident voluptate non excepteur elit proident elit.
+			Exercitation commodo commodo enim incididunt veniam labore enim amet. Duis adipiscing
+			commodo adipiscing aliqua do cupidatat ut sed dolore.
+		</p>
+		<div data-css="sub">
+			<section>
+				<h3><code>@about( <q>Work History</q> )</code></h3>
+				<ul>
+					{Works.All.map(v =>
+						<li>
+							{v.logo &&
+								<Picture
+									formats={['avif', 'webp']}
+									src={v.logo}
+									alt={`Logo ${v.institute}`}
+									width={80}
+									height={80}
+								/>
+							}
+							<div>
+								<h4>{v.institute}</h4>
+								<p>{v.role}</p>
+								<p>
+									{v.start_date.toLocaleDateString('en', {year: 'numeric', month: 'short'})}
+									-
+									{v.end_date === null
+										? 'Present'
+										: v.end_date.toLocaleDateString('en', {year: 'numeric', month: 'short'})
+									}
+								</p>
+							</div>
+						</li>
+					)}
+				</ul>
+			</section>
+			<section>
+				<h3><code>@about( <q>Education</q> )</code></h3>
+				<ul>
+					{Educations.All.map(v =>
+						<li>
+							{v.logo &&
+								<Picture
+									formats={['avif', 'webp']}
+									src={v.logo}
+									alt={`Logo ${v.university}`}
+									width={80}
+									height={80}
+								/>
+							}
+							<div>
+								<h4>{v.university}</h4>
+								<p>{v.degree}</p>
+								<p>{v.from_year} - {v.to_year} # GPA {v.grade}</p>
+							</div>
+						</li>
+					)}
+				</ul>
+			</section>
+		</div>
+	</div>
+</section>

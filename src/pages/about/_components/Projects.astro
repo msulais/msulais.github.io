@@ -1,0 +1,37 @@
+---
+import { Picture } from 'astro:assets'
+import * as AAA from '../../../configs/projects.js'
+import * as Styles from '../_styles/styles.enum.js'
+---
+
+<section class:list={[Styles.Section, Styles.Projects]}>
+	<h2><code>02 Projects</code></h2>
+	<div>
+		<ul data-css="list">
+			{AAA.All.map(v =>
+				<li>
+					<ul data-css="images">
+						{v.images.map(image =>
+							<li><Picture
+								src={image[0]}
+								alt={image[1]}
+								formats={['webp', 'avif']}
+								width={1024}
+							/></li>
+						)}
+					</ul>
+					<div>
+						<h3><code>{v.name}</code></h3>
+						<p><code>&gt; @link( {v.urls.map((a, i) => <Fragment>
+							<q><a href={a}>{a}</a></q>{i < v.urls.length - 1 && ', '}
+						</Fragment>)} )</code></p>
+						<p><code>&gt; @tech( {v.technology.map((a, i) => <Fragment>
+							<q>{a}</q>{i < v.technology.length - 1 && ', '}
+						</Fragment>)} )</code></p>
+						<p>{v.description}</p>
+					</div>
+				</li>
+			)}
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,30 @@
+---
+import * as SharedIds from '../_scripts/shared/ids.enum.js'
+import * as SharedClasses from '../_scripts/shared/classes.enum.js'
+---
+
+<div
+	id={SharedIds.Splash}
+	style={{
+		maxWidth: '100%',
+		minWidth: '100%',
+		minHeight: '100dvh',
+		maxHeight: '100dvh',
+		overflow: 'hidden',
+		display: 'flex'
+	}}>
+	<div class={SharedClasses.SplashDecoration}/>
+	<div class={SharedClasses.SplashDecoration}/>
+	<div class={SharedClasses.SplashDecoration}/>
+	<div class={SharedClasses.SplashDecoration}/>
+	<div class={SharedClasses.SplashDecoration}/>
+	<p
+		style={{
+			fontSize: '20vmin',
+			fontWeight: 'bold',
+			textAlign: 'center',
+			margin: 'auto'
+		}}>
+		<code id={SharedIds.SplashText}>000%</code>
+	</p>
+</div>

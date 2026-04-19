@@ -1,0 +1,58 @@
+:root {
+	--g-color-accent-light   :   0,  98, 161;
+	--g-color-on-accent-light: 255, 255, 255;
+	--g-color-accent-dark    : 157, 202, 255;
+	--g-color-on-accent-dark :   0,  50,  87;
+	--g-color-accent         : var(--g-color-accent-light);
+	--g-color-on-accent      : var(--g-color-on-accent-light);
+
+	--g-font-family-serif-sans: "Figtree", ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--g-font-family-monospace: "Google Sans Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+	font-family: var(--g-font-family-serif-sans);
+
+	@media (prefers-color-scheme: dark) {
+		--g-color-accent: var(--g-color-accent-dark);
+		--g-color-on-accent: var(--g-color-on-accent-dark);
+	}
+}
+
+* {
+	accent-color: rgb(var(--g-color-accent));
+	box-sizing: border-box;
+	font-family: inherit;
+	letter-spacing: inherit;
+	color-scheme: light;
+	margin: 0;
+	padding: 0;
+	transition-timing-function: cubic-bezier(.25,0,0,1);
+
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
+}
+
+code {
+	font-family: var(--g-font-family-monospace);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+[data-theme=dark] {
+	@media (prefers-color-scheme: light) {
+		display: none !important;
+	}
+}
+
+[data-theme=light] {
+	@media (prefers-color-scheme: dark) {
+		display: none !important;
+	}
+}
+
+body {
+	overflow-x: hidden;
+}

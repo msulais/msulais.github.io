@@ -1,0 +1,1 @@
+export const SplashDecoration = '__sd__'

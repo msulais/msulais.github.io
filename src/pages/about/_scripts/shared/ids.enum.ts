@@ -1,0 +1,6 @@
+export const Body = '__bd__'
+export const Footer = '__f__'
+export const Header = '__h__'
+export const HeroLetterU = '__hlu__'
+export const Splash = '__s__'
+export const SplashText = '__st__'

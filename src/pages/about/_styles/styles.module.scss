@@ -1,0 +1,179 @@
+.about {
+	& [data-css=sub] {
+		margin-top: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+
+	& img {
+		width: 40px;
+		height: 40px;
+		object-fit: contain;
+	}
+
+	& li {
+		display: flex;
+		align-items: flex-start;
+		gap: 16px;
+		margin-top: 16px;
+	}
+
+	& h4 {
+		font-style: italic;
+	}
+
+	& ul {
+		list-style: none;
+	}
+}
+
+.footer {
+	padding: 32px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 64px;
+
+	> p {
+		text-align: center;
+	}
+}
+
+.header {
+	min-height: 128px;
+}
+
+.hero {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
+	padding: 16px;
+	justify-content: center;
+
+	@media (max-width: 700px) {
+		flex-direction: column;
+	}
+
+	& [data-css=ms] {
+		width: min(700px, calc(100dvw - 256px));
+
+		@media (max-width: 700px) {
+			width: 100%;
+		}
+
+		& path {
+			fill: black;
+
+			@media (prefers-color-scheme: dark) {
+				fill: white;
+			}
+		}
+	}
+
+	& [data-css=actions] {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		align-items: center;
+
+		> a[href^=mailto] {
+			border: 2px solid rgb(var(--g-color-accent));
+			border-radius: 9999px;
+			padding: 8px 16px;
+			display: block;
+
+			&:hover {
+				background-color: rgb(var(--g-color-accent));
+				color: rgb(var(--g-color-on-accent));
+			}
+		}
+
+		> a:not([href^=mailto]) {
+			transition-duration: .25s;
+
+			&:hover {
+				scale: 1.5;
+			}
+		}
+	}
+
+	& img {
+		border-radius: 50%;
+		object-fit: cover;
+		width: 192px;
+		height: 192px;
+	}
+
+	& h1 {
+		display: none;
+	}
+
+	& p {
+		font-weight: bold;
+		font-size: 1.2em;
+		margin: 16px 0;
+	}
+
+	& q {
+		color: rgb(var(--g-color-accent))
+	}
+}
+
+.projects {
+	& h3 {
+		margin: 0.5em 0;
+	}
+
+	& a {
+		text-decoration: underline;
+		word-break: break-all;
+	}
+
+	& p:last-child {
+		margin-top: 0.5em;
+		text-align: justify;
+	}
+
+	& [data-css=list] {
+		list-style: none;
+
+		> li:not(:first-child) {
+			margin-top: 32px;
+		}
+	}
+
+	& [data-css=images] {
+		list-style: none;
+		display: flex;
+		align-items: center;
+		overflow: auto;
+		gap: 8px;
+		border-radius: 4px;
+
+		& picture {
+			border-radius: 4px;
+		}
+
+		& img {
+			width: 512px;
+			height: auto;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+	}
+}
+
+.section {
+	width: 56rem;
+	max-width: 100%;
+	padding: 64px 16px 16px 16px;
+
+	> div {
+		margin-left: 2.7rem;
+		padding-top: 8px;
+	}
+
+	& q {
+		color: rgb(var(--g-color-accent));
+	}
+}
