@@ -1,5 +1,6 @@
 export const Body = '__bd__'
 export const Footer = '__f__'
+export const FooterDecoration = '__fd__'
 export const Header = '__h__'
 export const HeroLetterU = '__hlu__'
 export const ProjectSection = '__ps__'

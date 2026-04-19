@@ -29,10 +29,19 @@
 }
 
 .footer {
-	padding: 32px;
 	position: relative;
-	overflow: hidden;
+	padding: 32px;
 	margin-top: 64px;
+	border-top: 1px solid;
+
+	> div {
+		position: absolute;
+		overflow: hidden;
+		min-height: 360px;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
 
 	> p {
 		text-align: center;

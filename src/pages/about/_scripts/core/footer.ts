@@ -2,16 +2,18 @@ import * as SharedIds from '../shared/ids.enum.js'
 import { elementById, setElementStyle } from "../utils/dom.js"
 
 const SPRING_EASING = 'cubic-bezier(.25,0,0,1)'
-const _ref_footer = elementById(SharedIds.Footer)
+const _ref_footerDecoration = elementById(SharedIds.FooterDecoration)
 
 function _animateElement(ref: HTMLElement): void {
-	const size = window.innerWidth * Math.random()
+	const size = Math.min(360 * 2, Math.max(window.innerHeight, window.innerWidth)) * Math.random()
 	const minDuration = 1000
 	setElementStyle(ref, 'left', `calc(${Math.random() * 100}% - ${size / 2}px)`)
+	setElementStyle(ref, 'bottom', `calc(0px - ${size / 2}px)`)
 	setElementStyle(ref, 'width', `${size}px`)
+	setElementStyle(ref, 'height', `${size}px`)
 	ref.animate({
-		opacity: [0, 1, 1, 0],
-		translate: ['0 0', `${Math.random() * 1 < 0.5? '-' : ''}100% 0`]
+		scale: [0, 1],
+		opacity: [0, 1, 1, 0]
 	}, {
 		duration: minDuration + (Math.random() * (5000 - minDuration)),
 		easing: SPRING_EASING
@@ -20,16 +22,14 @@ function _animateElement(ref: HTMLElement): void {
 	})
 }
 
-function _initMovingEffect(): void {
+function _initRippleEffect(): void {
 	for (let i = 0; i < 5; i++) {
 		const ref = document.createElement('div')
 		setElementStyle(ref, 'border', '4px solid')
-		setElementStyle(ref, 'height', 'calc(100% - 16px)')
-		setElementStyle(ref, 'border-radius', '8px')
-		setElementStyle(ref, 'top', '8px')
+		setElementStyle(ref, 'border-radius', '50%')
 		setElementStyle(ref, 'position', 'absolute')
 		setElementStyle(ref, 'z-index', '-1')
-		_ref_footer?.append(ref)
+		_ref_footerDecoration?.append(ref)
 		setTimeout(() => {
 			_animateElement(ref)
 		}, Math.random() * 3000)
@@ -37,7 +37,7 @@ function _initMovingEffect(): void {
 }
 
 function initFooter(): void {
-	_initMovingEffect()
+	_initRippleEffect()
 }
 
 export default initFooter
