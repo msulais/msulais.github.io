@@ -22,12 +22,8 @@ import * as Styles from '../_styles/styles.enum.js'
 					</ul>
 					<div>
 						<h3><code>{v.name}</code></h3>
-						<p><code>&gt; @link( {v.urls.map((a, i) => <Fragment>
-							<q><a href={a}>{a}</a></q>{i < v.urls.length - 1 && ', '}
-						</Fragment>)} )</code></p>
-						<p><code>&gt; @tech( {v.technology.map((a, i) => <Fragment>
-							<q>{a}</q>{i < v.technology.length - 1 && ', '}
-						</Fragment>)} )</code></p>
+						<p><code>&gt; @link({v.urls.map((a, i) => <Fragment><q><a href={a}>{a}</a></q>{i < v.urls.length - 1 && ', '}</Fragment>)})</code></p>
+						<p><code>&gt; @tech({v.technology.map((a, i) => <Fragment><q>{a}</q>{i < v.technology.length - 1 && ', '}</Fragment>)})</code></p>
 						<p>{v.description}</p>
 					</div>
 				</li>
