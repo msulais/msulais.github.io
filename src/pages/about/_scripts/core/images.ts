@@ -40,6 +40,8 @@ function _initEvents(): void {
 			}
 
 			_selected_ref = target.cloneNode(true) as HTMLImageElement
+			_selected_ref.loading = 'eager'
+			_selected_ref.fetchPriority = 'high'
 			setElementStyle(_selected_ref, 'width', '100%')
 			setElementStyle(_selected_ref, 'object-fit', 'contain')
 			_ref_dialog.replaceChildren(_selected_ref)
