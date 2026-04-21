@@ -23,7 +23,7 @@ type Project = {
 
 export const Redmerah: Project = {
 	name: 'Redmerah (Productivity Tools)',
-	description: 'Redmerah is a fast, distraction-free web application offering a comprehensive suite of everyday utilities—such as an advanced calculator, task manager, and QR scanner. I built it for my personal needs to replace bloated, ad-heavy alternatives. Developed using Astro and SolidJS, it features a handcrafted UI entirely devoid of third-party libraries, resulting in a lightweight and highly intuitive user experience. By utilizing a local-first architecture powered by the IndexedDB API, the platform ensures rapid performance and enhanced privacy, serving as a strong testament to my passion for creating efficient, user-centric tools.',
+	description: 'Redmerah is a fast, distraction-free web application offering a comprehensive suite of everyday utilities—such as an advanced calculator, task manager, and QR scanner. I built it for my personal needs to replace bloated, ad-heavy alternatives. Developed using Astro and Typescript, it features a handcrafted UI entirely devoid of third-party libraries, resulting in a lightweight and highly intuitive user experience. By utilizing a local-first architecture powered by the IndexedDB API, the platform ensures rapid performance and enhanced privacy, serving as a strong testament to my passion for creating efficient, user-centric tools.',
 	urls: ['https://www.redmerah.com'],
 	images: [
 		[redmerah_img1, 'Redmerah'],
